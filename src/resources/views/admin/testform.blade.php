@@ -7,7 +7,7 @@
             <ul>
                 <li>名前:<input type="text" name="name[]"value="{{old('name')}}"></li>
                 <br>
-                <li>コメント:<input type="text" name="comment[{{$i}}]"value="{{$i}}"></li>
+                <li>コメント:<input type="text" name="comment[]"value="{{old('comment')}}"></li>
                 <br>
                 <li>チェック<input type="checkbox" name="samp[{{$i}}]"value="{{$i}}"></li>
                 <br>
