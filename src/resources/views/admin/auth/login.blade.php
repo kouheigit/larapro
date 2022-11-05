@@ -11,7 +11,7 @@
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
+        <h1>Admin Login</h1>
         <form method="POST" action="{{ route('admin.adminlogin') }}">
             @csrf
 
