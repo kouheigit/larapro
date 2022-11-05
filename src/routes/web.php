@@ -24,6 +24,11 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::namespace('Auth')->group(function(){
+
+        Route::get('testform',[App\Http\Controllers\Admin\TestformController::class,'index'])->name('testform');
+
+
+
         Route::get('login',[App\Http\Controllers\Admin\Auth\AuthenticatedSessionController::class,'create'])->name('login');
         Route::post('login',[App\Http\Controllers\Admin\Auth\AuthenticatedSessionController::class,'store'])->name('adminlogin');
     });
