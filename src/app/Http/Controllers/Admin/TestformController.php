@@ -9,5 +9,7 @@ class TestformController extends Controller
     public function index(){
         return view('admin.testform');
     }
-
+    public function indexpost(){
+        //insert method;
+    }
 }
