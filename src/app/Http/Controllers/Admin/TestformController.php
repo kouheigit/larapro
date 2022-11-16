@@ -17,6 +17,7 @@ class TestformController extends Controller
 
     public function indexpost(Request $request)
     {
+        //新規作成
         $name = $request->input('name');
         $comment = $request->input('comment');
         $samp = $request->input('samp');
