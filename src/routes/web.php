@@ -26,6 +26,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::namespace('Auth')->group(function(){
 
         Route::get('testform',[App\Http\Controllers\Admin\TestformController::class,'index'])->name('testform');
+        Route::post('testform',[App\Http\Controllers\Admin\TestformController::class,'indexpost'])->name('testform');
 
 
 
