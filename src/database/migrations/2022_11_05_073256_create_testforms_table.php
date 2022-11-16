@@ -15,11 +15,11 @@ class CreateTestformsTable extends Migration
     {
         Schema::create('testforms', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
-            $table->string("comment");
-            $table->smallInteger("samp");
-            $table->smallInteger("samp1");
-            $table->string("remark");
+            $table->string("name")->nullable();
+            $table->string("comment")->nullable();
+            $table->smallInteger("samp")->nullable();
+            $table->smallInteger("samp1")->nullable();
+            $table->string("remark")->nullable();
             $table->timestamps();
         });
     }
