@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Testform;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -10,6 +11,7 @@ class TestformController extends Controller
 {
     public function index()
     {
+
         return view('admin.testform');
     }
 
@@ -44,6 +46,7 @@ class TestformController extends Controller
                     'samp' => $samp_check_value,
                     'samp1' => $samp1_check_value,
                     'remark' => $remark[$i],
+                    'created_at' => new Carbon('Asia/Tokyo'),
                 ];
                 Testform::insert($value);
             }

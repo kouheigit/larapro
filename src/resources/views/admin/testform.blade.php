@@ -1,7 +1,7 @@
 <h1>フォームテスト</h1>
 <form method="POST" action="{{('testform')}}">
-    @for($i=0; $i<3; $i++)
 
+    @for($i=0; $i<3; $i++)
         @csrf
         <table>
             <b>フォーム{{$i}}</b>
