@@ -11,11 +11,14 @@ class TestformController extends Controller
         return view('admin.testform');
     }
     public function indexpost(Request $request){
-        $name = $request->input('name');
-        $comment = $request->input('comment');
-        $samp = $request->input('samp');
-        $samp1 = $request->input('samp1');
-        $value = $request->input('value');
+        $value = [
+        $name = $request->input('name'),
+        $comment = $request->input('comment'),
+        $samp = $request->input('samp'),
+        $samp1 = $request->input('samp1'),
+        $form_count = $request->input('form_count'),
+        $form_counts = count($form_count),
+        ];
 
         dd($value);
         //insert method;
