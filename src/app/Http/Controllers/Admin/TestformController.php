@@ -11,8 +11,8 @@ class TestformController extends Controller
 {
     public function index()
     {
-
-        return view('admin.testform');
+        $testform = Testform::all();
+        return view('admin.testform',compact('testform'));
     }
 
     public function indexpost(Request $request)
