@@ -3,6 +3,7 @@
     @foreach($testform as $ts_val)
         <table>
             <ul>
+                <input type="hidden" name="id" value="{{$ts_val->id}}">
                 <li>名前:<br><input type="text" name="name_edit[]" value="{{old('name_edit[]',$ts_val->name)}}"></li>
 
                 <li>コメント:<br><input type="text" name="comment_edit[]" value="{{old('comment_edit[]',$ts_val->comment)}}"></li>
