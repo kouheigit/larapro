@@ -3,27 +3,26 @@
     @foreach($testform as $ts_val)
         <table>
             <ul>
-                <li>名前:<br><input type="text" name="name[]" value="{{old('name_edit[]',$ts_val->name)}}"></li>
+                <li>名前:<br><input type="text" name="name_edit[]" value="{{old('name_edit[]',$ts_val->name)}}"></li>
 
-                <li>コメント:<br><input type="text" name="comment[]" value="{{old('comment_edit[]',$ts_val->comment)}}"></li>
-                @if(old('samp[]',$ts_val->samp) == 1)
-                <li>チェック<input type="checkbox" name="samp[{{$ts_val}}]" value="samp{{old($ts_val->id)}}" checked></li>
+                <li>コメント:<br><input type="text" name="comment_edit[]" value="{{old('comment_edit[]',$ts_val->comment)}}"></li>
+                @if(old('samp_edit[]',$ts_val->samp) == 1)
+                <li>チェック<input type="checkbox" name="samp_edit[{{$ts_val}}]" value="{{old($ts_val->id)}}" checked></li>
                 @else
-                    <li>チェック<input type="checkbox" name="samp[{{$ts_val}}]" value="{{old($ts_val->id)}}"></li>
+                    <li>チェック<input type="checkbox" name="samp_edit[{{$ts_val}}]" value="{{old($ts_val->id)}}"></li>
                 @endif
 
-                @if(old('samp1[]',$ts_val->samp1) == 1)
-                <li>チェック1<input type="checkbox"  name="samp1[{{$ts_val}}]" value="{{old($ts_val->id)}}" checked></li>
+                @if(old('samp1_edit[]',$ts_val->samp1) == 1)
+                <li>チェック1<input type="checkbox"  name="samp1_edit[{{$ts_val}}]" value="{{old($ts_val->id)}}" checked></li>
                 @else
-                    <li>チェック1<input type="checkbox" name="samp1[{{$ts_val}}]" value="{{old($ts_val->id)}}"></li>
+                    <li>チェック1<input type="checkbox" name="samp1_edit[{{$ts_val}}]" value="{{old($ts_val->id)}}"></li>
                 @endif
-                <li>備考:<br><input type="text" name="remark[]" value="{{old('remark[]',$ts_val->remark)}}"></li>
-
+                <li>備考:<br><input type="text" name="remark_edit[]" value="{{old('remark_edit[]',$ts_val->remark)}}"></li>
             </ul>
         </table>
     @endforeach
 
-    @for($i=0; $i<3; $i++)
+    @for($i=0; $i<5; $i++)
         @csrf
         <table>
             <b>フォーム{{$i}}</b>

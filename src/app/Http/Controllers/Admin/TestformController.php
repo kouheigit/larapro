@@ -23,7 +23,6 @@ class TestformController extends Controller
         $samp = $request->input('samp');
         $samp1 = $request->input('samp1');
         $remark = $request->input('remark');
-
         $form_count = $request->input('form_count');
         //カウント数を取得
         $form_counts = count($form_count);
@@ -39,6 +38,8 @@ class TestformController extends Controller
             if(isset($samp1[$i])){
                 $samp1_check_value = 1;
             }
+
+            dd($remark[$i]);
 
             if($name[$i]==!null&&$comment==!null) {
                 $value = [
