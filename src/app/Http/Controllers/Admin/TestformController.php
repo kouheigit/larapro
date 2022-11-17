@@ -36,8 +36,7 @@ class TestformController extends Controller
         $samp1_edit = $request->input('samp1_edit');
         $remark_edit = $request->input('remark_edit');
 
-        var_dump($id);
-        die;
+
         for ($i = 0; $i < $form_counts; $i++) {
 
             $samp_check_value = 0;
@@ -69,9 +68,11 @@ class TestformController extends Controller
                 if ($name_edit[$i] == !null) {
                     Testform::where('id', $id_value)->update(['name'=>$name_edit[$i]]);
                 }
+                /*
                 if ($comment_edit[$i] == !null) {
                     Testform::where('id', $id_value)->update(['comment'=>$comment_edit[$i]]);
                 }
+
                 if ($samp_edit[$i] ==!null) {
                     Testform::where('id', $id_value)->update(['samp'=>'1']);
                 }
@@ -80,7 +81,7 @@ class TestformController extends Controller
                 }
                 if ($remark_edit[$i] == !null) {
                     Testform::where('id', $id_value)->update(['remark'=>$remark_edit[$i]]);
-                }
+                }*/
                 $i++;
             }
         }
