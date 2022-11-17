@@ -29,7 +29,7 @@ class TestformController extends Controller
 
 
         //更新用情報の取得
-        $id = $request->id;
+        $id = $request->input('id');
         $name_edit = $request->input('name_edit');
         $comment_edit = $request->input('comment_edit');
         $samp_edit = $request->input('samp_edit');
@@ -65,7 +65,7 @@ class TestformController extends Controller
             $i = 0;
             foreach ($id as $id_value) {
                 if ($name_edit[$i] == !null) {
-                    Testform::where('id', $id_value[$i])->update(['date' => $name_edit[$i]]);
+                    Testform::where('id', $id_value[$i])->update(['name'=>$name_edit[$i]]);
                 }
             }
         }
