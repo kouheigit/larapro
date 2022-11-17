@@ -36,7 +36,8 @@ class TestformController extends Controller
         $samp1_edit = $request->input('samp1_edit');
         $remark_edit = $request->input('remark_edit');
 
-
+        var_dump($id);
+        die;
         for ($i = 0; $i < $form_counts; $i++) {
 
             $samp_check_value = 0;
