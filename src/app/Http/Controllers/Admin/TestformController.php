@@ -27,6 +27,16 @@ class TestformController extends Controller
         //カウント数を取得
         $form_counts = count($form_count);
 
+
+        //更新用情報の取得
+        $name_edit = $request->input('name_edit');
+        $comment_edit = $request->input('comment_edit');
+        $samp_edit = $request->input('samp_edit');
+        $samp1_edit = $request->input('samp1_edit');
+        $remark_edit = $request->input('remark_edit');
+
+
+
         for ($i = 0; $i < $form_counts; $i++) {
 
             $samp_check_value = 0;
@@ -39,7 +49,6 @@ class TestformController extends Controller
                 $samp1_check_value = 1;
             }
 
-            dd($remark[$i]);
 
             if($name[$i]==!null&&$comment==!null) {
                 $value = [
