@@ -71,6 +71,17 @@ class TestformController extends Controller
                 if ($comment_edit[$i] == !null) {
                     Testform::where('id', $id_value)->update(['comment'=>$comment_edit[$i]]);
                 }
+                if ($remark_edit[$i] == !null) {
+                    Testform::where('id', $id_value)->update(['remark'=>$remark_edit[$i]]);
+                }
+
+                //サンプルチェックボックス
+                //チェックボックスの挙動がおかしい
+                $samp_edit_check = 0;
+                if (isset($samp_edit[$id_value])) {
+                    $samp_edit_check = 1;
+                }
+                Testform::where('id', $id[$i])->update(['samp' => $samp_edit_check]);
 
                 $i++;
             }
