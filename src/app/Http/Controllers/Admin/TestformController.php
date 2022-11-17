@@ -68,20 +68,10 @@ class TestformController extends Controller
                 if ($name_edit[$i] == !null) {
                     Testform::where('id', $id_value)->update(['name'=>$name_edit[$i]]);
                 }
-                /*
                 if ($comment_edit[$i] == !null) {
                     Testform::where('id', $id_value)->update(['comment'=>$comment_edit[$i]]);
                 }
 
-                if ($samp_edit[$i] ==!null) {
-                    Testform::where('id', $id_value)->update(['samp'=>'1']);
-                }
-                if ($samp1_edit[$i] ==!null) {
-                    Testform::where('id', $id_value)->update(['samp1'=>'1']);
-                }
-                if ($remark_edit[$i] == !null) {
-                    Testform::where('id', $id_value)->update(['remark'=>$remark_edit[$i]]);
-                }*/
                 $i++;
             }
         }

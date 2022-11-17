@@ -3,7 +3,7 @@
     @foreach($testform as $ts_val)
         <table>
             <ul>
-                <input type="hidden" name="id[]" value="{{'id[]',$ts_val->id}}">
+                <input type="hidden" name="id[]" value="{{old('id[]',$ts_val->id)}}">
                 <li>名前:<br><input type="text" name="name_edit[]" value="{{old('name_edit[]',$ts_val->name)}}"></li>
 
                 <li>コメント:<br><input type="text" name="comment_edit[]" value="{{old('comment_edit[]',$ts_val->comment)}}"></li>
@@ -12,7 +12,6 @@
                 @else
                     <li>チェック<input type="checkbox" name="samp_edit[{{$ts_val}}]" value="{{old($ts_val->id)}}"></li>
                 @endif
-
                 @if(old('samp1_edit[]',$ts_val->samp1) == 1)
                 <li>チェック1<input type="checkbox"  name="samp1_edit[{{$ts_val}}]" value="{{old($ts_val->id)}}" checked></li>
                 @else
