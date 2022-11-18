@@ -38,7 +38,6 @@ class TestformController extends Controller
 
 
         for ($i = 0; $i < $form_counts; $i++) {
-
             $samp_check_value = 0;
             if (isset($samp[$i])) {
                 $samp_check_value = 1;
