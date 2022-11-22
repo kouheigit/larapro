@@ -28,6 +28,7 @@ class TestformController extends Controller
         $form_counts = count($form_count);
 
 
+
         //更新用情報の取得
         $id = $request->input('id');
         $name_edit = $request->input('name_edit');
@@ -64,6 +65,7 @@ class TestformController extends Controller
         if($id==!null) {
             $i = 0;
             foreach ($id as $id_value) {
+
                 if ($name_edit[$i] == !null) {
                     Testform::where('id', $id_value)->update(['name'=>$name_edit[$i]]);
                 }
@@ -76,6 +78,7 @@ class TestformController extends Controller
 
                 //サンプルチェックボックス
                 //チェックボックスの挙動がおかしい
+                dd($samp_edit[$id_value]);
                 $samp_edit_check = 0;
                 if (isset($samp_edit[$id_value])) {
                     $samp_edit_check = 1;
