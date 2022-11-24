@@ -1,10 +1,12 @@
 <h1 id="choice">ここのテキストを変更する</h1>
 <h1 id="output">新たなテキスト</h1>
 <script>
-    /*
-    var todo = ['デザインカンプ作成','マズイ高い速い','宮本天外','ぐんぴぃ','Syamuさん'];
-    for(var i = 0; i<todo.length; i++){
-        console.log(todo[i]);
+
+
+/*
+    var value = ['宮本天外','ロートV5','ゴルゴ13','デューク東郷'];
+    for(var i = 0; i < value.length; i++){
+        console.log(value[i]);
     }
 
    var fizzbuzz = function(num){
@@ -21,7 +23,13 @@
    for(var i=0; i<=10; i++) {
        console.log(fizzbuzz(i));
    }
-    /*
+
+    var todo = ['デザインカンプ作成','マズイ高い速い','宮本天外','ぐんぴぃ','Syamuさん'];
+    for(var i = 0; i<todo.length; i++){
+        console.log(todo[i]);
+    }
+
+
     var total = function(price){
         var tax = 0.08;
         return price + price * tax;
