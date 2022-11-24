@@ -28,7 +28,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
         Route::get('testform',[App\Http\Controllers\Admin\TestformController::class,'index'])->name('testform');
         Route::post('testform',[App\Http\Controllers\Admin\TestformController::class,'indexpost'])->name('testform');
 
-
+        Route::get('someform',[App\Http\Controllers\Admin\SomeController::class,'index'])->name('someform');
 
         Route::get('login',[App\Http\Controllers\Admin\Auth\AuthenticatedSessionController::class,'create'])->name('login');
         Route::post('login',[App\Http\Controllers\Admin\Auth\AuthenticatedSessionController::class,'store'])->name('adminlogin');

@@ -37,6 +37,7 @@ class TestformController extends Controller
         $samp1_edit = $request->input('samp1_edit');
         $remark_edit = $request->input('remark_edit');
 
+        //dd($samp_edit[1]);
 
         for ($i = 0; $i < $form_counts; $i++) {
             $samp_check_value = 0;
@@ -78,6 +79,7 @@ class TestformController extends Controller
 
                 //サンプルチェックボックス
                 //チェックボックスの挙動がおかしい
+
                 $samp_edit_check = 0;
                 if (isset($samp_edit[$id_value])) {
                     $samp_edit_check = 1;
@@ -89,7 +91,6 @@ class TestformController extends Controller
                     $samp1_edit_check = 1;
                 }
                 Testform::where('id', $id[$i])->update(['samp1' => $samp1_edit_check]);
-
 
                 $i++;
             }

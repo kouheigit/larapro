@@ -8,14 +8,14 @@
 
                 <li>コメント:<br><input type="text" name="comment_edit[]" value="{{old('comment_edit[]',$ts_val->comment)}}"></li>
                 @if(old('samp_edit[]',$ts_val->samp) == 1)
-                <li>チェック<input type="checkbox" name="samp_edit[{{$ts_val}}]" value={{$ts_val->id}} checked></li>
+                <li>チェック<input type="checkbox" name="samp_edit[{{$ts_val->id}}]" value={{$ts_val->id}} checked></li>
                 @else
-                    <li>チェック<input type="checkbox" name="samp_edit[{{$ts_val}}]" value={{$ts_val->id}}></li>
+                    <li>チェック<input type="checkbox" name="samp_edit[{{$ts_val->id}}]" value={{$ts_val->id}}></li>
                 @endif
                 @if(old('samp1_edit[]',$ts_val->samp1) == 1)
-                <li>チェック1<input type="checkbox"  name="samp1_edit[{{$ts_val}}]" value={{$ts_val->id}} checked></li>
+                <li>チェック1<input type="checkbox"  name="samp1_edit[{{$ts_val->id}}]" value={{$ts_val->id}} checked></li>
                 @else
-                    <li>チェック1<input type="checkbox" name="samp1_edit[{{$ts_val}}]" value={{$ts_val->id}}></li>
+                    <li>チェック1<input type="checkbox" name="samp1_edit[{{$ts_val->id}}]" value={{$ts_val->id}}></li>
                 @endif
                 <li>備考:<br><input type="text" name="remark_edit[]" value="{{old('remark_edit[]',$ts_val->remark)}}"></li>
             </ul>
