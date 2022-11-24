@@ -1,6 +1,6 @@
 <h1 id="choice">ここのテキストを変更する</h1>
 <script>
-    /*
+
     var number = Math.floor(Math.random() * 5);
     var answer = parseInt(window.prompt("1~5までの数字を入力してください"));
     if(answer == number) {
@@ -34,7 +34,7 @@
         window.alert("ゲームを開始します");
     }else{
         window.alert("ゲームを終了します");
-    }*/
+    }
 
  document.getElementById('choice').textContent = new Date();
 </script>
