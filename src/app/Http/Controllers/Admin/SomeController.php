@@ -13,6 +13,20 @@ class SomeController extends Controller
         return view('admin.someform');
     }
     public function secondform(Request $request){
+        $name = $request->input('name');
+        $text = $request->input('text');
+        $check = $request->input('check');
+        $check1 = $request->input('check1');
+        $check2 = $request->input('check2');
+
+        /*$form_count = $request->input('form_count');
+        $form_counts = count($form_count);*/
+
+
+        /*
+        for($i=0; $i<$form_counts; $i++){
+
+        }*/
         return view('admin.secondform');
     }
 }
