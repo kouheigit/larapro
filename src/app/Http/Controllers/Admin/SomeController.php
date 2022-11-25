@@ -18,16 +18,13 @@ class SomeController extends Controller
         $check = $request->input('check');
         $check1 = $request->input('check1');
         $check2 = $request->input('check2');
-
-
         $form_count = $request->input('form_count');
-        $form_counts = count($form_count);
-        dd($form_counts);
+     /*   $form_counts = count($form_count);
+        dd($form_counts);*/
 
-
-        /*
+/*
         for($i=0; $i<$form_counts; $i++){
-
+            echo $i;
         }*/
         return view('admin.secondform');
     }
