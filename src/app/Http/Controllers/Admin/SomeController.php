@@ -19,8 +19,10 @@ class SomeController extends Controller
         $check1 = $request->input('check1');
         $check2 = $request->input('check2');
 
-        /*$form_count = $request->input('form_count');
-        $form_counts = count($form_count);*/
+
+        $form_count = $request->input('form_count');
+        $form_counts = count($form_count);
+        dd($form_counts);
 
 
         /*
