@@ -1,7 +1,82 @@
 <h1 id="choice">ここのテキストを変更する</h1>
 <h1 id="output">新たなテキスト</h1>
-<script>
 
+
+<!--
+<input type="text" value="10" id="text1" maxlength="5" />
+<input type="button" value="ボタン" onclick="clickBtn1()" />
+-->
+
+
+<script>
+    /*
+    function clickBtn1() {
+        const t1 = document.getElementById("text1").value;
+        window.alert(t1);
+        if(t1 % 3 == 0 && t1 % 5 == 0){
+            window.alert("fizzbuzz");
+        }else if(t1 % 3 == 0){
+            window.alert("fizz");
+        }else if(t1 % 5 == 0){
+            window.alert("buzz");
+        }else{
+            window.alert("nofizzbuzz");
+        }
+       // document.getElementById("span1").textContent = t1;
+    }
+
+    /*
+    function clickBtn2() {
+        const p2 = document.getElementById("p2");
+        window.alert(p2);
+    }
+/*
+<input type="text" id="input1" value="赤" maxlength="6" />
+<input type="button" value="変更" onclick="clickBtn1()" />
+
+<script>
+  function clickBtn1() {
+    const input1 = document.getElementById("input1");
+
+    if (input1.value === "赤") {
+      input1.value = "青";
+      input1.style.background = "#87CEFA";
+      input1.style.color = "red";
+    } else {
+      input1.value = "赤";
+      input1.style.background = "rgb(250,128,114)";
+      input1.style.color = "blue";
+    }
+  }
+var
+jsbook = {title: 'JavaScript入門',price:2500, stock:3}
+for(var p in jsbook){
+  window.alert(jsbook[p]);
+}
+
+var fizzbuzz = function(num){
+    if(num % 3 == 0 && num % 5 == 0){
+        return 'fizzbuzz';
+    }else if(num % 3 == 0 ){
+        return'fizz';
+    }else if(num % 5 == 0){
+        return 'buzz';
+    }else{
+        return num;
+    }
+}
+/*
+ var fizzbuzz = function(num){
+       if(num % 3 == 0 || num % 5 == 0){
+            return 'fizzbuzz';
+       }else if(num % 3 == 0 ){
+           return'fizz';
+       }else if(num % 5 == 0){
+           return 'buzz';
+       }else{
+          return num;
+       }
+   }
 
 /*
     var value = ['宮本天外','ロートV5','ゴルゴ13','デューク東郷'];
