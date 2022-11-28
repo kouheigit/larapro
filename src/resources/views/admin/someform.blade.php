@@ -1,15 +1,24 @@
 <h1 id="choice">ここのテキストを変更する</h1>
 <h1 id="output">新たなテキスト</h1>
 
-
-<!--
 <input type="text" value="10" id="text1" maxlength="5" />
 <input type="button" value="ボタン" onclick="clickBtn1()" />
--->
-
 
 <script>
-    /*
+    var jsbook = {title:'javascript',price:2500, stock:3};
+
+    for(var p in jsbook){
+        console.log(jsbook[p]);
+    }
+
+/*
+    const num = document.getElementById("text1").value;
+  //  window.alert(num);
+    function clickBtn1(num){
+        window.alert(num);
+    }
+
+
     function clickBtn1() {
         const t1 = document.getElementById("text1").value;
         window.alert(t1);

@@ -9,6 +9,10 @@ use App\Models\Someform;
 
 class SomeController extends Controller
 {
+    public function jstest(){
+        return view('admin.jstest');
+    }
+
     public function index(){
         return view('admin.someform');
     }

@@ -30,6 +30,8 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
 
         Route::get('secondform',[App\Http\Controllers\Admin\SomeController::class,'secondform'])->name('secondform');
 
+        Route::get('jstest',[App\Http\Controllers\Admin\SomeController::class,'jstest'])->name('jstest');
+
         Route::get('someform',[App\Http\Controllers\Admin\SomeController::class,'index'])->name('someform');
 
         Route::get('login',[App\Http\Controllers\Admin\Auth\AuthenticatedSessionController::class,'create'])->name('login');
