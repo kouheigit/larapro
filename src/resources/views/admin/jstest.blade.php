@@ -21,22 +21,46 @@
         <input type="text" name="word2">
         <input type="submit"value="検索Fiz">
     </form>
-   
 
+    <form action="#" id="form5">
+        <input type="text" name="word3">
+        <input type="submit" value="検索5">
+    </form>
+
+    <form action="#" id="form6">
+        <input type="text" name="word4">
+        <input type="submit" value="検索6">
+    </form>
+    <b id="choice"></b>
+    <!--整数値を入力させ、その値が偶数ならばeven、奇数ならばoddと表示するプログラムを作成せよ。-->
 
 </section>
 <script>
-   //
+    //formが起動したら発動する
+    document.getElementById('form6').onsubmit = function(){
+        var search = document.getElementById('form6').word4.value;
+        var addpro = function(num){
+
+            var numString = String(num);
+            if(numString % 2 == 0) {
+                document.getElementById('choice').textContent = "even";
+            }else{
+                document.getElementById('choice').textContent = "odd";
+            }
+
+        }
+        console.log(addpro(search));
+    }
 
 
+    document.getElementById('form5').onsubmit = function(){
+        var search = document.getElementById('form5').word3.value;
+        var addcount = function(num){
+            console.log(num);
+        }
+        console.log(addcount(search));
+    }
 
-   document.getElementById('form5').onsubmit = function() {
-       var search = document.getElementById('form5').word3.value;
-       console.log(search);
-   }
-
-
-   console.log(addcount(10));
 
     var addZero = function(num,digit){
         var numString = String(num);
