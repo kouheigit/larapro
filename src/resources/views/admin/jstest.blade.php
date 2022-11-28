@@ -34,8 +34,28 @@
     <b id="choice"></b>
     <!--整数値を入力させ、その値が偶数ならばeven、奇数ならばoddと表示するプログラムを作成せよ。-->
 
+    <form action="#" id="form7">
+        <input type="text" name="word5">
+        <input type="submit" value="検索7">
+    </form>
+    <b id="choice1"></b>
 </section>
 <script>
+
+    document.getElementById('form7').onsubmit = function(){
+       // 一桁の自然数＝0より大きく、かつ、9以下の整数、として判定すればよい。
+        var search = document.getElementById('form7').word5.value;
+
+        var addpro1 = function(num){
+            var numString = String(num);
+            if(num > 0 && num < 9){
+                document.getElementById('choice1').textContent = +num+'は自然数です';
+            }else{
+                document.getElementById('choice1').textContent = +num+'は自然数ではありません';
+            }
+            console.log(addpro1(search));
+        }
+    }
     //formが起動したら発動する
     document.getElementById('form6').onsubmit = function(){
         var search = document.getElementById('form6').word4.value;
