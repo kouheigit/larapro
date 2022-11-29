@@ -25,6 +25,9 @@ require __DIR__.'/auth.php';
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::namespace('Auth')->group(function(){
 
+        Route::get('jstest1',[App\Http\Controllers\Admin\SomeController::class,'jstest1'])->name('jstest1');
+        Route::get('jstest2',[App\Http\Controllers\Admin\SomeController::class,'jstest2'])->name('jstest2');
+
         Route::get('testform',[App\Http\Controllers\Admin\TestformController::class,'index'])->name('testform');
         Route::post('testform',[App\Http\Controllers\Admin\TestformController::class,'indexpost'])->name('testform');
 
