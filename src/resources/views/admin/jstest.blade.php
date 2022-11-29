@@ -40,7 +40,37 @@
     </form>
     <b id="choice1"></b>
 </section>
+
+   <form action="#" id="form8">
+       <input type="text" name="word8">
+       <br>
+       <input type="text" name="word9">
+       <br>
+       <input type="submit" value="検索8">
+   </form>
+ <b id="choice2"></b>
+
 <script>
+
+    document.getElementById('form8').onsubmit = function(){
+        var val = document.getElementById('form8').word8.value;
+        var val1 = document.getElementById('form8').word9.value;
+        var addpro2 = function (num,num1){
+            var numString = String(num);
+            var numString1= String(num1);
+            var numString2;
+            for(numString= 0; numString<10; numString++){
+                for(numString1=0; numString1<10; numString1++){
+                    numString2 = numString * numString1;
+                    console.log(numString2);
+                    //document.getElementById('choice2').textContent = numString2;
+                }
+            }
+        }
+        addpro2(val,val1);
+    }
+
+
 
     document.getElementById('form7').onsubmit = function(){
        // 一桁の自然数＝0より大きく、かつ、9以下の整数、として判定すればよい。
