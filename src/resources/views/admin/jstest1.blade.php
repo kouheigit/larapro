@@ -1,27 +1,35 @@
-<form method="GET" action="{{('jstest2')}}">
-    @csrf
-    <table>
-        <b>映画館に行きますか?</b>
-        <br>
-        <input type="radio" name="frequency">週1回以上<br>
-        <input type="radio" name="frequency">月に1回くらい<br>
-        <input type="radio" name="frequency">1年に数回程度<br>
-        <input type="radio" name="frequency">ほとんど行かない、映画は観ない<br>
-    </table>
-    <br>
-    <input type="submit" value="送信する">
-</form>
-<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<section>
+    <form action="#" id="form">
+        <input type="text" name="word">
+        <input type="submit" value="検索">
+    </form>
+    <!--ここに表示する-->
+    <p id="output"></p>
+</section>
 <script>
-
+    //formを取得したら発動する
     document.getElementById('form').onsubmit = function(){
-        if(Cookies.get('answered') === 'yes'){
-            window.alert('回答済みです、アンケートは1回しか入力できません');
-            return false;
-        }else{
-            Cookies.set('answered','yes', {expires: 7});
+        var val = document.getElementById('form').word.value;
+        var addpro = function(num){
+            
         }
-    };
+    }
+/*
+    document.getElementById('form8').onsubmit = function(){
+        var val = document.getElementById('form8').word8.value;
+        var val1 = document.getElementById('form8').word9.value;
+        var addpro2 = function (num,num1){
+            var numString = String(num);
+            var numString1= String(num1);
+            var numString2;
+            for(numString= 0; numString<10; numString++){
+                for(numString1=0; numString1<10; numString1++){
+                    numString2 = numString * numString1;
+                    console.log(numString2);
+                    //document.getElementById('choice2').textContent = numString2;
+                }
+            }
+        }
+        addpro2(val,val1);*/
 </script>
-
 
