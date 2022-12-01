@@ -15,10 +15,10 @@
     document.getElementById('form').onsubmit = function(){
         var val = document.getElementById('form').word.value;
         var addpro = function(num){
-            if(num < 5 && num >= 5){
+            if(num < 5){
                 var numString = String(num);
                 var ans = numString * 600;
-            }else if(num >= 5 && num > 20){
+            }else if(num >= 5 && num < 20){
                 var numString = String(num);
                 var ans = numString * 550;
             }else if(num >= 20){
@@ -30,7 +30,5 @@
         }
         addpro(val);
     }
-
-
 </script>
 
