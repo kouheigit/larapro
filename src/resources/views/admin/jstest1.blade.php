@@ -63,6 +63,7 @@
                 error:function(xhr, ts, err){
                     console.log(err);
                     // alert("error");
+                    //syamu
                 }
             })
         });
