@@ -3,8 +3,9 @@
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 
 <script>
+    /*
     $(function(){
-        /*
+
        $('.test').on('keyup',function()
         {
             //thisで.testの要素すべてを取得
@@ -37,22 +38,22 @@
         });
     });*/
     $(function(){
-        $('.year').on('keyup', function ()
+        $('.test').on('keyup', function ()
         {
             id = $(this).attr('id');
             console.log(id);
-            id2 = '#number'+id;
+            id2 = '#answer'+id;
             console.log(id2);
 
             //$(id2).val('test');
             console.log($(this).attr('id'));
-            console.log($('.year').val());
+            console.log($('.test').val());
 
             $.ajax({
                 type: "get",
-                url: "opmajax",
+                url: "jsajax",
                 data : {
-                    year:$('.year').val(),
+                    year:$('.test').val(),
                 },
                 cache: false,
                 dataType: 'json',
@@ -63,7 +64,6 @@
                 error:function(xhr, ts, err){
                     console.log(err);
                     // alert("error");
-                    //syamu
                 }
             })
         });
