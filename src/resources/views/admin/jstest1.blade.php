@@ -1,34 +1,78 @@
-<section>
-    <form action="#" id="form">
-        <input type="text" name="word">
-        <input type="submit" value="検索">
-    </form>
-    <!--ここに表示する-->
-    <p id="number"></p>
-    <p id="output"></p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 
-</section>
 <script>
-    //神山美術館の入場料金は、一人600円であるが、5人以上のグループなら一人550円、20人以上の団体なら一人500円である。
-    // 人数を入力し、入場料の合計を計算するプログラムを作成せよ。
-    //formを取得したら発動する
-    document.getElementById('form').onsubmit = function(){
-        var val = document.getElementById('form').word.value;
-        var addpro = function(num){
-            if(num < 5){
-                var numString = String(num);
-                var ans = numString * 600;
-            }else if(num >= 5 && num < 20){
-                var numString = String(num);
-                var ans = numString * 550;
-            }else if(num >= 20){
-                var numString = String(num);
-                var ans = numString * 500;
-            }
-            document.getElementById('number').textContent = numString;
-            document.getElementById('output').textContent = ans;
-        }
-        addpro(val);
-    }
+    $(function(){
+        /*
+       $('.test').on('keyup',function()
+        {
+            //thisで.testの要素すべてを取得
+            //idの情報のみ取得
+            id = $(this).attr('id');
+            answer_id = '#answer'+id;
+
+            console.log(id);
+            console.log(answer_id);
+
+            //console.log(id);
+
+            $.ajax({
+                type: "get",
+                url: "jsajax",
+                data : {
+                    test:$('.test').val(),
+                },
+                cache: false,
+                dataType: 'json',
+                success:function(o){
+                    $(answer_id).val(o);
+                    //alert(o);
+                },
+                error:function(xhr, ts, err){
+                    console.log(err);
+                    // alert("error");
+                }
+            })
+        });
+    });*/
+    $(function(){
+        $('.year').on('keyup', function ()
+        {
+            id = $(this).attr('id');
+            console.log(id);
+            id2 = '#number'+id;
+            console.log(id2);
+
+            //$(id2).val('test');
+            console.log($(this).attr('id'));
+            console.log($('.year').val());
+
+            $.ajax({
+                type: "get",
+                url: "opmajax",
+                data : {
+                    year:$('.year').val(),
+                },
+                cache: false,
+                dataType: 'json',
+                success:function(o){
+                    $(id2).val(o);
+                    //alert(o);
+                },
+                error:function(xhr, ts, err){
+                    console.log(err);
+                    // alert("error");
+                }
+            })
+        });
+    });
 </script>
+
+
+<table>
+    @for($i=0; $i<15; $i++)
+        <li><b>入力</b><input type="text" class="test" id="{{$i}}"name="test[]"value="{{old('test[]')}}"><b>答え</b><input type="text" class="answer"id="answer{{$i}}"name="answer[]"value="{{old('answer[]')}}"></li>
+    @endfor
+</table>
 

@@ -49,8 +49,49 @@
        <input type="submit" value="検索8">
    </form>
  <b id="choice2"></b>
+<section>
+    <form action="#" id="form">
+        <input type="text" name="word">
+        <input type="submit" value="検索">
+    </form>
+    <!--ここに表示する-->
+    <p id="number"></p>
+    <p id="output"></p>
+</section>
+<section>
+    <p id="output1"></p>
+    <p><input type="text" id="text_form" value="" name="name"></p>
+</section>
 
 <script>
+    //神山美術館の入場料金は、一人600円であるが、5人以上のグループなら一人550円、20人以上の団体なら一人500円である。
+    // 人数を入力し、入場料の合計を計算するプログラムを作成せよ。
+    //formを取得したら発動する
+    let text_form = document.querySelector('#text_form');
+    let output = document.querySelector('#output1');
+
+    text_form.addEventListener('keyup', function () {
+        output.innerHTML = text_form.value;
+    });
+
+    document.getElementById('form').onsubmit = function(){
+        var val = document.getElementById('form').word.value;
+        var addpro = function(num){
+            if(num < 5){
+                var numString = String(num);
+                var ans = numString * 600;
+            }else if(num >= 5 && num < 20){
+                var numString = String(num);
+                var ans = numString * 550;
+            }else if(num >= 20){
+                var numString = String(num);
+                var ans = numString * 500;
+            }
+            document.getElementById('number').textContent = numString;
+            document.getElementById('output').textContent = ans;
+        }
+        addpro(val);
+    }
 
     document.getElementById('form8').onsubmit = function(){
         var val = document.getElementById('form8').word8.value;

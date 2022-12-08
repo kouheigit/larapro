@@ -12,9 +12,16 @@ class SomeController extends Controller
     public function jstest2(){
         return view('admin.jstest2');
     }
-    public function jstest1(){
+    public function jstest1()
+    {
         return view('admin.jstest1');
     }
+
+    public function jsajax(Request $request){
+        $test = $request->test;
+        return response()->json($test);
+    }
+
     public function jstest(){
         return view('admin.jstest');
     }
