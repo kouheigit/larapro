@@ -4,7 +4,6 @@
 <script>
     $('.apple').on('keyup',function(){
         //apple+idを取得する
-        //
         id = $(this).attr('id');
         data = id;
         //idのみ取得
