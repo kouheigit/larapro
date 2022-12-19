@@ -9,7 +9,9 @@ use App\Models\Someform;
 
 class SomeController extends Controller
 {
-    public function jstest2(Request $request){
+    public function jstest2(Request $request)
+    {
+
         return view('admin.jstest2');
     }
     public function jstest1()
