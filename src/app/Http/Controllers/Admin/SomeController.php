@@ -5,12 +5,28 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Someform;
-
+use Carbon\Carbon;
 
 class SomeController extends Controller
 {
+    public function fixwave(Request $request)
+    {
+        $day = new Carbon();
+        $days = $day->toDateTimeString();
+
+        $day_2 = new Carbon("2022-12-30");
+        if($day_2 > $days){
+            $day = 1;
+        }else{
+            $day = 0;
+        }
+
+        return view('admin.fixwave',compact('day'));
+    }
     public function jstest2(Request $request)
     {
+        $apple = $request->apple;
+        $banana = $request->banana;
 
         return view('admin.jstest2');
     }
