@@ -9,6 +9,8 @@ use Carbon\Carbon;
 
 class SomeController extends Controller
 {
+
+
     public function fixwave(Request $request)
     {
         $day = new Carbon();
