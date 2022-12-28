@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Someform extends Model
+class Showform extends Model
 {
     use HasFactory;
-    protected $table = 'someforms';
+    protected $table = 'showforms';
     protected $fillable = [
-        'name',
-        'text',
-        'check',
-        'check1',
-        'check2',
+        'pic',
+        'email',
+        'product_id',
+        'sex',
+        'address',
     ];
 }
