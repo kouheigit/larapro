@@ -1,5 +1,6 @@
 <section>
 </section>
+<!--鬼滅の刃-->
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 <script>
     $('.apple').on('keyup',function(){
