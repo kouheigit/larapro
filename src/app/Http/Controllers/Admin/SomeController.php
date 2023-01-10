@@ -9,6 +9,11 @@ use Carbon\Carbon;
 
 class SomeController extends Controller
 {
+    public function somejsajax(Request $request)
+    {
+
+    }
+
     public function somejs(Request $request)
     {
         return view('admin.somejs');
