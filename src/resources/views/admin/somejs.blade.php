@@ -11,7 +11,7 @@
 <h3>上記の全合計</h3>
 <table>
     @for($i=0;$i<15;$i++)
-        <li>計算する値A<input type="text"class="jsvalue"id="jsvalue{{$i}}"name="jsvalue[]"value="{{old('jsvalue[]')}}">-計算する値B<input type="text"class="jsvalue1"id="jsvalue1"name="jsvalue1[]"value="{{old('jsvalue1[]')}}"></li>
+        <li>計算する値A<input type="text"class="jsvalue"id="jsvalue{{$i}}"name="jsvalue[]"value="{{old('jsvalue[]')}}">-計算する値B<input type="text"class="jsvalue1"id="jsvalue1"name="jsvalue1[]"value="{{old('jsvalue1[]')}}">　答え<input type="text"class="answer"id="answer{{$i}}"name="answer[]"value="{{old('answer[]')}}"></li>
     @endfor
 </table>
 </body>
