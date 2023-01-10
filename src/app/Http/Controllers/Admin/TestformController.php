@@ -85,13 +85,12 @@ class TestformController extends Controller
                     $samp_edit_check = 1;
                 }
                 Testform::where('id', $id[$i])->update(['samp' => $samp_edit_check]);
-
                 $samp1_edit_check = 0;
+
                 if (isset($samp1_edit[$id_value])) {
                     $samp1_edit_check = 1;
                 }
                 Testform::where('id', $id[$i])->update(['samp1' => $samp1_edit_check]);
-
                 $i++;
             }
         }
