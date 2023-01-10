@@ -1,14 +1,17 @@
 <h1>これはSomeJSのフォームです。</h1>
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 <script>
-    $('.jsvalue').on('keyup',function(){
+    $(function() {
+        $('.jsvalue').on('keyup',function()
+        {
         //jsvalueのidを取得する
-　       jsvalue_id = $(this).attr('id');
+        jsvalue_id = $(this).attr('id');
         //id単体で取得する
-         id = jsvalue_id.replace(/[^0-9]/g, '');
-         //idのjsvalue1を出力する
-         jsvalue1_id = '#jsvalue1'+id;
-         alert(jsvalue_id);
+        id = jsvalue_id.replace(/[^0-9]/g, '');
+        //idのjsvalue1を出力する
+        jsvalue1_id = '#jsvalue1' + id;
+        alert(jsvalue_id);
+    })
     });
 </script>
 <body>
