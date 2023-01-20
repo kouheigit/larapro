@@ -9,9 +9,9 @@ use Carbon\Carbon;
 
 class SomeController extends Controller
 {
-    public function somejsajax(Request $request)
+    public function jstest3(Request $reqest)
     {
-
+        return view('admin.jstest3');
     }
 
     public function somejs(Request $request)

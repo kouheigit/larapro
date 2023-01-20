@@ -1,6 +1,17 @@
 <h1>これはSomeJSのフォームです。</h1>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 <script>
+    $(function() {
+        $('.jsvalue').on('keyup', function () {
+
+        })
+    });
+</script>
+<script>
+    /*
     $(function() {
         $('.jsvalue').on('keyup',function()
         {
@@ -12,7 +23,7 @@
         jsvalue1_id = '#jsvalue1' + id;
         alert(jsvalue_id);
     })
-    });
+    });*/
 </script>
 <body>
 <h3>計算する値A+計算する値B✖️100</h3>

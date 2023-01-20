@@ -24,6 +24,8 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::namespace('Auth')->group(function(){
+        Route::get('jstest3',[App\Http\Controllers\Admin\SomeController::class,'jstest3'])->name('jstest3');
+
         Route::get('somejs',[App\Http\Controllers\Admin\SomeController::class,'somejs'])->name('somejs');
 
         Route::get('fixwave',[App\Http\Controllers\Admin\SomeController::class,'fixwave'])->name('fixwave');
