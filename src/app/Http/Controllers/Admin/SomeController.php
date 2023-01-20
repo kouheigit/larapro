@@ -14,6 +14,7 @@ class SomeController extends Controller
         return view('admin.jstest3');
     }
 
+
     public function somejs(Request $request)
     {
         return view('admin.somejs');
