@@ -15,6 +15,10 @@ class CreateJstest3Table extends Migration
     {
         Schema::create('jstest3', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('city');
+            $table->string(' streetname');
+            $table->string('streetaddress');
             $table->timestamps();
         });
     }
