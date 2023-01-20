@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateJstest3Table extends Migration
+class CreateJstestsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateJstest3Table extends Migration
      */
     public function up()
     {
-        Schema::create('jstest3', function (Blueprint $table) {
+        Schema::create('jstests', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('city');
-            $table->string(' streetname');
-            $table->string('streetaddress');
+            $table->string('name')->nullable();
+            $table->string('city')->nullable();
+            $table->string('streetname')->nullable();
+            $table->string('streetaddress')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateJstest3Table extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jstest3');
+        Schema::dropIfExists('jstests');
     }
 }

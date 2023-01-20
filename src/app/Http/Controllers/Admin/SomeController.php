@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Jstest;
 use App\Models\Someform;
 use Carbon\Carbon;
 
@@ -12,6 +13,24 @@ class SomeController extends Controller
     public function jstest3(Request $request)
     {
         return view('admin.jstest3');
+    }
+    public function jsget3(Request $request)
+    {
+        $name = $request->input('name');
+        $city = $request->input('city');
+        $streetname = $request->input('streetname');
+        $streetaddress = $request->input('streetaddress');
+
+        for($i=0; $i<15; $i++){
+            $value = [
+                'name'=>$name[$i],
+                'city'=>$city[$i],
+                'streetname'=>$streetname[$i],
+                'streetaddress'=>$streetaddress[$i],
+            ];
+            Jstest::insert($value);
+        }
+        return redirect('admin/jstest3');
     }
 
 
