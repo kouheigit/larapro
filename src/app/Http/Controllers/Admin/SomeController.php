@@ -9,7 +9,7 @@ use Carbon\Carbon;
 
 class SomeController extends Controller
 {
-    public function jstest3(Request $reqest)
+    public function jstest3(Request $request)
     {
         return view('admin.jstest3');
     }
