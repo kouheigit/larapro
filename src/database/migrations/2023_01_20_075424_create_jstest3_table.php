@@ -17,7 +17,7 @@ class CreateJstest3Table extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->string('city')->nullable();
-            $table->string(' streetname')->nullable();
+            $table->string('streetname')->nullable();
             $table->string('streetaddress')->nullable();
             $table->timestamps();
         });

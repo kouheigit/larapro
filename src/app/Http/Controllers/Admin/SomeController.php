@@ -18,19 +18,19 @@ class SomeController extends Controller
     {
         $name = $request->input('name');
         $city = $request->input('city');
-        $streetname = $request->input('streetname');
         //上記まではOK
         $streetname = $request->input('streetname');
-        //$streetaddress = $request->input('streetaddress');
-
-        for($i=0; $i<15; $i++){
-            $value = [
-                'name'=>$name[$i],
-                'city'=>$city[$i],
-                'streetname'=>$streetname[$i],
-            //    'streetaddress'=>$streetaddress[$i],
-            ];
-            Jstest::insert($value);
+        $streetaddress = $request->input('streetaddress');
+            for ($i = 0; $i < 15; $i++) {
+                if($name[$i]==!null&&$city[$i]==!null) {
+                $value = [
+                    'name' => $name[$i],
+                    'city' => $city[$i],
+                    'streetname' => $streetname[$i],
+                    'streetaddress' => $streetaddress[$i],
+                ];
+                Jstest::insert($value);
+            }
         }
         return redirect('admin/jstest3');
     }
