@@ -19,14 +19,16 @@ class SomeController extends Controller
         $name = $request->input('name');
         $city = $request->input('city');
         $streetname = $request->input('streetname');
-        $streetaddress = $request->input('streetaddress');
+        //上記まではOK
+        $streetname = $request->input('streetname');
+        //$streetaddress = $request->input('streetaddress');
 
         for($i=0; $i<15; $i++){
             $value = [
                 'name'=>$name[$i],
                 'city'=>$city[$i],
                 'streetname'=>$streetname[$i],
-                'streetaddress'=>$streetaddress[$i],
+            //    'streetaddress'=>$streetaddress[$i],
             ];
             Jstest::insert($value);
         }
