@@ -1,10 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Validator;
 use App\Models\Jstest;
 use App\Models\Someform;
 use Carbon\Carbon;
@@ -18,7 +17,12 @@ class SomeController extends Controller
     public function jsget3(Request $request)
     {
         $rules = [];
+        $rules = [];
         //required_with:payment_schedule.0'
+
+        //テストの値
+        $rules['test'] = 'required';
+
         $rules['name.0'] = 'required_with:city.0';
         $rules['name.1'] = 'required_with:city.1';
         $rules['name.2'] = 'required_with:city.2';
@@ -35,6 +39,22 @@ class SomeController extends Controller
         $rules['name.13'] = 'required_with:city.13';
         $rules['name.14'] = 'required_with:city.14';
 
+        $rules['city.1'] = 'required_with:name.1';
+        $rules['city.2'] = 'required_with:name.2';
+        $rules['city.3'] = 'required_with:name.3';
+        $rules['city.4'] = 'required_with:name.4';
+        $rules['city.5'] = 'required_with:name.5';
+        $rules['city.6'] = 'required_with:name.6';
+        $rules['city.7'] = 'required_with:name.7';
+        $rules['city.8'] = 'required_with:name.8';
+        $rules['city.9'] = 'required_with:name.9';
+        $rules['city.10'] = 'required_with:name.10';
+        $rules['city.11'] = 'required_with:name.11';
+        $rules['city.12'] = 'required_with:name.12';
+        $rules['city.13'] = 'required_with:name.13';
+        $rules['city.14'] = 'required_with:name.14';
+
+
 
         $rules = ['city'];
         $rules = ['streetname'];
@@ -42,17 +62,19 @@ class SomeController extends Controller
 
         $message = [
             'city.0.required_with'=>'名前が入力された時は都道府県の入力は必須となります',
+            'city.1.required_with'=>'名前が入力された時は都道府県の入力は必須となります',
         ];
-        $validator = Validator::make($request->all(),$rules,$message);
+        $validator = Validator::make($request->all(), $rules,$message);
         if($validator->fails())
         {
             return redirect('admin/jstest3')
                 ->withErrors($validator)
                 ->withInput();
         }
-        /*else{
+        //テストコード
+        else{
             dd(1);
-        }*/
+        }
 
 
         $name = $request->input('name');
