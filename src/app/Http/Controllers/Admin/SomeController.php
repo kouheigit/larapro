@@ -18,6 +18,42 @@ class SomeController extends Controller
     public function jsget3(Request $request)
     {
         $rules = [];
+        //required_with:payment_schedule.0'
+        $rules['name.0'] = 'required_with:city.0';
+        $rules['name.1'] = 'required_with:city.1';
+        $rules['name.2'] = 'required_with:city.2';
+        $rules['name.3'] = 'required_with:city.3';
+        $rules['name.4'] = 'required_with:city.4';
+        $rules['name.5'] = 'required_with:city.5';
+        $rules['name.6'] = 'required_with:city.6';
+        $rules['name.7'] = 'required_with:city.7';
+        $rules['name.8'] = 'required_with:city.8';
+        $rules['name.9'] = 'required_with:city.9';
+        $rules['name.10'] = 'required_with:city.10';
+        $rules['name.11'] = 'required_with:city.11';
+        $rules['name.12'] = 'required_with:city.12';
+        $rules['name.13'] = 'required_with:city.13';
+        $rules['name.14'] = 'required_with:city.14';
+
+
+        $rules = ['city'];
+        $rules = ['streetname'];
+        $rules = ['streetaddress'];
+
+        $message = [
+            'city.0.required_with'=>'名前が入力された時は都道府県の入力は必須となります',
+        ];
+        $validator = Validator::make($request->all(),$rules,$message);
+        if($validator->fails())
+        {
+            return redirect('admin/jstest3')
+                ->withErrors($validator)
+                ->withInput();
+        }
+        /*else{
+            dd(1);
+        }*/
+
 
         $name = $request->input('name');
         $city = $request->input('city');
