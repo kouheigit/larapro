@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Validator;
 use App\Models\Jstest;
 use App\Models\Someform;
 use Carbon\Carbon;
@@ -16,6 +17,8 @@ class SomeController extends Controller
     }
     public function jsget3(Request $request)
     {
+        $rules = [];
+
         $name = $request->input('name');
         $city = $request->input('city');
         //上記まではOK
