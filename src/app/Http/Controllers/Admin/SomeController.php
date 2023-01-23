@@ -61,6 +61,7 @@ class SomeController extends Controller
         $rules = ['streetaddress'];*/
 
         $message = [
+            //city
             'city.0.required_with'=>'名前が入力された時は都道府県の入力は必須となります',
             'city.1.required_with'=>'名前1が入力された時は都道府県1の入力は必須となります',
             'city.2.required_with'=>'名前2が入力された時は都道府県2の入力は必須となります',
@@ -76,6 +77,16 @@ class SomeController extends Controller
             'city.12.required_with'=>'名前12が入力された時は都道府県12の入力は必須となります',
             'city.13.required_with'=>'名前13が入力された時は都道府県13の入力は必須となります',
             'city.14.required_with'=>'名前14が入力された時は都道府県14の入力は必須となります',
+
+            'name.0.required_with'=>'都道府県が入力された場合は名前の入力は必須となります',
+            'name.1.required_with'=>'都道府県1が入力された場合は名前1の入力は必須となります',
+            'name.2.required_with'=>'都道府県2が入力された場合は名前2の入力は必須となります',
+            'name.3.required_with'=>'都道府県3が入力された場合は名前3の入力は必須となります',
+            'name.4.required_with'=>'都道府県4が入力された場合は名前4の入力は必須となります',
+            'name.5.required_with'=>'都道府県5が入力された場合は名前5の入力は必須となります',
+            'name.6.required_with'=>'都道府県6が入力された場合は名前6の入力は必須となります',
+            'name.7.required_with'=>'都道府県7が入力された場合は名前7の入力は必須となります',
+            'name.8.required_with'=>'都道府県8が入力された場合は名前8の入力は必須となります',
 
 
         ];
