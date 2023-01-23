@@ -19,10 +19,7 @@ class SomeController extends Controller
         $rules = [];
         $rules = [];
         //required_with:payment_schedule.0'
-
-        //テストの値
-        $rules['test'] = 'required';
-
+        
         $rules['name.0'] = 'required_with:city.0';
         $rules['name.1'] = 'required_with:city.1';
         $rules['name.2'] = 'required_with:city.2';
@@ -78,6 +75,7 @@ class SomeController extends Controller
             'city.13.required_with'=>'名前13が入力された時は都道府県13の入力は必須となります',
             'city.14.required_with'=>'名前14が入力された時は都道府県14の入力は必須となります',
 
+            //name
             'name.0.required_with'=>'都道府県が入力された場合は名前の入力は必須となります',
             'name.1.required_with'=>'都道府県1が入力された場合は名前1の入力は必須となります',
             'name.2.required_with'=>'都道府県2が入力された場合は名前2の入力は必須となります',
@@ -87,8 +85,12 @@ class SomeController extends Controller
             'name.6.required_with'=>'都道府県6が入力された場合は名前6の入力は必須となります',
             'name.7.required_with'=>'都道府県7が入力された場合は名前7の入力は必須となります',
             'name.8.required_with'=>'都道府県8が入力された場合は名前8の入力は必須となります',
-
-
+            'name.9.required_with'=>'都道府県9が入力された場合は名前9の入力は必須となります',
+            'name.10.required_with'=>'都道府県10が入力された場合は名前10の入力は必須となります',
+            'name.11.required_with'=>'都道府県11が入力された場合は名前11の入力は必須となります',
+            'name.12.required_with'=>'都道府県12が入力された場合は名前12の入力は必須となります',
+            'name.13.required_with'=>'都道府県13が入力された場合は名前13の入力は必須となります',
+            'name.14.required_with'=>'都道府県14が入力された場合は名前14の入力は必須となります',
         ];
 
         $validator = Validator::make($request->all(), $rules,$message);
