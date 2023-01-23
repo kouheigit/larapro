@@ -10,6 +10,10 @@ use Carbon\Carbon;
 
 class SomeController extends Controller
 {
+    public function ajaxtest(Request $request)
+    {
+
+    }
     public function jstest3(Request $request)
     {
         return view('admin.jstest3');
