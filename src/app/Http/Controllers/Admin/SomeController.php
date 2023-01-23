@@ -17,9 +17,8 @@ class SomeController extends Controller
     public function jsget3(Request $request)
     {
         $rules = [];
-        $rules = [];
         //required_with:payment_schedule.0'
-        
+
         $rules['name.0'] = 'required_with:city.0';
         $rules['name.1'] = 'required_with:city.1';
         $rules['name.2'] = 'required_with:city.2';
