@@ -39,6 +39,7 @@ class SomeController extends Controller
         $rules['name.13'] = 'required_with:city.13';
         $rules['name.14'] = 'required_with:city.14';
 
+        $rules['city.0'] = 'required_with:name.0';
         $rules['city.1'] = 'required_with:name.1';
         $rules['city.2'] = 'required_with:name.2';
         $rules['city.3'] = 'required_with:name.3';
@@ -54,31 +55,45 @@ class SomeController extends Controller
         $rules['city.13'] = 'required_with:name.13';
         $rules['city.14'] = 'required_with:name.14';
 
-
-
+/*
         $rules = ['city'];
         $rules = ['streetname'];
-        $rules = ['streetaddress'];
+        $rules = ['streetaddress'];*/
 
         $message = [
             'city.0.required_with'=>'名前が入力された時は都道府県の入力は必須となります',
-            'city.1.required_with'=>'名前が入力された時は都道府県の入力は必須となります',
+            'city.1.required_with'=>'名前1が入力された時は都道府県1の入力は必須となります',
+            'city.2.required_with'=>'名前2が入力された時は都道府県2の入力は必須となります',
+            'city.3.required_with'=>'名前3が入力された時は都道府県3の入力は必須となります',
+            'city.4.required_with'=>'名前4が入力された時は都道府県4の入力は必須となります',
+            'city.5.required_with'=>'名前5が入力された時は都道府県5の入力は必須となります',
+            'city.6.required_with'=>'名前6が入力された時は都道府県6の入力は必須となります',
+            'city.7.required_with'=>'名前7が入力された時は都道府県7の入力は必須となります',
+            'city.8.required_with'=>'名前8が入力された時は都道府県8の入力は必須となります',
+            'city.9.required_with'=>'名前9が入力された時は都道府県9の入力は必須となります',
+            'city.10.required_with'=>'名前10が入力された時は都道府県10の入力は必須となります',
+            'city.11.required_with'=>'名前11が入力された時は都道府県11の入力は必須となります',
+            'city.12.required_with'=>'名前12が入力された時は都道府県12の入力は必須となります',
+            'city.13.required_with'=>'名前13が入力された時は都道府県13の入力は必須となります',
+            'city.14.required_with'=>'名前14が入力された時は都道府県14の入力は必須となります',
+
+
         ];
+
         $validator = Validator::make($request->all(), $rules,$message);
-        if($validator->fails())
+        //Now check validation:
+        if ($validator->fails())
         {
             return redirect('admin/jstest3')
                 ->withErrors($validator)
                 ->withInput();
-        }
-        //テストコード
-        else{
+        }/*else{
             dd(1);
-        }
-
+        }*/
 
         $name = $request->input('name');
         $city = $request->input('city');
+
         //上記まではOK
         $streetname = $request->input('streetname');
         $streetaddress = $request->input('streetaddress');
