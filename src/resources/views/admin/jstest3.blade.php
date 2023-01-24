@@ -20,16 +20,22 @@
             city_id ="city"+ id;
             console.log(name_id);
             console.log(city_id);
+
             $.ajax({
                 type:"get",
                 url:"ajaxtest",
                 data:{
-                    name: $(name_id).val(),
+                    name:$(name_id).val(),
                 },
-                cache:false,
+                cache: false,
                 dataType:'json',
                 success: function (o) {
-                    $('#employee_name').val(o);
+                    console.log(o);
+                    $(city_id).val(o);
+                },
+                error:function(xhr, ts, err){
+                    console.log(err);
+                    // alert("error");
                 }
             })
         })

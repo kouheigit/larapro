@@ -12,8 +12,10 @@ class SomeController extends Controller
 {
     public function ajaxtest(Request $request)
     {
-
+        $name_id = $request->name_id;
+        return response()->json($name_id);
     }
+
     public function jstest3(Request $request)
     {
         return view('admin.jstest3');
@@ -162,6 +164,11 @@ class SomeController extends Controller
 
     public function jsajax(Request $request){
         $test = $request->test;
+        if (isset($test)) {
+            $test ="null以外";
+        }else{
+            $test="null";
+        }
         return response()->json($test);
     }
 
