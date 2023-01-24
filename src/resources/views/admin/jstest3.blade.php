@@ -17,7 +17,9 @@
             id_all = $(this).attr('id');
             id = id_all.replace(/[^0-9]/g, '');
             name_id = "#name"+ id;
+            city_id ="city"+ id;
             console.log(name_id);
+            console.log(city_id);
             $.ajax({
                 type:"get",
                 url:"ajaxtest",
@@ -27,10 +29,7 @@
                 cache:false,
                 dataType:'json',
                 success: function (o) {
-                    /*
-
-                     */
-
+                    $('#employee_name').val(o);
                 }
             })
         })
