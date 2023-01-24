@@ -15,9 +15,10 @@
         $('.search').on('keyup', function ()
         {
             id_all = $(this).attr('id');
-            id = data.replace(/[^0-9]/g, '')
-            name_id = '#name'+id;
-            console.log(id);
+            id = id_all.replace(/[^0-9]/g, '');
+            name_id = "#name"+ id;
+            console.log(name_id);
+            
         })
     });
 </script>
