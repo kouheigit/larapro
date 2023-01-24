@@ -9,13 +9,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <script type="text/javascript">
+
     //js未完成
-    $(function (){
-       $('.search').on('keyup',function()
-       {
-          id = $(this).attr('search');
-          console.log(id);
-    })
+    $(function() {
+        $('.search').on('keyup', function ()
+        {
+            id_all = $(this).attr('id');
+            id = data.replace(/[^0-9]/g, '')
+            name_id = '#name'+id;
+            console.log(id);
+        })
     });
 </script>
 
