@@ -15,7 +15,7 @@ class SomeController extends Controller
     {
         $name = $request->name;
         if(is_numeric($name)){
-            $name = "数値です";
+            $name = Jstest3::where('id','=',$name)->value('name');
         }else{
             $name = "数値で入力してください";
         }

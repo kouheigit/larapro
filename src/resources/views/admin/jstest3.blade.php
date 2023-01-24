@@ -32,7 +32,6 @@
                 success: function (o) {
                     console.log(o);
                     $(city_id).val(o);
-                    $(id2).val(o);
                 },
                 error:function(xhr, ts, err){
                     console.log(err);
