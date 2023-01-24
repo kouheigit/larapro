@@ -13,7 +13,15 @@ class SomeController extends Controller
     public function ajaxtest(Request $request)
     {
         $name_id = $request->name_id;
-        return response()->json($name_id);
+        if (isset($name_id)) {
+            $test ="null以外";
+        }else{
+            $test="null";
+        }
+        return response()->json($test);
+        /*
+        $name_id = $request->name_id;
+        return response()->json($name_id);*/
     }
 
     public function jstest3(Request $request)

@@ -17,7 +17,7 @@
             id_all = $(this).attr('id');
             id = id_all.replace(/[^0-9]/g, '');
             name_id = "#name"+ id;
-            city_id ="city"+ id;
+            city_id ="#city"+ id;
             console.log(name_id);
             console.log(city_id);
 
@@ -32,6 +32,7 @@
                 success: function (o) {
                     console.log(o);
                     $(city_id).val(o);
+                    $(id2).val(o);
                 },
                 error:function(xhr, ts, err){
                     console.log(err);
