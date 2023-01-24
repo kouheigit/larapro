@@ -13,16 +13,12 @@ class SomeController extends Controller
     public function ajaxtest(Request $request)
     {
         $name = $request->name;
-        /*
-        if (isset($name)) {
-            $name ="null以外";
+        if(is_numeric($name)){
+            $name = "数値です";
         }else{
-            $name="null";
-        }*/
+            $name = "数値で入力してください";
+        }
         return response()->json($name);
-        /*
-        $name_id = $request->name_id;
-        return response()->json($name_id);*/
     }
 
     public function jstest3(Request $request)
