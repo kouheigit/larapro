@@ -12,13 +12,14 @@ class SomeController extends Controller
 {
     public function ajaxtest(Request $request)
     {
-        $name_id = $request->name_id;
-        if (isset($name_id)) {
-            $test ="null以外";
+        $name = $request->name;
+        /*
+        if (isset($name)) {
+            $name ="null以外";
         }else{
-            $test="null";
-        }
-        return response()->json($test);
+            $name="null";
+        }*/
+        return response()->json($name);
         /*
         $name_id = $request->name_id;
         return response()->json($name_id);*/

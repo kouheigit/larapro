@@ -22,13 +22,13 @@
             console.log(city_id);
 
             $.ajax({
-                type:"get",
-                url:"ajaxtest",
+                type: "get",
+                url: "ajaxtest",
                 data:{
-                    name:$(name_id).val(),
+                    name:$(this).val(),
                 },
                 cache: false,
-                dataType:'json',
+                dataType: 'json',
                 success: function (o) {
                     console.log(o);
                     $(city_id).val(o);
