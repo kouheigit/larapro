@@ -18,6 +18,21 @@
             id = id_all.replace(/[^0-9]/g, '');
             name_id = "#name"+ id;
             console.log(name_id);
+            $.ajax({
+                type:"get",
+                url:"ajaxtest",
+                data:{
+                    name: $(name_id).val(),
+                },
+                cache:false,
+                dataType:'json',
+                success: function (o) {
+                    /*
+
+                     */
+
+                }
+            })
         })
     });
 </script>
