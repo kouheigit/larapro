@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <script type="text/javascript">
 
-    //js未完成
+    //js部分
     $(function() {
         $('.search').on('keyup', function ()
         {
