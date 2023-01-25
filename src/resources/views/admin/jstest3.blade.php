@@ -18,6 +18,9 @@
             id = id_all.replace(/[^0-9]/g, '');
             name_id = "#name"+ id;
             city_id ="#city"+ id;
+            streetname_id ="#streetname"+ id;
+            streetaddress_id ="#streetaddress"+ id;
+
             console.log(name_id);
             console.log(city_id);
 
@@ -30,8 +33,16 @@
                 cache: false,
                 dataType: 'json',
                 success: function (o) {
+                    /*
                     console.log(o);
-                    $(city_id).val(o);
+                    $(name_id).val(o);*/
+
+                    $.each(o,function(key,obj) {
+                        $(name_id).attr('value',obj.name);
+                        $(city_id).attr('value',obj.city);
+                        $(streetname_id).attr('value',obj.streetname);
+                        $(streetaddress_id).attr('value',obj.streetaddress);
+                    });
                 },
                 error:function(xhr, ts, err){
                     console.log(err);

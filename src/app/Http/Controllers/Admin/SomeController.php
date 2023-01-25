@@ -14,12 +14,23 @@ class SomeController extends Controller
     public function ajaxtest(Request $request)
     {
         $name = $request->name;
+        $jstest3 = Jstest3::where('id','=',$name)->get();
+
+        foreach($jstest3 as $value){
+            $value['name'] = $value->name;
+            $value['city'] = $value->city;
+            $value['streetname'] = $value->streetname;
+            $value['streetaddress'] = $value->streetaddress;
+            $show[] = $value;
+        }
+
+        /*
         if(is_numeric($name)){
             $name = Jstest3::where('id','=',$name)->value('name');
         }else{
             $name = "数値で入力してください";
-        }
-        return response()->json($name);
+        }*/
+        return response()->json($show);
     }
 
     public function jstest3(Request $request)
