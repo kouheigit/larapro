@@ -54,7 +54,6 @@
 </script>
 
 <form method="GET" action="{{route('admin.jsget3')}}">
-    <input tyep="text" class="test" id="test" name="test" value="{{old("test")}}">
     @for($i=0; $i < 15; $i++)
         <li>ID検索<input tyep="text" class="search" id="search{{$i}}" name="search[{{$i}}]" value="{{old("search.$i")}}">名前<input tyep="text" class="name" id="name{{$i}}" name="name[{{$i}}]" value="{{old("name.$i")}}">-都道府県<input tyep="text" class="city" id="city{{$i}}" name="city[{{$i}}]" value="{{old("city.$i")}}">-住所<input tyep="text" class="streetname" id="streetname{{$i}}" name="streetname[{{$i}}]" value="{{old("streetname.$i")}}">番地<input tyep="text" class="streetaddress" id="streetaddress{{$i}}" name="streetaddress[{{$i}}]" value="{{old("streetaddress.$i")}}"></li>
     @endfor
