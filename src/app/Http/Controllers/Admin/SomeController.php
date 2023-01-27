@@ -37,6 +37,7 @@ class SomeController extends Controller
     {
         return view('admin.jswage');
     }
+
     public function wageget(Request $request)
     {
         return redirect('admin/jswage');
