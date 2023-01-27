@@ -33,6 +33,12 @@ class SomeController extends Controller
         return response()->json($show);
     }
 
+    public function jswage(Request $request)
+    {
+        return view('admin.jswage');
+    }
+
+
     public function jstest3(Request $request)
     {
         return view('admin.jstest3');

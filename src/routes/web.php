@@ -28,7 +28,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
 
         Route::get('jstest3',[App\Http\Controllers\Admin\SomeController::class,'jstest3'])->name('jstest3');
         Route::get('jsget3',[App\Http\Controllers\Admin\SomeController::class,'jsget3'])->name('jsget3');
-
+        Route::get('jswage',[App\Http\Controllers\Admin\SomeController::class,'jswage'])->name('jswage');
 
         Route::get('somejs',[App\Http\Controllers\Admin\SomeController::class,'somejs'])->name('somejs');
 
