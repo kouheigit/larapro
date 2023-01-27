@@ -5,15 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Jstest3 extends Model
+class Attendance extends Model
 {
     use HasFactory;
-    protected $table = 'jstest3';
+    protected $table = 'attendances';
     protected $fillable = [
-        'name',
-        'city',
-        'streetname',
-        'streetaddress',
-        'hourly_wage',
-    ];
+        'worktime',
+        'missing_number',
+        ];
 }

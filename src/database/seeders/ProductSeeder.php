@@ -34,8 +34,9 @@ class ProductSeeder extends Seeder
                 'detail'=>$detail,
                 'day_id'=>$i,
             ];
+            DB::table('products')->insert($insert);
         }
-        DB::table('products')->insert($insert);
+
         //
     }
 }

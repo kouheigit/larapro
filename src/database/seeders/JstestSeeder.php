@@ -32,6 +32,5 @@ class JstestSeeder extends Seeder
             DB::table('jstest3')->insert($insert);
         }
         // DB::table('days')->insert($insert);
-
     }
 }
