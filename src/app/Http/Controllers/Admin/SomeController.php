@@ -37,6 +37,9 @@ class SomeController extends Controller
     {
         return view('admin.jswage');
     }
+    public function wageget(Request $request){
+        
+    }
 
 
     public function jstest3(Request $request)
