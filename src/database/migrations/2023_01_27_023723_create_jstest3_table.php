@@ -19,6 +19,7 @@ class CreateJstest3Table extends Migration
             $table->string('city')->nullable();
             $table->string('streetname')->nullable();
             $table->string('streetaddress')->nullable();
+            $table->integer('hourly_wage')->nullable();
             $table->timestamps();
         });
     }

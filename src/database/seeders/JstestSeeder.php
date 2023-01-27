@@ -19,11 +19,13 @@ class JstestSeeder extends Seeder
         $faker = Faker\Factory::create('ja_JP');
         $now = Carbon\Carbon::now();
         for($i=0; $i<100; $i++){
+            $hourly_wage = rand(1000, 1300);
             $insert =[
                 'name'=>$faker->name,
                 'city'=>$faker->city,
                 'streetname'=>$faker->streetAddress,
                 'streetaddress'=>$faker->streetAddress,
+                'hourly_wage'=>$hourly_wage,
                 'created_at'=>$now,
                 'updated_at'=>$now,
             ];
