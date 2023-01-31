@@ -22,6 +22,7 @@ class SomeController extends Controller
             $value['streetname'] = $value->streetname;
             $value['streetaddress'] = $value->streetaddress;
             $show[] = $value;
+
         }
 
         /*
@@ -33,6 +34,7 @@ class SomeController extends Controller
         return response()->json($show);
     }
 
+    //現在開発中のメソット
     public function jswage(Request $request)
     {
         return view('admin.jswage');
@@ -40,6 +42,35 @@ class SomeController extends Controller
 
     public function wageget(Request $request)
     {
+        $name = $request->input('name');
+        $city = $request->input('city');
+        $streetname = $request->input('streetname');
+        $streetaddress = $request->input('streetaddress');
+        $workingtime = $request->input('workingtime');
+        //チェックボックス
+        $missing_number = $request->input('missing_number');
+
+        /*
+        $absence_check_value = 0;
+        if (isset($absence[$i])) {
+            $absence_check_value = 1;
+        }
+        */
+        for($i=0; $i<15; $i++){
+            $missing_check = 0;
+            if(isset($missing_number[$i])){
+                $missing_check = 1;
+            }
+            $value =[
+                'name'=>$name[$i],
+                'city'=>$city[$i],
+                'streetname'=>$streetname[$i],
+                'streetaddress'=>$streetaddress[$i],
+                'workingtime' =>$workingtime[$i],
+                'missing_nunmber'=>$missing_check,
+            ];
+
+        }
         return redirect('admin/jswage');
     }
 
@@ -190,7 +221,8 @@ class SomeController extends Controller
         return view('admin.jstest1');
     }
 
-    public function jsajax(Request $request){
+    public function jsajax(Request $request)
+    {
         $test = $request->test;
         if (isset($test)) {
             $test ="null以外";
