@@ -27,6 +27,5 @@ class AttendSeeder extends Seeder
             ];
             DB::table('attendances')->insert($insert);
         }
-
     }
 }

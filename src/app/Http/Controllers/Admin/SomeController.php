@@ -42,12 +42,18 @@ class SomeController extends Controller
 
     public function wageget(Request $request)
     {
+
+        //ここから3つはjstest3です
         $name = $request->input('name');
         $city = $request->input('city');
         $streetname = $request->input('streetname');
         $streetaddress = $request->input('streetaddress');
+
+
+        //ここから2つはAttendanceです
+        //労働時間
         $workingtime = $request->input('workingtime');
-        //チェックボックス
+        //欠勤
         $missing_number = $request->input('missing_number');
 
         /*
@@ -69,7 +75,6 @@ class SomeController extends Controller
                 'workingtime' =>$workingtime[$i],
                 'missing_nunmber'=>$missing_check,
             ];
-
         }
         return redirect('admin/jswage');
     }
