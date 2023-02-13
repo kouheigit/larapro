@@ -11,6 +11,20 @@ use Carbon\Carbon;
 
 class SomeController extends Controller
 {
+    public function searchtest(Request $request)
+    {
+
+        $name =$request->input('name');
+        if(isset($name)){
+            $query = Jstest3::query();
+            if ($name) {
+               $value =  $query->where('name', 'like', "%$name%")->get();
+            }
+        }else{
+            $value = Jstest3::all();
+        }
+        return view('admin.searchtest',compact('value'));
+    }
     public function ajaxtest(Request $request)
     {
         $name = $request->name;
