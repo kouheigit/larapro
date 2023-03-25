@@ -11,6 +11,10 @@ use Carbon\Carbon;
 
 class SomeController extends Controller
 {
+    public function jschange(Request $request)
+    {
+        return view('admin.jschange');
+    }
     public function searchtest(Request $request)
     {
 
