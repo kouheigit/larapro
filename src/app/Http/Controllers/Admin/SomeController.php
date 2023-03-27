@@ -7,14 +7,27 @@ use Illuminate\Http\Request;
 use App\Models\Jstest;
 use App\Models\Jstest3;
 use App\Models\Someform;
+use App\Models\Testform;
 use Carbon\Carbon;
 
 class SomeController extends Controller
 {
     public function jschange(Request $request)
     {
-        return view('admin.jschange');
+        /*
+         $value = Testform::where('id', 1)->value('name');
+         $value1 = Testform::where('id', 2)->value('name');*/
+        $value = Testform::all();
+        $i = 0;
+        foreach($value as $values){
+            $changeval[$i] = $values->name;
+            $i++;
+        }
+
+        return view('admin.jschange',compact('changeval'));
     }
+
+
     public function searchtest(Request $request)
     {
 
