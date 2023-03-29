@@ -24,6 +24,10 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::namespace('Auth')->group(function(){
+        Route::get('ajaxtest',[App\Http\Controllers\Admin\SomeController::class,'ajaxtest'])->name('ajaxtest');
+
+        Route::get('jschangeajax',[App\Http\Controllers\Admin\SomeController::class,'jschangeajax'])->name('jschangeajax');
+
         Route::get('jschange',[App\Http\Controllers\Admin\SomeController::class,'jschange'])->name('jschange');
 
         Route::get('searchtest',[App\Http\Controllers\Admin\SomeController::class,'searchtest'])->name('searchtest');

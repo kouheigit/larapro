@@ -12,6 +12,9 @@ use Carbon\Carbon;
 
 class SomeController extends Controller
 {
+    public function jschangeajax(Request $request){
+
+    }
     public function jschange(Request $request)
     {
         /*
