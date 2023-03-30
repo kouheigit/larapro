@@ -12,7 +12,24 @@ use Carbon\Carbon;
 
 class SomeController extends Controller
 {
-    public function jschangeajax(Request $request){
+    public function jschangeajax(Request $request)
+    {
+        $changeid_1 = $request->changeid_1;//idは1
+
+        $changeid_2 = $request->changeid_2;//idは2
+
+        if($changeid_1 == 0){
+            Testform::where('id',1)->update(['name'=>1]);
+        }else{
+            Testform::where('id',1)->update(['name'=>0]);
+        }
+
+        if($changeid_2 == 0){
+            Testform::where('id',2)->update(['name'=>1]);
+        }else{
+            Testform::where('id',2)->update(['name'=>0]);
+        }
+
 
     }
     public function jschange(Request $request)
