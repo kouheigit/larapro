@@ -21,7 +21,7 @@
        }
    }
 </script>
-
+<!--syamugame-->
 {{--まだbuttonの値、class name　idがちゃんと設定できていないのでmanagement.bladeをもう一度参照して作り直せ--}}
 <input type="button" class="id1"type="button"value="値がある"onclick="valuechange">
 <input type="hidden" id="id1_hidden" name="id1_value" value={{$changeval[0]}}>
