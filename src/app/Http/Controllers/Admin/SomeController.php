@@ -14,6 +14,7 @@ class SomeController extends Controller
 {
     public function jschangeajax(Request $request)
     {
+        /*backend changevalue*/
         $changeid_1 = $request->changeid_1;//idは1
 
         $changeid_2 = $request->changeid_2;//idは2
