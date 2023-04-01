@@ -19,6 +19,8 @@ class SomeController extends Controller
 
         $changeid_2 = $request->changeid_2;//idは2
 
+
+
         if($changeid_1 == 0){
             Testform::where('id',1)->update(['name'=>1]);
         }else{

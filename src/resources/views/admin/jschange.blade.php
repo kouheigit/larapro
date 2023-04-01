@@ -8,10 +8,10 @@
             flag = confirm("ボタンID1の値を変更しますか?");
             if (flag == true) {
                 $.ajax({
-                    type: "get",
-                    url: "jschangeajax",
+                    type:"get",
+                    url:"jschangeajax",
                     data: {
-                        changeid_1:changeid_1
+                        changeid_1:changeid_1,
                     },
                     cache: false,
                     dataType: 'json',
@@ -24,15 +24,34 @@
                 })
             }
         }
+        /*
         function valuechange1() {
             var changeid_2 = $(this).data('value');
-            flag = ("ボタンID2の値を変更しますか?");
+            flag = confirm("ボタンID2の値を変更しますか?");
+            if (flag == true) {
+                $.ajax({
+                    type:"get",
+                    url:"jschangeajax",
+                    data: {
+                        changeid_2:changeid_2
+                    },
+                    cache: false,
+                    dataType: 'json',
+                })
+            }
+        }*/
+
+        function valuechange1() {
+            //  $(document).on('click', '[id^=voucher_comment]', function(){
+            var voucher_id = $(this).data('value');
+            flag = confirm("ボタンID2の値を変更しますか?");
+            // 「はい」が押されたときの処理
             if (flag == true) {
                 $.ajax({
                     type: "get",
                     url: "jschangeajax",
                     data: {
-                        changeid_2:changeid_2
+                        changeid_2:changeid_2,
                     },
                     cache: false,
                     dataType: 'json',
