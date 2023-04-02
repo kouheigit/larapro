@@ -16,9 +16,7 @@ class SomeController extends Controller
     {
         /*backend changevalue*/
         $changeid_1 = $request->changeid_1;//idは1
-
         $changeid_2 = $request->changeid_2;//idは2
-
 
 
         if($changeid_1 == 0){
@@ -32,8 +30,6 @@ class SomeController extends Controller
         }else{
             Testform::where('id',2)->update(['name'=>0]);
         }
-
-
     }
     public function jschange(Request $request)
     {
