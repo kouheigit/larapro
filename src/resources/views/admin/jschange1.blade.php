@@ -27,11 +27,11 @@
                     dataType: 'json',
                 })
 
-                if($(idname).val() == 0){
-                    $(idname).val(1);
+                if($(text1).val() == 0){
+                    $(text1).val(1);
                     $(idname).val("値がある");
                 }else{
-                    $(idname).val(0);
+                    $(text1).val(0);
                     $(idname).val("値がない");
                 }
 
@@ -48,7 +48,20 @@
                     dataType: 'json',
                 })
             }
+                alert("伝票締の変更が完了しました");
+            }else{
+                alert("値の変更を取り消しました");
+                //location.reload();
             }
+
+            /*
+               alert("伝票締の変更が完了しました");
+                //location.reload();
+            }else{
+                alert("値の変更を取り消しました");
+                //location.reload();
+            }
+             */
         })
 
     });
@@ -72,10 +85,14 @@
 @else
     <input type="button" id="id1" class="btn" value="値がない">
     <input type="hidden" id="id1hidden" class="id1hidden" value={{$changeval[0]}}>
-    
+@endif
 
-
-<input type="button" id="id2" class="btn" value="値がある">
-<input type="hidden" id="id2hidden" class="id2hidden" value={{$changeval[0]}}>
+@if($changeval[0]==1)
+    <input type="button" id="id2" class="btn" value="値がある">
+    <input type="hidden" id="id2hidden" class="id2hidden" value={{$changeval[0]}}>
+@else
+    <input type="button" id="id2" class="btn" value="値がない">
+    <input type="hidden" id="id2hidden" class="id2hidden" value={{$changeval[0]}}>
+@endif
 
 
