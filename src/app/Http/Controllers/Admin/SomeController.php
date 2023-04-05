@@ -22,6 +22,12 @@ class SomeController extends Controller
         }else{
             Testform::where('id',1)->update(['name'=>0]);
         }
+
+        if($idvalue2 == 0){
+            Testform::where('id',2)->update(['name'=>1]);
+        }else{
+            Testform::where('id',2)->update(['name'=>0]);
+        }
     }
     public function jschange1(Request $request)
     {
