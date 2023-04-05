@@ -14,7 +14,14 @@ class SomeController extends Controller
 {
     public function jschangeajax1(Request $request)
     {
+        $idvalue1 = $request->idvalue1;
+        $idvalue2 = $request->idvalue2;
 
+        if($idvalue1 == 0){
+            Testform::where('id',1)->update(['name'=>1]);
+        }else{
+            Testform::where('id',1)->update(['name'=>0]);
+        }
     }
     public function jschange1(Request $request)
     {

@@ -17,7 +17,7 @@
                     type: "get",
                     url: "jschangeajax1",
                     data: {
-                        idvalue: idvalue1,
+                        idvalue1:idvalue,
                     },
                     cache: false,
                     dataType: 'json',
@@ -29,7 +29,7 @@
                     type: "get",
                     url: "jschangeajax1",
                     data: {
-                        idvalue: idvalue2,
+                        idvalue2:idvalue,
                     },
                     cache: false,
                     dataType: 'json',
