@@ -7,9 +7,35 @@
             var idname = $(this).attr("id");
            // var selectNo = $(this).val();
             var text1="." + idname + "hidden";
-            var getval = $(text1).val();
-            
-            alert(getval);
+            var idvalue = $(text1).val();
+
+            alert(text1);
+          　//  flag = confirm("ボタンの値を変更しますか?");
+            if(text1 == ".id1hidden") {
+                alert("id1成功")
+                $.ajax({
+                    type: "get",
+                    url: "jschangeajax1",
+                    data: {
+                        idvalue: idvalue1,
+                    },
+                    cache: false,
+                    dataType: 'json',
+                })
+            }
+            if(text1 == ".id2hidden"){
+                alert("id2成功")
+                $.ajax({
+                    type: "get",
+                    url: "jschangeajax1",
+                    data: {
+                        idvalue: idvalue2,
+                    },
+                    cache: false,
+                    dataType: 'json',
+                })
+            }
+
         })
     });
     /*
@@ -30,6 +56,7 @@
 
 <input type="button" id="id1" class="btn" value="値がある">
 <input type="hidden" id="id1hidden" class="id1hidden" value={{$changeval[0]}}>
+
 
 <input type="button" id="id2" class="btn" value="値がある">
 <input type="hidden" id="id2hidden" class="id2hidden" value={{$changeval[0]}}>
