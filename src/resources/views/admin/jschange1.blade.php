@@ -4,13 +4,17 @@
 <script type="text/javascript">
     $(function(){
         $('.btn').click(function(){
+            //classのbtnが押されると
             var idname = $(this).attr("id");
            // var selectNo = $(this).val();
             var text1="." + idname + "hidden";
             var idvalue = $(text1).val();
 
             alert(text1);
-          　//  flag = confirm("ボタンの値を変更しますか?");
+
+          　 flag = confirm("ボタンの値を変更しますか?");
+            if(flag == true){
+
             if(text1 == ".id1hidden") {
                 alert("id1成功")
                 $.ajax({
@@ -22,8 +26,17 @@
                     cache: false,
                     dataType: 'json',
                 })
+
+                if($(idname).val() == 0){
+                    $(idname).val(1);
+                    $(idname).val("値がある");
+                }else{
+                    $(idname).val(0);
+                    $(idname).val("値がない");
+                }
+
             }
-            if(text1 == ".id2hidden"){
+            if(text1 == ".id2hidden") {
                 alert("id2成功")
                 $.ajax({
                     type: "get",
@@ -35,8 +48,9 @@
                     dataType: 'json',
                 })
             }
-
+            }
         })
+
     });
     /*
     $(function(){
@@ -53,9 +67,9 @@
 <h1>ID番号1→{{$changeval[0]}}</h1>
 <h1>ID番号2→{{$changeval[1]}}</h1>
 
-
 <input type="button" id="id1" class="btn" value="値がある">
 <input type="hidden" id="id1hidden" class="id1hidden" value={{$changeval[0]}}>
+
 
 
 <input type="button" id="id2" class="btn" value="値がある">

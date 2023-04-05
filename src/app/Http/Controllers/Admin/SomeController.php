@@ -40,6 +40,7 @@ class SomeController extends Controller
         return view('admin.jschange1',compact('changeval'));
     }
 
+
     public function jschangeajax(Request $request)
     {
         /*backend changevalue*/
