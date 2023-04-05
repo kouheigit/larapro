@@ -66,10 +66,13 @@
 <h1>なめだるまジャン</h1>
 <h1>ID番号1→{{$changeval[0]}}</h1>
 <h1>ID番号2→{{$changeval[1]}}</h1>
-
-<input type="button" id="id1" class="btn" value="値がある">
-<input type="hidden" id="id1hidden" class="id1hidden" value={{$changeval[0]}}>
-
+@if($changeval[0]==1)
+    <input type="button" id="id1" class="btn" value="値がある">
+    <input type="hidden" id="id1hidden" class="id1hidden" value={{$changeval[0]}}>
+@else
+    <input type="button" id="id1" class="btn" value="値がない">
+    <input type="hidden" id="id1hidden" class="id1hidden" value={{$changeval[0]}}>
+    
 
 
 <input type="button" id="id2" class="btn" value="値がある">
