@@ -14,7 +14,7 @@ class SomeController extends Controller
 {
     public function jschangeajax1(Request $request)
     {
-        
+
     }
     public function jschange1(Request $request)
     {
