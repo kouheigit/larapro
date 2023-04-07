@@ -31,7 +31,7 @@ $(function(){
             alert("値の変更を取り消しました");
         }
     });
-    
+
     $('#id2').click(function(){
         var id2hidden = $('#id2hidden').val();
         flag = confirm("ボタンの値を変更しますか?");
