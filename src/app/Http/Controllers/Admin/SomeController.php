@@ -12,6 +12,19 @@ use Carbon\Carbon;
 
 class SomeController extends Controller
 {
+    //jschange2
+    public function jschange2(Request $request)
+    {
+        $value = Testform::all();
+        $i = 0;
+        foreach($value as $values) {
+            $changeval[$i] = $values->name;
+            $i++;
+        }
+
+        return view("admin.jschange2",compact('changeval'));
+    }
+
     public function jschangeajax1(Request $request)
     {
         $idvalue1 = $request->idvalue1;
