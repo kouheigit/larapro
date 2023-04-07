@@ -5,6 +5,7 @@
 <script type="text/javascript">
 
 $(function(){
+
     $('#id1').click(function() {
         var id1hidden = $('#id1hidden').val();
         flag = confirm("ボタンの値を変更しますか?");
@@ -30,9 +31,31 @@ $(function(){
             alert("値の変更を取り消しました");
         }
     });
-
+    
     $('#id2').click(function(){
-      alert("test");
+        var id2hidden = $('#id2hidden').val();
+        flag = confirm("ボタンの値を変更しますか?");
+        if(flag == true){
+            $.ajax({
+                type:"get",
+                url: "jschangeajax2",
+                data: {
+                    id2hidden:id2hidden
+                },
+                cache:false,
+                datatype: 'json,'
+            })
+            if($('#id2hidden').val() == 0){
+                $('#id2hidden').val(1);
+                $('#id2').val("値がない");
+            }else{
+                $('#id2hidden').val(0);
+                $('#id2').val("値がある");
+            }
+            alert("値の変更が完了しました");
+        }else{
+            alert("値の変更を取り消しました");
+        }
     })
 });
 

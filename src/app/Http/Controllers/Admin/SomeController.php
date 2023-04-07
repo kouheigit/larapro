@@ -16,11 +16,18 @@ class SomeController extends Controller
     public function jschangeajax2(Request $request)
     {
         $id1hidden = $request->id1hidden;
+        $id2hidden = $request->id2hidden;
 
         if($id1hidden==0){
             Testform::where('id',1)->update(['name'=>1]);
         }else{
             Testform::where('id',1)->update(['name'=>0]);
+        }
+
+        if($id2hidden==0){
+            Testform::where('id',2)->update(['name'=>1]);
+        }else{
+            Testform::where('id',2)->update(['name'=>0]);
         }
 
     }
