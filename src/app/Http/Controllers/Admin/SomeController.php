@@ -15,6 +15,14 @@ class SomeController extends Controller
     //jschange2
     public function jschangeajax2(Request $request)
     {
+        $id1hidden = $request->id1hidden;
+
+        if($id1hidden==0){
+            Testform::where('id',1)->update(['name'=>1]);
+        }else{
+            Testform::where('id',1)->update(['name'=>0]);
+        }
+
     }
 
     public function jschange2(Request $request)
