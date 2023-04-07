@@ -6,7 +6,18 @@ $(function(){
     $('#id1').click(function() {
         var hidden = $('#id1hidden').val();
         alert(hidden);
-        
+        flag = confirm("ボタンの値を変更しますか?");
+        if(flag == true){
+            $.ajax({
+                type:"get",
+                url:"jschangeajax2",
+                data: {
+                    hidden:hidden
+                },
+                cache:false,
+                datatype:'json',
+            })
+        }
        // var hidden = $(this).attr("id");
 
     });

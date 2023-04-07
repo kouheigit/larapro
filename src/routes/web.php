@@ -25,6 +25,8 @@ require __DIR__.'/auth.php';
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::namespace('Auth')->group(function(){
 
+        Route::get('jschangeajax2',[App\Http\Controllers\Admin\SomeController::class,'jschangeajax2'])->name('jschangeajax2');
+
         Route::get('jschange2',[App\Http\Controllers\Admin\SomeController::class,'jschange2'])->name('jschange2');
 
         Route::get('ajaxtest',[App\Http\Controllers\Admin\SomeController::class,'ajaxtest'])->name('ajaxtest');
@@ -32,6 +34,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
         Route::get('jschangeajax',[App\Http\Controllers\Admin\SomeController::class,'jschangeajax'])->name('jschangeajax');
 
         Route::get('jschange1',[App\Http\Controllers\Admin\SomeController::class,'jschange1'])->name('jschange1');
+
         Route::get('jschangeajax1',[App\Http\Controllers\Admin\SomeController::class,'jschangeajax1'])->name('jschangeajax1');
 
         Route::get('jschange',[App\Http\Controllers\Admin\SomeController::class,'jschange'])->name('jschange');

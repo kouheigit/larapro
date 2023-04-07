@@ -13,6 +13,10 @@ use Carbon\Carbon;
 class SomeController extends Controller
 {
     //jschange2
+    public function jschangeajax2(Request $request)
+    {
+    }
+
     public function jschange2(Request $request)
     {
         $value = Testform::all();
@@ -41,6 +45,7 @@ class SomeController extends Controller
         }else{
             Testform::where('id',2)->update(['name'=>0]);
         }
+
     }
     public function jschange1(Request $request)
     {
