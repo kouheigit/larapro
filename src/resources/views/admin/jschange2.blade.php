@@ -2,6 +2,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <script type="text/javascript">
+$(function(){
+    $('#id1').click(function() {
+        var hidden = $('#id1hidden').val();
+        alert(hidden);
+        
+       // var hidden = $(this).attr("id");
+
+    });
+
+
+});
 
 </script>
 <h1>ID番号1→{{$changeval[0]}}</h1>
