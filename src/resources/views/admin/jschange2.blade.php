@@ -30,6 +30,10 @@ $(function(){
             alert("値の変更を取り消しました");
         }
     });
+
+    $('#id2').click(function(){
+      alert("test");
+    })
 });
 
 </script>
