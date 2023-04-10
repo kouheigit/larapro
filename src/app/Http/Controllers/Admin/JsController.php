@@ -10,6 +10,11 @@ use App\Http\Controllers\Controller;
 
 class JsController extends Controller
 {
+    public function ajaxchange4(Request $request)
+    {
+
+    }
+
     public function jschange4(Request $request)
     {
         $value = Testform::all();
