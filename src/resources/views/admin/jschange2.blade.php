@@ -72,5 +72,10 @@ $(function(){
 @endif
 
 
-<input type="button" id="id2" class="id2" value="値がある">
-<input type="hidden" id="id2hidden" class="id2hidden" value={{$changeval[1]}}>
+@if($changeval[1]==1)
+    <input type="button" id="id2" class="id2" value="値がある"onclick>
+    <input type="hidden" id="id2hidden" class="id2hidden" value={{$changeval[1]}}>
+@else
+    <input type="button" id="id2" class="id2" value="値がない"onclick>
+    <input type="hidden" id="id2hidden" class="id2hidden" value={{$changeval[1]}}>
+@endif

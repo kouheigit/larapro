@@ -3,6 +3,9 @@
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 <script>
+    $(function (){
+        $(.)
+    });
 </script>
 
 {{--
@@ -12,7 +15,6 @@
 
 <input type="button" id="idchange" class="idchange" value="値がある"onclick="">
 <input type="hidden" id="idchangehidden" class="idchangehidden" value={{$changes[2]}}>
-
 
 <input type="button" id="id1change" class="id1change" value="値がある">
 <input type="hidden" id="id1changehidden" class="id1changehidden" value={{$changes[3]}}>
