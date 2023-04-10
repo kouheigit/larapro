@@ -4,11 +4,33 @@
 <script>
     $(function(){
         $('.id1').click(function() {
-          window.alert("test");
+            var id1hidden =$('.id1hidden').val();
+          window.alert(id1hidden);
+          $.ajax({
+              type:"get",
+              url:"ajaxchange4",
+              data: {
+                  id1hidden:id1hidden,
+              },
+              cache:false,
+              datatype:'json',
+          })
+          /*
+          $.ajax({
+                type:"get",
+                url: "jschangeajax2",
+                data: {
+                    id1hidden:id1hidden
+                },
+                cache:false,
+                datatype: 'json',
+            })
+           */
         })
+
         $('.id2').click(function(){
-            window.alert("id2test");
-            
+            var id2hidden = $('.id2hidden').val();
+            window.alert(id2hidden);
         })
     });
 </script>
@@ -20,7 +42,7 @@
 <input type="hidden" id="id1hidden" class="id1hidden" value={{$changes[2]}}>
 
 <input type="button" id="id2" class="id2" value="値がない">
-<input type="hidden" id="id2hidden" class="id2hidden" valule={{$changes[3]}}>
+<input type="hidden" id="id2hidden" class="id2hidden" value={{$changes[3]}}>
 {{--
 <input type="button" id="id1" class="id1" value="値がない"onclick>
 <input type="hidden" id="id1hidden" class="id1hidden" value={{$changes[2]}}>
