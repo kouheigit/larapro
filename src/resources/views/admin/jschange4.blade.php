@@ -68,7 +68,7 @@
 <h1>{{$changes[2]}}</h1>
 <h1>{{$changes[3]}}</h1>
 
-<input type="text" id="idans" class="idans" name="idans"value="">
+<input type="text" id="idans" class="idans" name="idans">
 
 @if($changes[2]==0)
     <input type="button" id="id1" class="id1" value="値がない">
