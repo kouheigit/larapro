@@ -15,22 +15,20 @@
               cache:false,
               datatype:'json',
           })
-          /*
-          $.ajax({
-                type:"get",
-                url: "jschangeajax2",
-                data: {
-                    id1hidden:id1hidden
-                },
-                cache:false,
-                datatype: 'json',
-            })
-           */
         })
 
         $('.id2').click(function(){
             var id2hidden = $('.id2hidden').val();
             window.alert(id2hidden);
+            $.ajax({
+                type:"get",
+                url:"ajaxchange5",
+                data: {
+                    id2hidden:id2hidden,
+                },
+                cache:false,
+                datatype:'json',
+            })
         })
     });
 </script>

@@ -29,6 +29,8 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
 
         Route::get('jschange4',[App\Http\Controllers\Admin\JsController::class,'jschange4'])->name('jschange4');
 
+        Route::get('ajaxchange5',[App\Http\Controllers\Admin\JsController::class,'ajaxchange5'])->name('ajaxchange5');
+
         Route::get('ajaxchange4',[App\Http\Controllers\Admin\JsController::class,'ajaxchange4'])->name('ajaxchange4');
 
 
