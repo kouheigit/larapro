@@ -5,31 +5,54 @@
     $(function(){
         $('.id1').click(function() {
             var id1hidden =$('.id1hidden').val();
-          window.alert(id1hidden);
-          $.ajax({
-              type:"get",
-              url:"ajaxchange4",
-              data: {
-                  id1hidden:id1hidden,
-              },
-              cache:false,
-              datatype:'json',
-          })
-            
+           flag = confirm("値を変更しますか?");
+          if(flag==true) {
+              $.ajax({
+                  type: "get",
+                  url: "ajaxchange4",
+                  data: {
+                      id1hidden:id1hidden,
+                  },
+                  cache: false,
+                  datatype: 'json',
+              })
+              if($('#id1hidden').val() == 0){
+                  $('#id1hidden').val(1);
+                  $('#id1').val("値がない");
+              }else{
+                  $('#id1hidden').val(0);
+                  $('#id1').val("値がある");
+              }
+              alert("値の変更が完了しました");
+          }else{
+              alert("値の変更を取り消しました");
+          }
         })
 
         $('.id2').click(function(){
             var id2hidden = $('.id2hidden').val();
-            window.alert(id2hidden);
-            $.ajax({
-                type:"get",
-                url:"ajaxchange5",
-                data: {
-                    id2hidden:id2hidden,
-                },
-                cache:false,
-                datatype:'json',
-            })
+            flag = confirm("値を変更しますか?");
+            if(flag==true) {
+                $.ajax({
+                    type: "get",
+                    url: "ajaxchange5",
+                    data: {
+                        id2hidden: id2hidden,
+                    },
+                    cache: false,
+                    datatype: 'json',
+                })
+                if($('#id2hidden').val() == 0){
+                    $('#id2hidden').val(1);
+                    $('#id2').val("値がない");
+                }else{
+                    $('#id2hidden').val(0);
+                    $('#id2').val("値がある");
+                }
+                alert("値の変更が完了しました");
+            }else{
+                alert("値の変更を取り消しました");
+            }
         })
     });
 </script>

@@ -5,6 +5,7 @@
 <script type="text/javascript">
     <!--larapro start-->
 $(function(){
+
     $('#id1').click(function() {
         var id1hidden = $('#id1hidden').val();
         flag = confirm("ボタンの値を変更しますか?");
