@@ -72,9 +72,6 @@
     });
 </script>
 
-<h1>{{$changes[2]}}</h1>
-<h1>{{$changes[3]}}</h1>
-
 <input type="text" id="idans1" class="idans1" name="idans1"size="30">
 @if($changes[2]==0)
     <input type="button" id="id1" class="id1" value="値がない">
@@ -95,11 +92,4 @@
     <input type="button" id="id2" class="id2" value="値がある">
     <input type="hidden" id="id2hidden" class="id2hidden" value={{$changes[3]}}>
 @endif
-{{--
-<input type="button" id="id1" class="id1" value="値がない"onclick>
-<input type="hidden" id="id1hidden" class="id1hidden" value={{$changes[2]}}>
 
-
-<input type="button" id="id2" class="id2" value="値がない"onclick>
-<input type="hidden" id="id2hidden" class="id2hidden" value={{$changes[3]}}>
---}}
