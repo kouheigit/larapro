@@ -15,6 +15,13 @@
                   },
                   cache: false,
                   datatype: 'json',
+                  success:function(o){
+                      $('.idans1').val(o);
+                  },
+                  error:function(xhr, ts, err){
+                      console.log(err);
+                      // alert("error");
+                  }
               })
               if($('#id1hidden').val() == 0){
                   $('#id1hidden').val(1);
@@ -68,8 +75,7 @@
 <h1>{{$changes[2]}}</h1>
 <h1>{{$changes[3]}}</h1>
 
-<input type="text" id="idans" class="idans" name="idans">
-
+<input type="text" id="idans1" class="idans1" name="idans1"size="30">
 @if($changes[2]==0)
     <input type="button" id="id1" class="id1" value="値がない">
     <input type="hidden" id="id1hidden" class="id1hidden" value={{$changes[2]}}>
@@ -77,7 +83,10 @@
     <input type="button" id="id1" class="id1" value="値がある">
     <input type="hidden" id="id1hidden" class="id1hidden" value={{$changes[2]}}>
 @endif
+<br>
+<br>
 
+<input type="text" id="idans" class="idans" name="idans"size="30">
 
 @if($changes[3]==0)
     <input type="button" id="id2" class="id2" value="値がない">

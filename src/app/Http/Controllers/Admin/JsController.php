@@ -16,8 +16,12 @@ class JsController extends Controller
 
             if ($id1hidden == 0) {
                 Testform::where('id', 3)->update(['name' => 1]);
+                $value ="ID1の値を0から1に変更しました。";
+                return response()->json($value);
             } else {
                 Testform::where('id', 3)->update(['name' => 0]);
+                $value ="ID1の値を1から0に変更しました。";
+                return response()->json($value);
             }
 
     }
