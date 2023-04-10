@@ -12,6 +12,12 @@ class JsController extends Controller
 {
     public function jschange4(Request $request)
     {
-        return view('admin.jschange4');
+        $value = Testform::all();
+        $i = 0;
+        foreach($value as $values){
+            $changes[$i] = $values->name;
+            $i++;
+        }
+        return view('admin.jschange4',compact('changes'));
     }
 }
