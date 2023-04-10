@@ -5,7 +5,6 @@
 <script type="text/javascript">
     <!--larapro start-->
 $(function(){
-
     $('#id1').click(function() {
         var id1hidden = $('#id1hidden').val();
         flag = confirm("ボタンの値を変更しますか?");
@@ -63,19 +62,19 @@ $(function(){
 <h1>ID番号1→{{$changeval[0]}}</h1>
 <h1>ID番号2→{{$changeval[1]}}</h1>
 
-@if($changeval[0]==1)
-    <input type="button" id="id1" class="id1" value="値がある"onclick>
+@if($changeval[0]==0)
+    <input type="button" id="id1" class="id1" value="値がない"onclick>
     <input type="hidden" id="id1hidden" class="id1hidden" value={{$changeval[0]}}>
 @else
-    <input type="button" id="id1" class="id1" value="値がない">
+    <input type="button" id="id1" class="id1" value="値がある"onclick>
     <input type="hidden" id="id1hidden" class="id1hidden" value={{$changeval[0]}}>
 @endif
 
 
-@if($changeval[1]==1)
-    <input type="button" id="id2" class="id2" value="値がある"onclick>
+@if($changeval[1]==0)
+    <input type="button" id="id2" class="id2" value="値がなる"onclick>
     <input type="hidden" id="id2hidden" class="id2hidden" value={{$changeval[1]}}>
 @else
-    <input type="button" id="id2" class="id2" value="値がない"onclick>
+    <input type="button" id="id2" class="id2" value="値がある"onclick>
     <input type="hidden" id="id2hidden" class="id2hidden" value={{$changeval[1]}}>
 @endif
