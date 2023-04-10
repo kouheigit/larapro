@@ -37,11 +37,19 @@
                     type: "get",
                     url: "ajaxchange5",
                     data: {
-                        id2hidden: id2hidden,
+                        id2hidden:id2hidden,
                     },
                     cache: false,
                     datatype: 'json',
+                    success:function(o){
+                        $('.idans').val(o);
+                    },
+                    error:function(xhr, ts, err){
+                        console.log(err);
+                        // alert("error");
+                    }
                 })
+
                 if($('#id2hidden').val() == 0){
                     $('#id2hidden').val(1);
                     $('#id2').val("値がない");
@@ -59,6 +67,8 @@
 
 <h1>{{$changes[2]}}</h1>
 <h1>{{$changes[3]}}</h1>
+
+<input type="text" id="idans" class="idans" name="idans"value="">
 
 @if($changes[2]==0)
     <input type="button" id="id1" class="id1" value="値がない">

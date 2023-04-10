@@ -19,6 +19,7 @@ class JsController extends Controller
             } else {
                 Testform::where('id', 3)->update(['name' => 0]);
             }
+
     }
     public function ajaxchange5(Request $request)
     {
@@ -30,6 +31,9 @@ class JsController extends Controller
         } else {
             Testform::where('id', 4)->update(['name' => 0]);
         }
+
+        $show ="test";
+        return response()->json($show);
 
     }
 
