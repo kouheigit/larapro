@@ -10,6 +10,10 @@ use App\Http\Controllers\Controller;
 
 class JsController extends Controller
 {
+    public function jschange5(Request $request)
+    {
+        return view('admin.jschange5');
+    }
     public function ajaxchange4(Request $request)
     {
         $id1hidden = $request->id1hidden;
@@ -39,9 +43,6 @@ class JsController extends Controller
             $value ="ID2の値を1から0に変更しました。";
             return response()->json($value);
         }
-
-        $show ="test";
-        return response()->json($show);
 
     }
 
