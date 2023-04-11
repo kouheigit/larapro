@@ -13,8 +13,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(AttendSeeder::class);
+        $this->call(FirstSeeder::class);
         /*
+         *
+        $this->call(AttendSeeder::class);
         $this->call(JstestSeeder::class);
         $this->call(AdminSeeder::class);
         $this->call(ShowformSeeder::class);

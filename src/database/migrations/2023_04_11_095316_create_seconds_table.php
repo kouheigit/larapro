@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFirstsTable extends Migration
+class CreateSecondsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateFirstsTable extends Migration
      */
     public function up()
     {
-        Schema::create('firsts', function (Blueprint $table) {
+        Schema::create('seconds', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
-            $table->string('value')->nullable();
+            $table->string('discount')->nullable();
             $table->timestamps();
         });
     }
@@ -28,7 +27,6 @@ class CreateFirstsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('firsts');
+        Schema::dropIfExists('seconds');
     }
 }
-
