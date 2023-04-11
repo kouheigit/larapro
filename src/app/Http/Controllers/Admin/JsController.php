@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+use App\Models\Jstest;
 use App\Models\Testform;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -14,6 +15,22 @@ class JsController extends Controller
     {
         return view('admin.jschange5');
     }
+    public function jschange5post(Request $request)
+    {
+        $one = $request->input('one');
+        $two = $request->input('two');
+        $three = $request->input('three');
+        for($i=0; $i<15; $i++){
+            $value = [
+                'one' => $one[$i],
+                'two' => $two[$i],
+                'three'=>$three[$i],
+            ];
+            //Jstest::insert($value);
+        }
+        return redirect('admin/jstest5');
+    }
+
     public function ajaxchange4(Request $request)
     {
         $id1hidden = $request->id1hidden;
