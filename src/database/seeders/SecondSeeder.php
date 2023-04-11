@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Carbon;
 
 class SecondSeeder extends Seeder
 {
@@ -17,15 +18,14 @@ class SecondSeeder extends Seeder
         for($i=0; $i<100; $i++)
         {
             $now = Carbon\Carbon::now();
-            $discount = rand(100000, 250000);
+            $discount = rand(10, 15);
             $insert =[
-                'discount'=>$product_name[$rand],
+                'discount'=>$discount,
                 'created_at'=>$now,
                 'updated_at'=>$now,
             ];
-            DB::table('firsts')->insert($insert);
+            DB::table('seconds')->insert($insert);
         }
 
-    }
     }
 }
