@@ -16,6 +16,7 @@ class CreateFirstsTable extends Migration
         Schema::create('firsts', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
+            $table->string('product_code')->nullable();
             $table->string('value')->nullable();
             $table->timestamps();
         });
@@ -31,4 +32,3 @@ class CreateFirstsTable extends Migration
         Schema::dropIfExists('firsts');
     }
 }
-

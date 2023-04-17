@@ -21,8 +21,23 @@ class FirstSeeder extends Seeder
             $now = Carbon\Carbon::now();
             $rand = array_rand($product_name);
             $product_value = rand(100000, 250000);
+            //product_code
+            $product_code = null;
+            if($product_name[$rand]=='MacbookPro'){
+                $product_code = 1;
+            }else if($product_name[$rand]=='液晶テレビ'){
+                $product_code = 2;
+            }else if($product_name[$rand]=='食洗機'){
+                $product_code = 3;
+            }else if($product_name[$rand]=='DVDレコーダー'){
+                $product_code = 4;
+            }else if($product_name[$rand]=='マッサージチェア'){
+                $product_code = 5;
+            }
+
             $insert =[
                 'name'=>$product_name[$rand],
+                'product_code'=>$product_code,
                 'value'=>$product_value,
                 'created_at'=>$now,
                 'updated_at'=>$now,
