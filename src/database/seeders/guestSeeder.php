@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facade\DB;
+use Illuminate\Support\Facades\DB;
 use Database\Seeders\Facades\Factory;
 use Faker;
 use Carbon;
@@ -31,6 +31,7 @@ class guestSeeder extends Seeder
                 'created_at'=>$now,
                 'updated_at'=>$now,
             ];
+           DB::table('guests')->insert($insert);
         }
     }
 }
