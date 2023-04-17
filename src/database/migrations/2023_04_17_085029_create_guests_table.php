@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSecondsTable extends Migration
+class CreateGuestsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class CreateSecondsTable extends Migration
      */
     public function up()
     {
-        Schema::create('seconds', function (Blueprint $table) {
+        Schema::create('guests', function (Blueprint $table) {
             $table->id();
-            $table->string('discount')->nullable();
+            // $table->string('name')->nullable();
+            $table->string('name')->nullable();
+            $table->string('product_code')->nullable();
+            $table->string('product_code1')->nullable();
+            $table->string('product_code2')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +31,6 @@ class CreateSecondsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('seconds');
+        Schema::dropIfExists('guests');
     }
 }
