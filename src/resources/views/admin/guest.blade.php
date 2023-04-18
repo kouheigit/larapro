@@ -18,9 +18,8 @@
                 dataType:'json',
                 success: function (o) {
 
-                    
                     //valuetest(しっかりと値が習得できた)
-                    //$('.name').val(o);
+                    $('.name').val(o);
                 },
                 error:function(xhr, ts, err){
                     console.log(err);

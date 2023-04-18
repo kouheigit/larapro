@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Jstest;
 use App\Models\Jstest3;
+use App\Models\guest;
 use App\Models\Someform;
 use App\Models\Testform;
 use Carbon\Carbon;
@@ -14,8 +15,12 @@ class SomeController extends Controller
 {
     public function ajaxguest(Request $request)
     {
+
         $id_value = $request->id_value;
-        return response()->json($id_value);
+
+        $test = guest::where('id',1)->value('name');
+
+        return response()->json($test);
 
     }
 
