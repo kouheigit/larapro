@@ -6,11 +6,23 @@
         $('.id').on('keyup',function(){
             id_part = $(this).attr('id');
             id = '#' + id_part;
-            //idの値を取得した
+            //idの値を取得した奴
             id_value = $(id).val();
-
-
-            //alert(id_value);
+            $.ajax({
+                type:"get",
+                url:"ajaxguest",
+                data:{
+                    id:id_value,
+                },
+                cache: false,
+                dataType:'json',
+                success: function (o) {
+                },
+                error:function(xhr, ts, err){
+                    console.log(err);
+                    // alert("error");
+                },
+            })
         })
     })
 </script>
