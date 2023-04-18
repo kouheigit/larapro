@@ -18,9 +18,9 @@ class SomeController extends Controller
 
         $id_value = $request->id_value;
 
-        $test = guest::where('id',1)->value('name');
+        $guest_value = guest::where('id',$id_value)->value('name');
 
-        return response()->json($test);
+        return response()->json($guest_value);
 
     }
 
