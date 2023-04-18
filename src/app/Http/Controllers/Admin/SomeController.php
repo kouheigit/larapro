@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Jstest;
 use App\Models\Jstest3;
 use App\Models\guest;
+use App\Models\First;
 use App\Models\Someform;
 use App\Models\Testform;
 use Carbon\Carbon;
@@ -18,9 +19,32 @@ class SomeController extends Controller
 
         $id_value = $request->id_value;
 
-        $guest_value = guest::where('id',$id_value)->value('name');
+        $guest_value = guest::where('id',$id_value)->get();
 
-        return response()->json($guest_value);
+        foreach($guest_value as $guest_values){
+            $value = $guest_values->product_code;
+        }
+        /*
+        foreach($value as $values) {
+            $changeval[$i] = $values->name;
+            $i++;
+        }*/
+        //↑ここまでのコードが正しい
+
+        /*
+        $query = First::query();
+
+        if ($nameKeyword) {
+            $query->where(DB::raw('CONCAT(first_name, last_name)'), 'like', '%' . $nameKeyword . '%');
+        }
+        */
+        /*
+        foreach($value as $values) {
+            $changeval[$i] = $values->name;
+            $i++;
+        }*/
+
+        return response()->json($value);
 
     }
 
