@@ -12,6 +12,12 @@ use Carbon\Carbon;
 
 class SomeController extends Controller
 {
+
+    public function guest(Request $request)
+    {
+        return view('admin.guest');
+    }
+
     //jschange2
     public function jschangeajax2(Request $request)
     {
