@@ -23,6 +23,9 @@ class SomeController extends Controller
 
         foreach($guest_value as $guest_values){
             $value = $guest_values->product_code;
+            /*
+            $value = $guest_values->product_code1;
+            $value = $guest_values->product_code2;*/
         }
         /*
         foreach($value as $values) {
@@ -44,7 +47,7 @@ class SomeController extends Controller
             $i++;
         }*/
 
-        return response()->json($value);
+        return response()->json($guest_value);
 
     }
 
