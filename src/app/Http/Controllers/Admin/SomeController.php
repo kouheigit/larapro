@@ -14,7 +14,9 @@ class SomeController extends Controller
 {
     public function ajaxguest(Request $request)
     {
-        
+        $id_value = $request->id_value;
+        return response()->json($id_value);
+
     }
 
     public function guest(Request $request)
