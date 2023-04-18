@@ -12,6 +12,10 @@ use Carbon\Carbon;
 
 class SomeController extends Controller
 {
+    public function ajaxguest(Request $request)
+    {
+        
+    }
 
     public function guest(Request $request)
     {
