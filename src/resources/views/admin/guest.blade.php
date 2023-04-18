@@ -1,9 +1,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-<scrip>
+<script type="text/javascript">
+    $(function(){
+        $('.id').on('keyup',function(){
+            id_part = $(this).attr('id');
+            id = '#' + id_part;
+            //idの値を取得した
+            id_value = $(id).val();
 
-</scrip>
+
+            //alert(id_value);
+        })
+    })
+</script>
 
 <h1>購入履歴</h1>
 <li>ID　　　　　　　　　購入者名　　　　　　購入商品　　　　　　購入商品1　　　　 　購入商品2</li>
