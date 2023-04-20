@@ -22,11 +22,26 @@ class SomeController extends Controller
 
         $guest_value = guest::where('id',$id_value)->get();
 
+
         foreach($guest_value as $guest_values){
-            $value = $guest_values->product_code;
-            /*
-            $value = $guest_values->product_code1;
-            $value = $guest_values->product_code2;*/
+                if($guest_values->name){
+                    $value_name = $guest_values->name;
+                }
+
+                if($guest_values->product_code){
+                    $value_product_code = $guest_values->product_code;
+                }
+
+                if($guest_values->product_code1)
+                {
+                    $value_product_code1 = $guest_values->product_code1;
+                }
+
+                if($guest_values->product_code2)
+                {
+                    $value_product_code2 = $guest_values->product_code2;
+                }
+
         }
         /*
         foreach($value as $values) {
@@ -48,8 +63,7 @@ class SomeController extends Controller
             $i++;
         }*/
 
-        return response()->json($guest_value);
-
+        return response()->json($value_name);
     }
 
     public function guest(Request $request)
