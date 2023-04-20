@@ -14,7 +14,7 @@ use Carbon\Carbon;
 
 class SomeController extends Controller
 {
-    //ajaxguest
+    //ajaxgueststart
     public function ajaxguest(Request $request)
     {
 
