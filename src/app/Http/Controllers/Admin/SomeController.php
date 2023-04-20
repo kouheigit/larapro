@@ -43,13 +43,22 @@ class SomeController extends Controller
                 }
         }
 
+
+
         //test_code
-        $jointest = Post::join('firsts', 'posts.id', '=', 'comments.posts_id')
-            ->where('comments.text', 'like', '%あいうえお%')->get();
+        $query = First::query();
 
 
+        $players = DB::table('players')
+            ->join('teams', 'players.team_id', '=', 'teams.id')
+            ->get();
 
+        /*if($pic){
+            $query->join('employees as emp_pic','emp_pic.id','=','pic')->where('emp_pic.employee_name','LIKE','%'.$pic.'%');
+            //$query->where('pic', 'LIKE', '%'.$pic.'%');
+        }*/
 
+        //ここから削除する
         /*
         foreach($value as $values) {
             $changeval[$i] = $values->name;
