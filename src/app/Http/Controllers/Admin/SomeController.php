@@ -41,8 +41,15 @@ class SomeController extends Controller
                 {
                     $value_product_code2 = $guest_values->product_code2;
                 }
-
         }
+
+        //test_code
+        $jointest = Post::join('firsts', 'posts.id', '=', 'comments.posts_id')
+            ->where('comments.text', 'like', '%あいうえお%')->get();
+
+
+
+
         /*
         foreach($value as $values) {
             $changeval[$i] = $values->name;
