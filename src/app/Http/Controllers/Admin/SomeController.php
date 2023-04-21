@@ -17,6 +17,9 @@ class SomeController extends Controller
     //ajaxgueststart
     public function ajaxguest(Request $request)
     {
+        /*
+        \DB::enableQueryLog();
+        dd(\DB::getQueryLog());*/
 
         $id_value = $request->id_value;
 
@@ -25,9 +28,8 @@ class SomeController extends Controller
      //   \DB::enableQueryLog();
         $query = guest::select('guests.name as name','guests.product_code as product_code','firsts.value');
 //        $query = guest::query();
-        $guest_value = $query->join('firsts','guests.product_code1','=','firsts.product_code')->where('guests.id',$id_value)->get();
+        $guest_value = $query->join('firsts','guests.product_code','=','firsts.product_code')->where('guests.id',$id_value)->get();
        // dd(\DB::getQueryLog());
-
 
 
         foreach($guest_value as $guest_values){
@@ -38,6 +40,7 @@ class SomeController extends Controller
                 if($guest_values->product_code){
                     $value_product_code = $guest_values->product_code;
                 }
+                $value_names = $guest_values->name;
                 $value_value = $guest_values->value;
 /*
                 if($guest_values->product_code1)
@@ -92,7 +95,7 @@ class SomeController extends Controller
             $i++;
         }*/
 
-        return response()->json($value_name);
+        return response()->json($value_names);
     }
 
     public function guest(Request $request)
