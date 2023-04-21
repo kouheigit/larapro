@@ -12,5 +12,6 @@ class First extends Model
     protected $fillable = [
         'name',
         'value',
+        'product_code',
     ];
 }
