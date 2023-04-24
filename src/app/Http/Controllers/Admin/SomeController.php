@@ -28,74 +28,29 @@ class SomeController extends Controller
      //   \DB::enableQueryLog();
         $query = guest::select('guests.name as name','guests.product_code as product_code','firsts.value');
 //        $query = guest::query();
+
         $guest_value = $query->join('firsts','guests.product_code','=','firsts.product_code')->where('guests.id',$id_value)->get();
+
+
        // dd(\DB::getQueryLog());
 
 
-        foreach($guest_value as $guest_values){
-                if($guest_values->name){
-                    $value_name = $guest_values->name;
-                }
 
-                if($guest_values->product_code){
-                    $value_product_code = $guest_values->product_code;
-                }
-                $value_names = $guest_values->name;
-                $value_value = $guest_values->value;
-/*
-                if($guest_values->product_code1)
-                {
-                    $value_product_code1 = $guest_values->product_code1;
-                }
-
-                if($guest_values->product_code2)
-                {
-                    $value_product_code2 = $guest_values->product_code2;
-                }*/
+        foreach($guest_value as $guest_values) {
+            if ($guest_values->name) {
+                $value_name = $guest_values->name;
+            }
+            $value_value = $guest_values->value;
         }
 
+        $query1 = guest::query();
+        $guest_value1 = $query1->join('firsts','guests.product_code1','=','firsts.product_code')->where('guests.id',$id_value)->get();
+                //新しいテストコード
+                foreach ($guest_value1 as $guest_values1){
+                    $value_value1 = $guest_values1->value;
+                }
 
-
-        //test_code
-
-/*
-        $query = First::query();
-
-       $name =  $query->join('guests','firsts.product_code','=','guests.product_code')->where('guests.product_code','LIKE','%'.$value_product_code.'%');
-*/
-
-      //  $players = DB::table('players')->join('teams', 'players.team_id', '=', 'teams.id')->get();
-
-
-        /*if($pic){
-            $query->join('employees as emp_pic','emp_pic.id','=','pic')->where('emp_pic.employee_name','LIKE','%'.$pic.'%');
-            //$query->where('pic', 'LIKE', '%'.$pic.'%');
-        }*/
-
-
-
-        //ここから削除する
-        /*
-        foreach($value as $values) {
-            $changeval[$i] = $values->name;
-            $i++;
-        }*/
-        //↑ここまでのコードが正しい
-
-        /*
-        $query = First::query();
-
-        if ($nameKeyword) {
-            $query->where(DB::raw('CONCAT(first_name, last_name)'), 'like', '%' . $nameKeyword . '%');
-        }
-        */
-        /*
-        foreach($value as $values) {
-            $changeval[$i] = $values->name;
-            $i++;
-        }*/
-
-        return response()->json($value_names);
+        return response()->json($value_value);
     }
 
     public function guest(Request $request)
