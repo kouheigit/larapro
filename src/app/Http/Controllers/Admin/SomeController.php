@@ -49,9 +49,11 @@ class SomeController extends Controller
                     $value_value1 = $guest_values1->value;
                 }
 
+        \DB::enableQueryLog();
         $query2 = guest::select('guests.name as name','guests.product_code2 as product_code','firsts.value');
        // $query2= guest::query();
         $guest_value2 = $query2->join('firsts','guests.product_code2','=','firsts.product_code')->where('guests.id',$id_value)->get();
+        dd(\DB::getQueryLog());
                  foreach($guest_value2 as $guest_values2){
                      $value_value2 = $guest_values2->value;
                  }
