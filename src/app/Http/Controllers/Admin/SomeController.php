@@ -17,6 +17,7 @@ class SomeController extends Controller
     //ajaxgueststart
     public function ajaxguest(Request $request)
     {
+        //ajaxguest start
         /*
         \DB::enableQueryLog();
         dd(\DB::getQueryLog());*/
@@ -34,8 +35,6 @@ class SomeController extends Controller
 
        // dd(\DB::getQueryLog());
 
-
-
         foreach($guest_value as $guest_values) {
             if ($guest_values->name) {
                 $value_name = $guest_values->name;
@@ -43,14 +42,15 @@ class SomeController extends Controller
             $value_value = $guest_values->value;
         }
 
-        $query1 = guest::query();
+       // $query1 = guest::query();
+        $query1 = guest::select('guests.name as name','guests.product_code1 as product_code','firsts.value');
         $guest_value1 = $query1->join('firsts','guests.product_code1','=','firsts.product_code')->where('guests.id',$id_value)->get();
                 //新しいテストコード
                 foreach ($guest_value1 as $guest_values1){
                     $value_value1 = $guest_values1->value;
                 }
 
-        return response()->json($value_value);
+        return response()->json($value_value1);
     }
 
     public function guest(Request $request)
