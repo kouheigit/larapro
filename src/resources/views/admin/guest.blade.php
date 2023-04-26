@@ -17,9 +17,10 @@
                 cache: false,
                 dataType:'json',
                 success: function (o) {
-
-                    //valuetest(しっかりと値が習得できた)
-                    $('.name').val(o);
+                    $.each(o,function(key,obj){
+                        //$('.name').val(o);
+                        //alert(o);
+                    });
                 },
                 error:function(xhr, ts, err){
                     console.log(err);
