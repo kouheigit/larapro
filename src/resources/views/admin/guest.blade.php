@@ -28,6 +28,46 @@
             })
         })
     })
+    /*
+        $(function() {
+            $('.number').on('keyup', function ()
+            {
+                id = $(this).attr('id');
+                data = id;
+                id_data = data.replace(/[^0-9]/g, '');
+                id2 = '#year'+id_data;
+                id1 = '#billing_day'+id_data;
+                $.ajax({
+                    type: "get",
+                    url: "opmajax",
+                    data: {
+                        year: $(id2).val(),
+                        number: $(this).val(),
+                    },
+                    cache: false,
+                    dataType: 'json',
+                    success: function (o) {
+                        $.each(o,function(key,obj){
+                            id1 = '#billing_day' + id_data;
+                            id_payment_schedule ='#payment_schedule'+ id_data;
+                            site_name ='#site_name' + id_data;
+                            console.log(obj.invoice.slice(0, 10));
+                            $(id1).attr('value', obj.invoice.slice(0, 10));
+                            $(id_payment_schedule).attr('value',obj.allpay);
+                            $(site_name).attr('value',obj.site_name);
+                            //ループの外で
+                            max = obj.allsum;
+                            id_data++;
+                        });
+                        allsum();
+                    },
+                    error: function (xhr, ts, err) {
+                        console.log(err);
+                    }
+                })
+            });
+        });
+     */
 </script>
 <h1>購入履歴</h1>
 <li>ID　　　　　　　　　購入者名　　　　　　購入商品　　　　　　購入商品1　　　　 　購入商品2</li>

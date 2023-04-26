@@ -64,7 +64,6 @@ class SomeController extends Controller
                      $all_value[] =  $value_value2;
                  }
 
-                 dd($all_value);
         return response()->json($all_value);
     }
 
