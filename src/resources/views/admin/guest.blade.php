@@ -17,10 +17,15 @@
                 cache: false,
                 dataType:'json',
                 success: function (o) {
+                    $('.name').val(obj);
+                    /*
                     $.each(o,function(key,obj){
-                        //$('.name').val(o);
+                        $('.name').val(obj);
+                        $('.product_code').val(obj);
+                        $('.product_code1').val(obj);
+                        $('.product_code2').val(o);
                         //alert(o);
-                    });
+                    });*/
                 },
                 error:function(xhr, ts, err){
                     console.log(err);
