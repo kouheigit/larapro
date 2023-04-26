@@ -24,7 +24,7 @@ class SomeController extends Controller
         $id_value = $request->id_value;
 
         //all_valueを取得する
-        $all_value[] = null;
+        //$all_value[] = null;
 
 
         //取得したい値をselectに全部取得する
@@ -36,11 +36,11 @@ class SomeController extends Controller
             if ($guest_values->name) {
                 $value_name = $guest_values->name;
                 //all_valueを追加した
-                $all_value[] = $value_name;
+                $all_value['name'] = $value_name;
             }
             $value_value = $guest_values->value;
             //all_valueを追加した
-            $all_value[] = $value_value;
+            $all_value['product_code'] = $value_value;
         }
 
        // $query1 = guest::query();
@@ -50,7 +50,7 @@ class SomeController extends Controller
                 foreach ($guest_value1 as $guest_values1){
                     $value_value1 = $guest_values1->value;
                     //all_valueを追加した
-                    $all_value[] = $value_value1;
+                    $all_value['product_code1'] = $value_value1;
                 }
 
 
@@ -61,9 +61,9 @@ class SomeController extends Controller
                  foreach($guest_value2 as $guest_values2){
                      $value_value2 = $guest_values2->value;
                      //all_valueを追加した
-                     $all_value[] =  $value_value2;
+                     $all_value['product_code2'] =  $value_value2;
                  }
-
+                 //dd($all_value);
         return response()->json($all_value);
     }
 

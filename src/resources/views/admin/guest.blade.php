@@ -17,15 +17,15 @@
                 cache: false,
                 dataType:'json',
                 success: function (o) {
-                    $('.name').val(obj);
-                    /*
-                    $.each(o,function(key,obj){
-                        $('.name').val(obj);
-                        $('.product_code').val(obj);
-                        $('.product_code1').val(obj);
-                        $('.product_code2').val(o);
+                   // $('.name').val(obj);
+                    //$.each(o,function(key,obj){
+                      //  console.log(key);
+                        $('.name').val(o.name);
+                        $('.product_code').val(o.product_code);
+                        $('.product_code1').val(o.product_code1);
+                        $('.product_code2').val(o.product_code2);
                         //alert(o);
-                    });*/
+                   // });
                 },
                 error:function(xhr, ts, err){
                     console.log(err);
@@ -35,6 +35,8 @@
         })
     })
     /*
+     $val['allsum'] = $sum;
+
         $(function() {
             $('.number').on('keyup', function ()
             {
