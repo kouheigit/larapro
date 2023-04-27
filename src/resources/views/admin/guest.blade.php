@@ -8,6 +8,15 @@
             id = '#' + id_part;
             //idの値を取得した奴
             id_value = $(id).val();
+
+            //数字
+           const numbers = id_part.replace(/[^0-9]/g, '');
+            names = '#' + 'name'+ numbers;
+            product_codes = '#' + 'product_code' + numbers;
+            product_codes1 = '#' + `product_code1[${numbers}]`;
+            product_codes2 = '#' + `product_code2[${numbers}]`;
+            alert(product_codes1);
+
             $.ajax({
                 type:"get",
                 url:"ajaxguest",
@@ -20,10 +29,10 @@
                    // $('.name').val(obj);
                     //$.each(o,function(key,obj){
                       //  console.log(key);
-                        $('.name').val(o.name);
-                        $('.product_code').val(o.product_code);
-                        $('.product_code1').val(o.product_code1);
-                        $('.product_code2').val(o.product_code2);
+                        $(names).val(o.name);
+                        $(product_codes).val(o.product_code);
+                        $(product_codes1).val(o.product_code1);
+                        $(product_codes2).val(o.product_code2);
                         //alert(o);
                    // });
                 },
