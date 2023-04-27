@@ -16,6 +16,7 @@ class SomeController extends Controller
 {
     public function ajaxguest(Request $request)
     {
+        //ajaxstart
         /*
         \DB::enableQueryLog();
         dd(\DB::getQueryLog());*/
