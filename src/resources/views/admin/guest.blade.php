@@ -6,19 +6,13 @@
         $('.id').on('keyup',function(){
             id_part = $(this).attr('id');
             id = '#' + id_part;
-            //idの値を取得した奴
             id_value = $(id).val();
 
-            //数字
            const numbers = id_part.replace(/[^0-9]/g, '');
             names = '#' + 'name'+ numbers;
             product_codes = '#' + 'product_code' + numbers;
             first_products = '#' + 'first_product' + numbers;
             second_products = '#' + 'second_product' + numbers;
-            /*
-            product_codes1 = '#' + `product_code1[${numbers}]`;
-            product_codes2 = '#' + `product_code2[${numbers}]`;*/
-            alert(second_products);
 
             $.ajax({
                 type:"get",
@@ -30,18 +24,13 @@
                 dataType:'json',
                 success: function (o) {
                    // $('.name').val(obj);
-                    //$.each(o,function(key,obj){
-                      //  console.log(key);
                         $(names).val(o.name);
                         $(product_codes).val(o.product_code);
                         $(first_products).val(o.first_product);
                         $(second_products).val(o.second_product);
-                        //alert(o);
-                   // });
                 },
                 error:function(xhr, ts, err){
                     console.log(err);
-                    // alert("error");
                 },
             })
         })
