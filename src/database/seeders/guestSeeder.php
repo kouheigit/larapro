@@ -21,13 +21,13 @@ class guestSeeder extends Seeder
         $now = Carbon\Carbon::now();
         for($i=0; $i<100; $i++){
             $product_value = rand(1, 5);
-            $product_value1 = rand(1, 5);
-            $product_value2 = rand(1, 5);
+            $first_product = rand(1, 5);
+            $second_product = rand(1, 5);
             $insert =[
                 'name'=>$faker->name,
                 'product_code'=>$product_value,
-                'product_code1'=>$product_value1,
-                'product_code2'=>$product_value2,
+                'first_product'=>$first_product,
+                'second_product'=>$second_product,
                 'created_at'=>$now,
                 'updated_at'=>$now,
             ];

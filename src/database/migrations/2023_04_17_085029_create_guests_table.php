@@ -18,8 +18,11 @@ class CreateGuestsTable extends Migration
             // $table->string('name')->nullable();
             $table->string('name')->nullable();
             $table->string('product_code')->nullable();
+            $table->string('first_product')->nullable();
+            $table->string('second_product')->nullable();
+            /*
             $table->string('product_code1')->nullable();
-            $table->string('product_code2')->nullable();
+            $table->string('product_code2')->nullable();*/
             $table->timestamps();
         });
     }

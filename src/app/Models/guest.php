@@ -12,16 +12,7 @@ class guest extends Model
     protected $fillable = [
         'name',
         'product_code',
-        'product_code1',
-        'product_code2',
+        'first_product',
+        'second_product',
     ];
-    /*
-    use HasFactory;
-    protected $table = 'jstests';
-    protected $fillable = [
-        'name',
-        'city',
-        'streetname',
-        'streetaddress',
-    ];*/
 }

@@ -23,10 +23,6 @@ class SomeController extends Controller
 
         $id_value = $request->id_value;
 
-        //all_valueを取得する
-        //$all_value[] = null;
-        
-        //取得したい値をselectに全部取得する
         $query = guest::select('guests.name as name','guests.product_code as product_code','firsts.value');
         $guest_value = $query->join('firsts','guests.product_code','=','firsts.product_code')->where('guests.id',$id_value)->get();
 
@@ -43,24 +39,31 @@ class SomeController extends Controller
         }
 
        // $query1 = guest::query();
+        /*
         $query1 = guest::select('guests.name as name','guests.product_code1 as product_code','firsts.value');
-        $guest_value1 = $query1->join('firsts','guests.product_code1','=','firsts.product_code')->where('guests.id',$id_value)->get();
-                //新しいテストコード
+        $guest_value1 = $query1->join('firsts','guests.product_code1','=','firsts.product_code')->where('guests.id',$id_value)->get();*/
+
+        $query1 = guest::select('guests.name as name','guests.first_product as product_code','firsts.value');
+        $guest_value1 = $query1->join('firsts','guests.first_product','=','firsts.product_code')->where('guests.id',$id_value)->get();
+
                 foreach ($guest_value1 as $guest_values1){
                     $value_value1 = $guest_values1->value;
                     //all_valueを追加した
-                    $all_value['product_code1'] = $value_value1;
+                    $all_value['first_product'] = $value_value1;
                 }
 
-
+/*
         $query2 = guest::select('guests.name as name','guests.product_code2 as product_code','firsts.value');
-       // $query2= guest::query();
-        $guest_value2 = $query2->join('firsts','guests.product_code2','=','firsts.product_code')->where('guests.id',$id_value)->get();
+        $guest_value2 = $query2->join('firsts','guests.product_code2','=','firsts.product_code')->where('guests.id',$id_value)->get();*/
+
+        $query2 = guest::select('guests.name as name','guests.second_product as product_code','firsts.value');
+        $guest_value2 = $query2->join('firsts','guests.second_product','=','firsts.product_code')->where('guests.id',$id_value)->get();
+
 
                  foreach($guest_value2 as $guest_values2){
                      $value_value2 = $guest_values2->value;
                      //all_valueを追加した
-                     $all_value['product_code2'] =  $value_value2;
+                     $all_value['second_product'] =  $value_value2;
                  }
                  //dd($all_value);
         return response()->json($all_value);
