@@ -5,7 +5,25 @@
     $(function(){
         function allsum(){
             //合計
+            max = 0;
+            for(let i = 0; i < 15; i++){
+                product_code = '#product_code'+i;
+                price = $(product_code).val();
+                max = max + Number(price);
+            }
+            for(let i = 0; i < 15; i++){
+                first_product = '#first_product'+i;
+                price = $(first_product).val();
+                max = max + Number(price);
+            }
+            for(let i =0; i < 15; i++){
+                second_product ='#second_product'+i;
+                price = $(second_product).val();
+                max = max + Number(price)
+            }
             sum = '#sum';
+            $(sum).attr('value',max);
+
         }
         /*
         function allsum(){
@@ -47,6 +65,8 @@
                         $(product_codes).val(o.product_code);
                         $(first_products).val(o.first_product);
                         $(second_products).val(o.second_product);
+                    allsum();
+
                 },
                 error:function(xhr, ts, err){
                     console.log(err);
