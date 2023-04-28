@@ -3,6 +3,25 @@
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <script type="text/javascript">
     $(function(){
+        function allsum(){
+            //合計
+            sum = '#sum';
+        }
+        /*
+        function allsum(){
+            id_payment_schedule ='#payment_schedule0';
+            price = $(id_payment_schedule).val();
+            max = 0;
+            for (let i = 0; i < 14; i++){
+                id_payment_schedule ='#payment_schedule'+i;
+                price = $(id_payment_schedule).val();
+                max = max + Number(price);
+            }
+            id_max ='#total_amount';
+            $(id_max).attr('value',max);
+            console.log(max);
+        }
+         */
         $('.id').on('keyup',function(){
             id_part = $(this).attr('id');
             id = '#' + id_part;
