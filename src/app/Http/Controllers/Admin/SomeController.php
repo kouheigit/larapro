@@ -26,7 +26,7 @@ class SomeController extends Controller
         //all_valueを取得する
         //$all_value[] = null;
 
-
+        //code fixstart
         //取得したい値をselectに全部取得する
         $query = guest::select('guests.name as name','guests.product_code as product_code','firsts.value');
         $guest_value = $query->join('firsts','guests.product_code','=','firsts.product_code')->where('guests.id',$id_value)->get();
