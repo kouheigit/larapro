@@ -11,9 +11,17 @@ use App\Models\First;
 use App\Models\Someform;
 use App\Models\Testform;
 use Carbon\Carbon;
+use PDF;
 
 class SomeController extends Controller
 {
+    public function pdf(Request $request)
+    {
+        //ここのPDFしたいbladeを読み込ませる
+        $pdf = PDF::loadView('admin.pdf');
+        return $pdf->download('test.pdf');
+    }
+
     public function ajaxguest(Request $request)
     {
         /*
