@@ -17,7 +17,6 @@ use PDF;
 
 class SomeController extends Controller
 {
-//モグゴリ
     public function pdftest(Request $request)
     {
         // TCPDFオブジェクトを作成
