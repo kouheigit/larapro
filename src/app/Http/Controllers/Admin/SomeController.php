@@ -18,7 +18,7 @@ class SomeController extends Controller
     public function pdf(Request $request)
     {
         //ここのPDFしたいbladeを読み込ませる
-        $pdf = PDF::loadView('admin.pdf');
+        $pdf = PDF::loadView('admin.guest');
         return $pdf->download('test.pdf');
     }
 
