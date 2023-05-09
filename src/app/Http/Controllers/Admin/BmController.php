@@ -16,6 +16,7 @@ class BmController extends Controller
 {
     public function index(Request $request)
     {
+        //bmstart
         return view('admin.Bm');
     }
 }
