@@ -11,10 +11,37 @@ use App\Models\First;
 use App\Models\Someform;
 use App\Models\Testform;
 use Carbon\Carbon;
+use TCPDF;
+use setasign\Fpdi\Tcpdf\Fpdi;
 use PDF;
 
 class SomeController extends Controller
 {
+
+    public function pdftest(Request $request)
+    {
+        // TCPDFオブジェクトを作成
+        $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+
+        // PDFの設定を変更
+        $pdf->SetCreator(PDF_CREATOR);
+        $pdf->SetAuthor('Author');
+        $pdf->SetTitle('Title');
+        $pdf->SetSubject('Subject');
+        $pdf->SetKeywords('Keywords');
+
+        // ページを追加
+        $pdf->AddPage();
+
+        // フォントを設定
+        $pdf->SetFont('kozminproregular', '', 12);
+
+        // テキストを追加
+        $pdf->Write(5, 'Hello, World!');
+
+        // ファイルを出力
+        $pdf->Output('hello.pdf', 'I');
+    }
     public function pdf(Request $request)
     {
         //ここのPDFしたいbladeを読み込ませる
