@@ -14,4 +14,12 @@ class BmController extends Controller
     {
         return view('admin.Bm');
     }
+    public function addvalue(Request $request)
+    {
+        $year = $request->input('year');
+        $number = $request->input('number');
+        
+
+
+    }
 }
