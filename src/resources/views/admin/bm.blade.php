@@ -1,4 +1,4 @@
-<h1>テスト</h1>
+<h1>テストサイト</h1>
 @for($i=0; $i<15; $i++)
     <li><input type="text" class="id" id="id{{$i}}"name="id[{{$i}}]"value="{{old("id.$i")}}"><input type="text" class="year" id="year{{$i}}"name="year[{{$i}}]"value="{{old("year.$i")}}"><input type="text" class="number" id="number{{$i}}"name="number[{{$i}}]"value="{{old("number.$i")}}"><input type="text" class="item" id="item{{$i}}"name="item[{{$i}}]"value="{{old("item.$i")}}"><input type="text" class="quantity" id="quantity{{$i}}"name="quantity[{{$i}}]"value="{{old("quantity.$i")}}"><input type="text" class="unit" id="unit{{$i}}"name="unit[{{$i}}]"value="{{old("unit.$i")}}"><input type="text" class="price" id="price{{$i}}"name="price[{{$i}}]"value="{{old("price.$i")}}"><input type="text" class="taxation" id="taxation{{$i}}"name="taxation[{{$i}}]"value="{{old("taxation.$i")}}"><input type="text" class="sum" id="sum{{$i}}"name="sum[{{$i}}]"value="{{old("sum.$i")}}"><input type="checkbox" class="taxation" id="taxation[{{$i}}]" name="taxation[{{$i}}]" value={{$i}}></li>
 @endfor
