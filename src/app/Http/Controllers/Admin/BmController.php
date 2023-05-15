@@ -16,10 +16,17 @@ class BmController extends Controller
     }
     public function addvalue(Request $request)
     {
+        //配列ではない値
         $year = $request->input('year');
         $number = $request->input('number');
-        
 
+        //配列の値
+        $item = $request->input('item');
+        $quantity = $request->input('quantity');
+        $unit = $request->input('unit');
+        $price = $request->input('price');
+        $sum = $request->input('sum');
+        $taxation = $request->input('taxation');
 
     }
 }
