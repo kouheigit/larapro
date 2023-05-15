@@ -26,6 +26,8 @@ require __DIR__.'/auth.php';
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::namespace('Auth')->group(function(){
 
+        Route::get('domppdf',[App\Http\Controllers\Admin\SomeController::class,'domppdf']);
+
         Route::get('pdftest',[App\Http\Controllers\Admin\SomeController::class,'pdftest']);
 
         Route::get('bm',[App\Http\Controllers\Admin\BmController::class,'index'])->name('bm');

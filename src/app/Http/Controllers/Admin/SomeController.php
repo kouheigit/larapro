@@ -17,6 +17,11 @@ use PDF;
 
 class SomeController extends Controller
 {
+    public function domppdf(Request $request)
+    {
+        $pdf = PDF::loadView('admin.guest');
+        return $pdf->download('test.pdf');
+    }
     public function pdftest(Request $request)
     {
         // TCPDFオブジェクトを作成

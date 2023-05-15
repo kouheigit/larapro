@@ -1,3 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>PDF</title>
+    <style>
+        @font-face{
+            font-family: ipag;
+            font-style: normal;
+            font-weight: normal;
+            src:url('{{ storage_path('fonts/ipag.ttf')}}');
+        }
+        @font-face{
+            font-family: ipag;
+            font-style: normal;
+            font-weight: bold;
+            src:url('{{ storage_path('fonts/ipag.ttf')}}');
+        }
+        body {
+            font-family: ipag;
+        }
+    </style>
+</head>
+<!--ここまで--->
+<body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
@@ -82,3 +107,4 @@
     <li><input type="text" class="id" id="id{{$i}}"name="id[{{$i}}]"value="{{old("id.$i")}}"> <input type="text" class="name" id="name{{$i}}"name="name[{{$i}}]"value="{{old("name.$i")}}">　<input type="text" class="product_code" id="product_code{{$i}}"name="product_code[{{$i}}]"value="{{old("product_code.$i")}}">　<input type="text" class="first_product"id="first_product{{$i}}"value="{{old("first_product.$i")}}">　<input type="text" class="second_product"id="second_product{{$i}}"value="{{old("second_product.$i")}}"></li>
 @endfor
     <b>合計</b><input type="text" class="sum" id="sum" name="sum" value="{{old("sum")}}">
+</body>
