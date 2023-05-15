@@ -15,7 +15,7 @@ class Billingmanagement_list extends Model
         'item',
         'quantity',
         'unit',
-        'unit_price',
+        'price',
         'taxation',
         'sum',
     ];
