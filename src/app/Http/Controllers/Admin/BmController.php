@@ -38,5 +38,17 @@ class BmController extends Controller
         $ctsv = $request->input('ctsv');
         $sum = $request->input('sum');
         $remarks = $request->input('remarks');
+
+        for($i=0; $i<14; $i++){
+            $inset = [
+                'item'=>$item[$i],
+                'quantity'=>$quantity[$i],
+                'unity'=>$unit[$i],
+                'price'=>$price[$i],
+                'sum'=>$sum[$i],
+
+
+            ];
+        }
     }
 }
