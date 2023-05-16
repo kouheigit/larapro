@@ -15,15 +15,17 @@ class CreateBillingmanagementListsTable extends Migration
     {
         Schema::create('billingmanagement_lists', function (Blueprint $table) {
             $table->id();
-            $table->integer('year');
-            $table->integer('number');
-            $table->string('item');
-            $table->double('quantity');
-            $table->string('unit');
-            $table->integer('price');
-            $table->smallInteger('taxation');
-            $table->integer('sum');
+            $table->integer('year')->nullable();
+            $table->integer('number')->nullable();
+            $table->string('item')->nullable();
+            $table->double('quantity')->nullable();
+            $table->string('unit')->nullable();
+            $table->integer('price')->nullable();
+            $table->smallInteger('taxation')->nullable();
+            $table->integer('sum')->nullable();
             $table->timestamps();
+
+
         });
     }
 

@@ -15,12 +15,12 @@ class CreateBillingmanagementTaxesTable extends Migration
     {
         Schema::create('billingmanagement_taxes', function (Blueprint $table) {
             $table->id();
-            $table->integer('tax');
-            $table->integer('value');
-            $table->integer('subtotal');
-            $table->integer('ctsv');
-            $table->integer('total');
-            $table->string('remarks');
+            $table->integer('tax')->nullable();
+            $table->integer('value')->nullable();
+            $table->integer('subtotal')->nullable();
+            $table->integer('ctsv')->nullable();
+            $table->integer('total')->nullable();
+            $table->string('remarks')->nullable();
             $table->timestamps();
         });
     }

@@ -19,6 +19,4 @@ class Billingmanagement_list extends Model
         'taxation',
         'sum',
     ];
-
-
 }
