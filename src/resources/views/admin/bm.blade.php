@@ -12,7 +12,6 @@
 @endfor
     <br>
     <br>
-    <!--消費税関連テーブル-->
     <b>消費税関連</b>
     <br>
         消費税<input type="text" class="tax" id="tax" name="tax" value="{{old("tax")}}">有効値<input type="text" class="value" id="value" name="value" value="{{old("value")}}">
