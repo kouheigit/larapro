@@ -48,18 +48,22 @@ class BmController extends Controller
 
         //Bm_list
         for($i=0; $i<14; $i++){
+            $taxation_check = 0;
+            if(isset($taxation[$i])){
+                $taxation_check = 1;
+            }
+            
             $inset_list = [
                 //Bm_list配列出ない値
                 'year'=>$year,
                 'number'=>$number,
-
                 //Bm_list配列の値
                 'item'=>$item[$i],
                 'quantity'=>$quantity[$i],
                 'unit'=>$unit[$i],
                 'price'=>$price[$i],
                 'sum'=>$sum[$i],
-                'taxation'=>$taxation,
+                'taxation'=>$taxation_check,
                 'created_at'=>new Carbon('Asia/Tokyo'),
             ];
             Billingmanagement_list::insert($inset_list);
@@ -75,7 +79,6 @@ class BmController extends Controller
             'created_at'=>new Carbon('Asia/Tokyo'),
         ];
         Billingmanagement_tax::insert($insert_tax);
-        dd($inset_list);
         return redirect('admin/bm');
     }
 }
