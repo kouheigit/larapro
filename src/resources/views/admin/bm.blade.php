@@ -1,6 +1,7 @@
 <h1>テストサイト</h1>
 <form method="GET" action="{{ route('admin.addvalue') }}">
     @csrf
+    <!--案件番号-->
     <b>案件番号</b>
     <br>
 <input type="text" class="year" id="year" name="year"value="{{old("year")}}">-<input type="text" class="number" id="number"name="number"value="{{old("number")}}">
@@ -11,9 +12,10 @@
 @endfor
     <br>
     <br>
+    <!--消費税関連テーブル-->
     <b>消費税関連</b>
     <br>
-        消費税<input type="text" class="tax" id="tax" name="tax" value="{{old("tax")}}">有効値<input type="text" class="value" id="value" name="value" value="value">
+        消費税<input type="text" class="tax" id="tax" name="tax" value="{{old("tax")}}">有効値<input type="text" class="value" id="value" name="value" value="{{old("value")}}">
         <br>
         小計<input type="text" class="subtotal" id="subtotal" name="subtotal" value="{{old("subtotal")}}">消費税有効値<input type="text" class="ctsv" id="ctsv" name="ctsv" value="{{old("ctsv")}}">
         <br>合計<input type="text" class="sum" id="sum" name="sum" value="{{old("sum")}}">備考欄<input type="text" class="remarks" id="remarks" name="remarks" value="{{old("remarks")}}">

@@ -32,6 +32,11 @@ class BmController extends Controller
 
         //Bmtax
         //配列ではない値
-
+        $tax = $request->input('tax');
+        $value =$request->input('value');
+        $subtotal = $request->input('subtotal');
+        $ctsv = $request->input('ctsv');
+        $sum = $request->input('sum');
+        $remarks = $request->input('remarks');
     }
 }
