@@ -36,9 +36,10 @@ class BmController extends Controller
         $value =$request->input('value');
         $subtotal = $request->input('subtotal');
         $ctsv = $request->input('ctsv');
-        $sum = $request->input('sum');
+        $total = $request->input('total');
         $remarks = $request->input('remarks');
 
+        /*
         for($i=0; $i<14; $i++){
             $inset = [
                 'item'=>$item[$i],
@@ -46,9 +47,7 @@ class BmController extends Controller
                 'unity'=>$unit[$i],
                 'price'=>$price[$i],
                 'sum'=>$sum[$i],
-
-
             ];
-        }
+        }*/
     }
 }

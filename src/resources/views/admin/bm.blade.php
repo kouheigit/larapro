@@ -18,7 +18,7 @@
         消費税<input type="text" class="tax" id="tax" name="tax" value="{{old("tax")}}">有効値<input type="text" class="value" id="value" name="value" value="{{old("value")}}">
         <br>
         小計<input type="text" class="subtotal" id="subtotal" name="subtotal" value="{{old("subtotal")}}">消費税有効値<input type="text" class="ctsv" id="ctsv" name="ctsv" value="{{old("ctsv")}}">
-        <br>合計<input type="text" class="sum" id="sum" name="sum" value="{{old("sum")}}">備考欄<input type="text" class="remarks" id="remarks" name="remarks" value="{{old("remarks")}}">
+        <br>合計<input type="text" class="total" id="total" name="total" value="{{old("total")}}">備考欄<input type="text" class="remarks" id="remarks" name="remarks" value="{{old("remarks")}}">
          <br>
          <input type="submit"value="送信する">
 </form>

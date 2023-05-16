@@ -19,7 +19,7 @@ class CreateBillingmanagementTaxesTable extends Migration
             $table->integer('value');
             $table->integer('subtotal');
             $table->integer('ctsv');
-            $table->integer('sum');
+            $table->integer('total');
             $table->string('remarks');
             $table->timestamps();
         });

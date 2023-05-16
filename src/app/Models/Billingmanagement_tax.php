@@ -14,7 +14,7 @@ class Billingmanagement_tax extends Model
         'value',
         'subtotal',
         'ctsv',
-        'sum',
+        'total',
         'remarks',
     ];
 }
