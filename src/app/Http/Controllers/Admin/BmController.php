@@ -38,21 +38,14 @@ class BmController extends Controller
         $ctsv = $request->input('ctsv');
         $total = $request->input('total');
         $remarks = $request->input('remarks');
-
-        /*
-        $absence_edit_check = 0;
-        if (isset($absence_edit[$id_value])) {
-            $absence_edit_check = 1;
-
-        }*/
-
+        
         //Bm_list
         for($i=0; $i<14; $i++){
             $taxation_check = 0;
             if(isset($taxation[$i])){
                 $taxation_check = 1;
             }
-            
+
             $inset_list = [
                 //Bm_list配列出ない値
                 'year'=>$year,
