@@ -39,15 +39,37 @@ class BmController extends Controller
         $total = $request->input('total');
         $remarks = $request->input('remarks');
 
-        /*
+        //Bm_list
         for($i=0; $i<14; $i++){
-            $inset = [
+            $inset_list = [
+                //Bm_list配列出ない値
+                'year'=>$year,
+                'number'=>$number,
+
+                //Bm_list配列の値
                 'item'=>$item[$i],
                 'quantity'=>$quantity[$i],
-                'unity'=>$unit[$i],
+                'unit'=>$unit[$i],
                 'price'=>$price[$i],
                 'sum'=>$sum[$i],
+                'taxation'=>$taxation,
+                'created_at'=>new Carbon('Asia/Tokyo'),
             ];
-        }*/
+            Billingmanagement_list::insert($inset_list);
+        }
+        //Bm_tax
+        $insert_tax = [
+            'tax'=>$tax,
+            'value'=>$value,
+            'subtotal'=>$subtotal,
+            'ctsv'=>$ctsv,
+            'total'=>$total,
+            'remarks'=>$remarks,
+            'created_at'=>new Carbon('Asia/Tokyo'),
+        ];
+        Billingmanagement_tax::insert($insert_tax);
+        dd($inset_list);
+        return redirect('admin/bm');
     }
 }
+

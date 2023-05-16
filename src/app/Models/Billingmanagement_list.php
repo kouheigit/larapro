@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Billingmanagement_list extends Model
 {
     use HasFactory;
-    protected $table = 'Billingmanagement_lists';
+    protected $table = 'billingmanagement_lists';
     protected $fillable = [
         'year',
         'number',
