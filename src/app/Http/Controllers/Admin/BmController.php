@@ -38,7 +38,7 @@ class BmController extends Controller
         $ctsv = $request->input('ctsv');
         $total = $request->input('total');
         $remarks = $request->input('remarks');
-        
+
         //Bm_list
         for($i=0; $i<14; $i++){
             $taxation_check = 0;

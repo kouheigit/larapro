@@ -1,4 +1,14 @@
 <h1>テストサイト</h1>
+
+<!--エラーメッセージ-->
+@if(count($errors) > 0)
+    <p>入力に問題があります</p>
+@endif
+
+@foreach($errors->all() as $error)
+    <li>{{ $error }}</li>
+@endforeach
+
 <form method="GET" action="{{ route('admin.addvalue') }}">
     @csrf
     <!--案件番号-->
