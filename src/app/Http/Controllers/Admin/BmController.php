@@ -84,6 +84,22 @@ class BmController extends Controller
         $rules['price.13'] = 'nullable|numeric|required_with:unit.13';
 
 
+        $rules['sum.0'] = 'nullable|numeric|required_with:price.0';
+        $rules['sum.1'] = 'nullable|numeric|required_with:price.1';
+        $rules['sum.2'] = 'nullable|numeric|required_with:price.2';
+        $rules['sum.3'] = 'nullable|numeric|required_with:price.3';
+        $rules['sum.4'] = 'nullable|numeric|required_with:price.4';
+        $rules['sum.5'] = 'nullable|numeric|required_with:price.5';
+        $rules['sum.6'] = 'nullable|numeric|required_with:price.6';
+        $rules['sum.7'] = 'nullable|numeric|required_with:price.7';
+        $rules['sum.8'] = 'nullable|numeric|required_with:price.8';
+        $rules['sum.9'] = 'nullable|numeric|required_with:price.9';
+        $rules['sum.10'] = 'nullable|numeric|required_with:price.10';
+        $rules['sum.11'] = 'nullable|numeric|required_with:price.11';
+        $rules['sum.12'] = 'nullable|numeric|required_with:price.12';
+        $rules['sum.13'] = 'nullable|numeric|required_with:price.13';
+
+
 
         $message =[
             'year.numeric'=>'案件番号は数字で入力する必要があります',
