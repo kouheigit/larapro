@@ -39,7 +39,6 @@ class BmController extends Controller
         $rules['item.11'] = 'nullable|required_with:quantity.11';
         $rules['item.12'] = 'nullable|required_with:quantity.12';
         $rules['item.13'] = 'nullable|required_with:quantity.13';
-        $rules['item.14'] = 'nullable|required_with:quantity.14';
 
         $rules['quantity.0'] = 'nullable|numeric|required_with:item.0';
         $rules['quantity.1'] = 'nullable|numeric|required_with:item.1';
@@ -47,6 +46,14 @@ class BmController extends Controller
         $rules['quantity.3'] = 'nullable|numeric|required_with:item.3';
         $rules['quantity.4'] = 'nullable|numeric|required_with:item.4';
         $rules['quantity.5'] = 'nullable|numeric|required_with:item.5';
+        $rules['quantity.7'] = 'nullable|numeric|required_with:item.7';
+        $rules['quantity.8'] = 'nullable|numeric|required_with:item.8';
+        $rules['quantity.9'] = 'nullable|numeric|required_with:item.9';
+        $rules['quantity.11'] = 'nullable|numeric|required_with:item.11';
+        $rules['quantity.12'] = 'nullable|numeric|required_with:item.12';
+        $rules['quantity.13'] = 'nullable|numeric|required_with:item.13';
+
+        
 
         $message =[
             'year.numeric'=>'案件番号は数字で入力する必要があります',
@@ -55,24 +62,38 @@ class BmController extends Controller
             'number.numeric'=>'案件番号は数字で入力する必要があります',
             'number.required_with'=>'案件番号は両枠入力する必要があります',
 
-            'item.0.required_with'=>'項目1が入力された場合は数量1の入力は必須です',
-            'item.1.required_with'=>'項目2が入力された場合は数量2の入力は必須です',
-            'item.2.required_with'=>'項目3が入力された場合は数量3の入力は必須です',
-            'item.3.required_with'=>'項目4が入力された場合は数量4の入力は必須です',
-            'item.4.required_with'=>'項目5が入力された場合は数量5の入力は必須です',
-            'item.5.required_with'=>'項目6が入力された場合は数量6の入力は必須です',
-            'item.6.required_with'=>'項目7が入力された場合は数量7の入力は必須です',
-            'item.7.required_with'=>'項目8が入力された場合は数量8の入力は必須です',
-            'item.8.required_with'=>'項目9が入力された場合は数量9の入力は必須です',
-            'item.9.required_with'=>'項目10が入力された場合は数量10の入力は必須です',
-            'item.10.required_with'=>'項目11が入力された場合は数量11の入力は必須です',
-            'item.11.required_with'=>'項目12が入力された場合は数量12の入力は必須です',
-            'item.12.required_with'=>'項目13が入力された場合は数量13の入力は必須です',
-            'item.13.required_with'=>'項目14が入力された場合は数量14の入力は必須です',
-            'item.14.required_with'=>'項目15が入力された場合は数量15の入力は必須です',
+            'item.0.required_with'=>'数量1が入力された場合は項目1の入力は必須です',
+            'item.1.required_with'=>'数量2が入力された場合は項目2の入力は必須です',
+            'item.2.required_with'=>'数量3が入力された場合は項目3の入力は必須です',
+            'item.3.required_with'=>'数量4が入力された場合は項目4の入力は必須です',
+            'item.4.required_with'=>'数量5が入力された場合は項目5の入力は必須です',
+            'item.5.required_with'=>'数量6が入力された場合は項目6の入力は必須です',
+            'item.6.required_with'=>'数量7が入力された場合は項目7の入力は必須です',
+            'item.7.required_with'=>'数量8が入力された場合は項目8の入力は必須です',
+            'item.8.required_with'=>'数量9が入力された場合は項目9の入力は必須です',
+            'item.9.required_with'=>'数量10が入力された場合は項目10の入力は必須です',
+            'item.10.required_with'=>'数量11が入力された場合は項目11の入力は必須です',
+            'item.11.required_with'=>'数量12が入力された場合は項目12の入力は必須です',
+            'item.12.required_with'=>'数量13が入力された場合は項目13の入力は必須です',
+            'item.13.required_with'=>'数量14が入力された場合は項目14の入力は必須です',
 
-            'quantity.0.required_with'=>'数量1が入力された場合は項目1の入力は必須です',
+            'quantity.0.required_with'=>'項目1が入力された場合は数量1の入力は必須です',
+            'quantity.1.required_with'=>'項目2が入力された場合は数量2の入力は必須です',
+            'quantity.2.required_with'=>'項目3が入力された場合は数量3の入力は必須です',
+            'quantity.3.required_with'=>'項目4が入力された場合は数量4の入力は必須です',
+            'quantity.4.required_with'=>'項目2が入力された場合は数量4の入力は必須です',
+            'quantity.5.required_with'=>'項目3が入力された場合は数量5の入力は必須です',
+            'quantity.6.required_with'=>'項目4が入力された場合は数量6の入力は必須です',
+            'quantity.7.required_with'=>'項目7が入力された場合は数量7の入力は必須です',
+            'quantity.8.required_with'=>'項目8が入力された場合は数量8の入力は必須です',
+            'quantity.9.required_with'=>'項目9が入力された場合は数量9の入力は必須です',
+            'quantity.10.required_with'=>'項目10が入力された場合は数量10の入力は必須です',
+            'quantity.11.required_with'=>'項目11が入力された場合は数量11の入力は必須です',
+            'quantity.12.required_with'=>'項目12が入力された場合は数量12の入力は必須です',
+            'quantity.13.required_with'=>'項目13が入力された場合は数量13の入力は必須です',
+
             'quantity.0.numeric'=>'数量1は数字で入力をしてください',
+            'quantity.1.numeric'=>'数量2は数字で入力をしてください',
 
 
         ];
