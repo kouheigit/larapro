@@ -25,23 +25,23 @@ class BmController extends Controller
         $rules['year'] = 'nullable|numeric|required_with:number';
         $rules['number'] = 'nullable|numeric|required_with:year';
 
-        $rules['item.0'] = 'required_with:quantity.0';
-        $rules['item.1'] = 'required_with:quantity.1';
-        $rules['item.2'] = 'required_with:quantity.2';
-        $rules['item.3'] = 'required_with:quantity.3';
-        $rules['item.4'] = 'required_with:quantity.4';
-        $rules['item.5'] = 'required_with:quantity.5';
-        $rules['item.6'] = 'required_with:quantity.6';
-        $rules['item.7'] = 'required_with:quantity.7';
-        $rules['item.8'] = 'required_with:quantity.8';
-        $rules['item.9'] = 'required_with:quantity.9';
-        $rules['item.10'] = 'required_with:quantity.10';
-        $rules['item.11'] = 'required_with:quantity.11';
-        $rules['item.12'] = 'required_with:quantity.12';
-        $rules['item.13'] = 'required_with:quantity.13';
-        $rules['item.14'] = 'required_with:quantity.14';
+        $rules['item.0'] = 'nullable|required_with:quantity.0';
+        $rules['item.1'] = 'nullable|required_with:quantity.1';
+        $rules['item.2'] = 'nullable|required_with:quantity.2';
+        $rules['item.3'] = 'nullable|required_with:quantity.3';
+        $rules['item.4'] = 'nullable|required_with:quantity.4';
+        $rules['item.5'] = 'nullable|required_with:quantity.5';
+        $rules['item.6'] = 'nullable|required_with:quantity.6';
+        $rules['item.7'] = 'nullable|required_with:quantity.7';
+        $rules['item.8'] = 'nullable|required_with:quantity.8';
+        $rules['item.9'] = 'nullable|required_with:quantity.9';
+        $rules['item.10'] = 'nullable|required_with:quantity.10';
+        $rules['item.11'] = 'nullable|required_with:quantity.11';
+        $rules['item.12'] = 'nullable|required_with:quantity.12';
+        $rules['item.13'] = 'nullable|required_with:quantity.13';
+        $rules['item.14'] = 'nullable|required_with:quantity.14';
 
-       // $rules['item.0'] = 'required_with:quantity.0';
+        $rules['quantity.0'] = 'nullable|numeric|required_with:item.0';
 
         $message =[
             'year.numeric'=>'案件番号は数字で入力する必要があります',
@@ -65,6 +65,9 @@ class BmController extends Controller
             'item.12.required_with'=>'項目13が入力された場合は数量13の入力は必須です',
             'item.13.required_with'=>'項目14が入力された場合は数量14の入力は必須です',
             'item.14.required_with'=>'項目15が入力された場合は数量15の入力は必須です',
+
+            'quantity.0.required_with'=>'数量1が入力された場合は項目1の入力は必須です',
+            'quantity.0.numeric'=>'数量は数字で入力をしてください',
         ];
 
         $validator = Validator::make($request->all(), $rules,$message);
