@@ -53,7 +53,7 @@ class BmController extends Controller
         $rules['quantity.12'] = 'nullable|numeric|required_with:item.12';
         $rules['quantity.13'] = 'nullable|numeric|required_with:item.13';
 
-        
+
 
         $message =[
             'year.numeric'=>'案件番号は数字で入力する必要があります',
