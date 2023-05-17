@@ -17,9 +17,13 @@ class BmController extends Controller
     //validation start
     public function addvalue(Request $request)
     {
+
+
         $rules = [];
         //item
+
         $rules['item.0'] = 'required_with:quantity.0';
+
         $rules['item.1'] = 'required_with:quantity.1';
         $rules['item.2'] = 'required_with:quantity.2';
         $rules['item.3'] = 'required_with:quantity.3';
@@ -34,6 +38,8 @@ class BmController extends Controller
         $rules['item.12'] = 'required_with:quantity.12';
         $rules['item.13'] = 'required_with:quantity.13';
         $rules['item.14'] = 'required_with:quantity.14';
+
+        $rules['item.0'] = 'required_with:quantity.0';
 
         $message =[
             'item.0.required_with'=>'項目1が入力された場合は数量1の入力は必須です',
