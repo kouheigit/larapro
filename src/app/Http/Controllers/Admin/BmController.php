@@ -17,6 +17,52 @@ class BmController extends Controller
     //validation start
     public function addvalue(Request $request)
     {
+        $rules = [];
+        //item
+        $rules['item.0'] = 'required_with:quantity.0';
+        $rules['item.1'] = 'required_with:quantity.1';
+        $rules['item.2'] = 'required_with:quantity.2';
+        $rules['item.3'] = 'required_with:quantity.3';
+        $rules['item.4'] = 'required_with:quantity.4';
+        $rules['item.5'] = 'required_with:quantity.5';
+        $rules['item.6'] = 'required_with:quantity.6';
+        $rules['item.7'] = 'required_with:quantity.7';
+        $rules['item.8'] = 'required_with:quantity.8';
+        $rules['item.9'] = 'required_with:quantity.9';
+        $rules['item.10'] = 'required_with:quantity.10';
+        $rules['item.11'] = 'required_with:quantity.11';
+        $rules['item.12'] = 'required_with:quantity.12';
+        $rules['item.13'] = 'required_with:quantity.13';
+        $rules['item.14'] = 'required_with:quantity.14';
+
+        $message =[
+            'item.0.required_with'=>'項目1が入力された場合は数量1の入力は必須です',
+            'item.1.required_with'=>'項目2が入力された場合は数量2の入力は必須です',
+            'item.2.required_with'=>'項目3が入力された場合は数量3の入力は必須です',
+            'item.3.required_with'=>'項目4が入力された場合は数量4の入力は必須です',
+            'item.4.required_with'=>'項目5が入力された場合は数量5の入力は必須です',
+            'item.5.required_with'=>'項目6が入力された場合は数量6の入力は必須です',
+            'item.6.required_with'=>'項目7が入力された場合は数量7の入力は必須です',
+            'item.7.required_with'=>'項目8が入力された場合は数量8の入力は必須です',
+            'item.8.required_with'=>'項目9が入力された場合は数量9の入力は必須です',
+            'item.9.required_with'=>'項目10が入力された場合は数量10の入力は必須です',
+            'item.10.required_with'=>'項目11が入力された場合は数量11の入力は必須です',
+            'item.11.required_with'=>'項目12が入力された場合は数量12の入力は必須です',
+            'item.12.required_with'=>'項目13が入力された場合は数量13の入力は必須です',
+            'item.13.required_with'=>'項目14が入力された場合は数量14の入力は必須です',
+            'item.14.required_with'=>'項目15が入力された場合は数量15の入力は必須です',
+        ];
+
+        $validator = Validator::make($request->all(), $rules,$message);
+        //Now check validation:
+        if ($validator->fails())
+        {
+            return redirect(route('admin.bm'))
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+
         //Bmlist
         //配列ではない値
         $year = $request->input('year');
