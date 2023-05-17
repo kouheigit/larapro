@@ -19,10 +19,11 @@ class BmController extends Controller
     {
 
         $rules = [];
-        //item
+
 
         $rules['year'] = 'nullable|numeric|required_with:number';
         $rules['number'] = 'nullable|numeric|required_with:year';
+
 
         $rules['item.0'] = 'nullable|required_with:quantity.0';
         $rules['item.1'] = 'nullable|required_with:quantity.1';
@@ -98,6 +99,8 @@ class BmController extends Controller
         $rules['sum.11'] = 'nullable|numeric|required_with:price.11';
         $rules['sum.12'] = 'nullable|numeric|required_with:price.12';
         $rules['sum.13'] = 'nullable|numeric|required_with:price.13';
+
+        $rules['tax'] = 'nullable|numeric|required_with:value';
 
 
 
@@ -227,7 +230,12 @@ class BmController extends Controller
             'sum.10.numeric'=>'合計11は数字で入力をしてください',
             'sum.11.numeric'=>'合計12は数字で入力をしてください',
             'sum.12.numeric'=>'合計13は数字で入力をしてください',
-            
+
+
+            'tax.numeric'=>'消費税は数字で入力する必要があります',
+            'tax.required_with'=>'有効値を入力したら消費税を入力する必要があります',
+
+
         ];
 
         $validator = Validator::make($request->all(), $rules,$message);
