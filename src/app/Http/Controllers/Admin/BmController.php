@@ -198,6 +198,36 @@ class BmController extends Controller
             'price.11.numeric'=>'単位12は数字で入力してください',
             'price.12.numeric'=>'単位13は数字で入力してください',
             'price.13.numeric'=>'単位14は数字で入力してください',
+
+            'sum.0.required_with'=>'単価1が入力された場合は合計1の入力は必須です',
+            'sum.1.required_with'=>'単価2が入力された場合は合計2の入力は必須です',
+            'sum.2.required_with'=>'単価3が入力された場合は合計3の入力は必須です',
+            'sum.3.required_with'=>'単価4が入力された場合は合計4の入力は必須です',
+            'sum.4.required_with'=>'単価5が入力された場合は合計5の入力は必須です',
+            'sum.5.required_with'=>'単価6が入力された場合は合計6の入力は必須です',
+            'sum.6.required_with'=>'単価7が入力された場合は合計7の入力は必須です',
+            'sum.7.required_with'=>'単価8が入力された場合は合計8の入力は必須です',
+            'sum.8.required_with'=>'単価9が入力された場合は合計9の入力は必須です',
+            'sum.10.required_with'=>'単価10が入力された場合は合計10の入力は必須です',
+            'sum.11.required_with'=>'単価11が入力された場合は合計11の入力は必須です',
+            'sum.12.required_with'=>'単価12が入力された場合は合計12の入力は必須です',
+            'sum.13.required_with'=>'単価13が入力された場合は合計13の入力は必須です',
+
+
+            'sum.0.numeric'=>'合計1は数字で入力をしてください',
+            'sum.1.numeric'=>'合計2は数字で入力をしてください',
+            'sum.2.numeric'=>'合計3は数字で入力をしてください',
+            'sum.3.numeric'=>'合計4は数字で入力をしてください',
+            'sum.4.numeric'=>'合計5は数字で入力をしてください',
+            'sum.5.numeric'=>'合計6は数字で入力をしてください',
+            'sum.6.numeric'=>'合計7は数字で入力をしてください',
+            'sum.7.numeric'=>'合計8は数字で入力をしてください',
+            'sum.8.numeric'=>'合計9は数字で入力をしてください',
+            'sum.9.numeric'=>'合計10は数字で入力をしてください',
+            'sum.10.numeric'=>'合計11は数字で入力をしてください',
+            'sum.11.numeric'=>'合計12は数字で入力をしてください',
+            'sum.12.numeric'=>'合計13は数字で入力をしてください',
+            
         ];
 
         $validator = Validator::make($request->all(), $rules,$message);
