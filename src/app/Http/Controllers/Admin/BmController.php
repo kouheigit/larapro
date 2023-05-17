@@ -182,7 +182,6 @@ class BmController extends Controller
             'price.11.numeric'=>'単位12は数字で入力してください',
             'price.12.numeric'=>'単位13は数字で入力してください',
             'price.13.numeric'=>'単位14は数字で入力してください',
-
         ];
 
         $validator = Validator::make($request->all(), $rules,$message);
