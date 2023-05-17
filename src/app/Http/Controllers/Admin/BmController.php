@@ -22,8 +22,10 @@ class BmController extends Controller
         $rules = [];
         //item
 
-        $rules['item.0'] = 'required_with:quantity.0';
+        $rules['year'] = 'nullable|numeric|required_with:number';
+        $rules['number'] = 'nullable|numeric|required_with:year';
 
+        $rules['item.0'] = 'required_with:quantity.0';
         $rules['item.1'] = 'required_with:quantity.1';
         $rules['item.2'] = 'required_with:quantity.2';
         $rules['item.3'] = 'required_with:quantity.3';
@@ -39,9 +41,15 @@ class BmController extends Controller
         $rules['item.13'] = 'required_with:quantity.13';
         $rules['item.14'] = 'required_with:quantity.14';
 
-        $rules['item.0'] = 'required_with:quantity.0';
+       // $rules['item.0'] = 'required_with:quantity.0';
 
         $message =[
+            'year.numeric'=>'案件番号は数字で入力する必要があります',
+            'year.required_with'=>'案件番号は両枠入力する必要があります',
+
+            'number.numeric'=>'案件番号は数字で入力する必要があります',
+            'number.required_with'=>'案件番号は両枠入力する必要があります',
+
             'item.0.required_with'=>'項目1が入力された場合は数量1の入力は必須です',
             'item.1.required_with'=>'項目2が入力された場合は数量2の入力は必須です',
             'item.2.required_with'=>'項目3が入力された場合は数量3の入力は必須です',
