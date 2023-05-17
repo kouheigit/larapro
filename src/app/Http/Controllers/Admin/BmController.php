@@ -14,6 +14,7 @@ class BmController extends Controller
     {
         return view('admin.Bm');
     }
+    //validation start
     public function addvalue(Request $request)
     {
         //Bmlist
