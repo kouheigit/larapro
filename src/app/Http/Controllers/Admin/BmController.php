@@ -46,12 +46,27 @@ class BmController extends Controller
         $rules['quantity.3'] = 'nullable|numeric|required_with:item.3';
         $rules['quantity.4'] = 'nullable|numeric|required_with:item.4';
         $rules['quantity.5'] = 'nullable|numeric|required_with:item.5';
+        $rules['quantity.6'] = 'nullable|numeric|required_with:item.6';
         $rules['quantity.7'] = 'nullable|numeric|required_with:item.7';
         $rules['quantity.8'] = 'nullable|numeric|required_with:item.8';
         $rules['quantity.9'] = 'nullable|numeric|required_with:item.9';
         $rules['quantity.11'] = 'nullable|numeric|required_with:item.11';
         $rules['quantity.12'] = 'nullable|numeric|required_with:item.12';
         $rules['quantity.13'] = 'nullable|numeric|required_with:item.13';
+
+        $rules['unit.0'] = 'nullable|required_with:quantity.0';
+        $rules['unit.1'] = 'nullable|required_with:quantity.1';
+        $rules['unit.2'] = 'nullable|required_with:quantity.2';
+        $rules['unit.3'] = 'nullable|required_with:quantity.3';
+        $rules['unit.4'] = 'nullable|required_with:quantity.4';
+        $rules['unit.5'] = 'nullable|required_with:quantity.5';
+        $rules['unit.6'] = 'nullable|required_with:quantity.6';
+        $rules['unit.7'] = 'nullable|required_with:quantity.7';
+        $rules['unit.8'] = 'nullable|required_with:quantity.8';
+        $rules['unit.9'] = 'nullable|required_with:quantity.9';
+        $rules['unit.11'] = 'nullable|required_with:quantity.11';
+        $rules['unit.12'] = 'nullable|required_with:quantity.12';
+        $rules['unit.13'] = 'nullable|required_with:quantity.13';
 
 
 
