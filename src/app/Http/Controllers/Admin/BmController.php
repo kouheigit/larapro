@@ -42,6 +42,11 @@ class BmController extends Controller
         $rules['item.14'] = 'nullable|required_with:quantity.14';
 
         $rules['quantity.0'] = 'nullable|numeric|required_with:item.0';
+        $rules['quantity.1'] = 'nullable|numeric|required_with:item.1';
+        $rules['quantity.2'] = 'nullable|numeric|required_with:item.2';
+        $rules['quantity.3'] = 'nullable|numeric|required_with:item.3';
+        $rules['quantity.4'] = 'nullable|numeric|required_with:item.4';
+        $rules['quantity.5'] = 'nullable|numeric|required_with:item.5';
 
         $message =[
             'year.numeric'=>'案件番号は数字で入力する必要があります',
@@ -67,7 +72,9 @@ class BmController extends Controller
             'item.14.required_with'=>'項目15が入力された場合は数量15の入力は必須です',
 
             'quantity.0.required_with'=>'数量1が入力された場合は項目1の入力は必須です',
-            'quantity.0.numeric'=>'数量は数字で入力をしてください',
+            'quantity.0.numeric'=>'数量1は数字で入力をしてください',
+
+
         ];
 
         $validator = Validator::make($request->all(), $rules,$message);
