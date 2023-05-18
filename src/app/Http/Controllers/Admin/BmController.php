@@ -101,6 +101,7 @@ class BmController extends Controller
         $rules['sum.13'] = 'nullable|numeric|required_with:price.13';
 
         $rules['tax'] = 'nullable|numeric|required_with:value';
+        $rules['value'] = 'nullable|numeric|required_with:subtotal';
 
 
 
@@ -234,6 +235,11 @@ class BmController extends Controller
 
             'tax.numeric'=>'消費税は数字で入力する必要があります',
             'tax.required_with'=>'有効値を入力したら消費税を入力する必要があります',
+
+            'value.numeric'=>'有効値は数字で入力する必要があります',
+            'value.required_with'=>'小計を入力したら有効値を入力する必要があります',
+
+
 
 
         ];
