@@ -100,12 +100,19 @@ class BmController extends Controller
         $rules['sum.12'] = 'nullable|numeric|required_with:price.12';
         $rules['sum.13'] = 'nullable|numeric|required_with:price.13';
 
+        //消費税テーブル
         $rules['tax'] = 'nullable|numeric|required_with:value';
         $rules['value'] = 'nullable|numeric|required_with:subtotal';
+        $rules['subtotal'] = 'nullable|numeric|required_with:ctsv';
+        $rules['ctsv'] = 'nullable|numeric|required_with:total';
+
+        $rules['sum'] = 'nullable|numeric|required_with:ctsv';
 
 
 
         $message =[
+
+            //項目、税金関連
             'year.numeric'=>'案件番号は数字で入力する必要があります',
             'year.required_with'=>'案件番号は両枠入力する必要があります',
 
@@ -156,7 +163,6 @@ class BmController extends Controller
             'quantity.11.numeric'=>'数量11は数字で入力をしてください',
             'quantity.12.numeric'=>'数量12は数字で入力をしてください',
             'quantity.13.numeric'=>'数量13は数字で入力をしてください',
-
 
             'unit.0.required_with'=>'単位1が入力された場合は数量1の入力は必須です',
             'unit.1.required_with'=>'単位2が入力された場合は数量2の入力は必須です',
@@ -233,14 +239,21 @@ class BmController extends Controller
             'sum.12.numeric'=>'合計13は数字で入力をしてください',
 
 
+            //消費税テーブル
             'tax.numeric'=>'消費税は数字で入力する必要があります',
-            'tax.required_with'=>'有効値を入力したら消費税を入力する必要があります',
+            'tax.required_with'=>'有効値を入力した場合は消費税を入力する必要があります',
 
             'value.numeric'=>'有効値は数字で入力する必要があります',
-            'value.required_with'=>'小計を入力したら有効値を入力する必要があります',
+            'value.required_with'=>'小計を入力した場合は有効値を入力する必要があります',
 
+            'subtotal.numeric'=>'小計は数字で入力する必要があります',
+            'subtotal.required_with'=>'消費税有効値を入力した場合は小計を入力する必要があります',
 
+            'ctsv.numeric'=>'消費税有効値は数字で入力する必要があります',
+            'ctsv.required_with'=>'合計を入力した場合は消費税有効値を入力する必要があります',
 
+            'sum.numeric'=>'合計値は数字で入力する必要があります',
+            
 
         ];
 
