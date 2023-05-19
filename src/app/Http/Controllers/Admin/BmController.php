@@ -106,7 +106,7 @@ class BmController extends Controller
         $rules['subtotal'] = 'nullable|numeric|required_with:ctsv';
         $rules['ctsv'] = 'nullable|numeric|required_with:total';
 
-        $rules['sum'] = 'nullable|numeric|required_with:ctsv';
+        $rules['total'] = 'nullable|numeric|required_with:ctsv';
 
 
 
@@ -252,8 +252,8 @@ class BmController extends Controller
             'ctsv.numeric'=>'消費税有効値は数字で入力する必要があります',
             'ctsv.required_with'=>'合計を入力した場合は消費税有効値を入力する必要があります',
 
-            'sum.numeric'=>'合計値は数字で入力する必要があります',
-            
+            'total.numeric'=>'合計【下記テーブル】は数字で入力する必要があります',
+
 
         ];
 
@@ -314,16 +314,18 @@ class BmController extends Controller
             }
         }
         //Bm_tax
-        $insert_tax = [
-            'tax'=>$tax,
-            'value'=>$value,
-            'subtotal'=>$subtotal,
-            'ctsv'=>$ctsv,
-            'total'=>$total,
-            'remarks'=>$remarks,
-            'created_at'=>new Carbon('Asia/Tokyo'),
-        ];
-        Billingmanagement_tax::insert($insert_tax);
+        if($tax==!null&&$value==!null&&$subtotal==!null&&$ctsv==!null&&$total==!null) {
+            $insert_tax = [
+                'tax' => $tax,
+                'value' => $value,
+                'subtotal' => $subtotal,
+                'ctsv' => $ctsv,
+                'total' => $total,
+                'remarks' => $remarks,
+                'created_at' => new Carbon('Asia/Tokyo'),
+            ];
+            Billingmanagement_tax::insert($insert_tax);
+        }
         return redirect('admin/bm');
     }
 }
