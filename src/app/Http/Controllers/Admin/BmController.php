@@ -101,11 +101,10 @@ class BmController extends Controller
         $rules['sum.13'] = 'nullable|numeric|required_with:price.13';
 
         //消費税テーブル
-        $rules['tax'] = 'nullable|numeric|required_with:value';
-        $rules['value'] = 'nullable|numeric|required_with:subtotal';
-        $rules['subtotal'] = 'nullable|numeric|required_with:ctsv';
-        $rules['ctsv'] = 'nullable|numeric|required_with:total';
-
+        $rules['tax'] = 'nullable|numeric|required_with:sum';
+        $rules['value'] = 'nullable|numeric|required_with:tax';
+        $rules['subtotal'] = 'nullable|numeric|required_with:value';
+        $rules['ctsv'] = 'nullable|numeric|required_with:subtotal';
         $rules['total'] = 'nullable|numeric|required_with:ctsv';
 
 
@@ -164,20 +163,20 @@ class BmController extends Controller
             'quantity.12.numeric'=>'数量12は数字で入力をしてください',
             'quantity.13.numeric'=>'数量13は数字で入力をしてください',
 
-            'unit.0.required_with'=>'単位1が入力された場合は数量1の入力は必須です',
-            'unit.1.required_with'=>'単位2が入力された場合は数量2の入力は必須です',
-            'unit.2.required_with'=>'単位3が入力された場合は数量3の入力は必須です',
-            'unit.3.required_with'=>'単位4が入力された場合は数量4の入力は必須です',
-            'unit.4.required_with'=>'単位5が入力された場合は数量4の入力は必須です',
-            'unit.5.required_with'=>'単位6が入力された場合は数量5の入力は必須です',
-            'unit.6.required_with'=>'単位7が入力された場合は数量6の入力は必須です',
-            'unit.7.required_with'=>'単位8が入力された場合は数量7の入力は必須です',
-            'unit.8.required_with'=>'単位9が入力された場合は数量8の入力は必須です',
-            'unit.9.required_with'=>'単位10が入力された場合は数量9の入力は必須です',
-            'unit.10.required_with'=>'単位11が入力された場合は数量10の入力は必須です',
-            'unit.11.required_with'=>'単位12が入力された場合は数量11の入力は必須です',
-            'unit.12.required_with'=>'単位13が入力された場合は数量12の入力は必須です',
-            'unit.13.required_with'=>'単位14が入力された場合は数量13の入力は必須です',
+            'unit.0.required_with'=>'数量1が入力された場合は単位1の入力は必須です',
+            'unit.1.required_with'=>'数量2が入力された場合は単位2の入力は必須です',
+            'unit.2.required_with'=>'数量3が入力された場合は単位3の入力は必須です',
+            'unit.3.required_with'=>'数量4が入力された場合は単位4の入力は必須です',
+            'unit.4.required_with'=>'数量5が入力された場合は単位4の入力は必須です',
+            'unit.5.required_with'=>'数量6が入力された場合は単位5の入力は必須です',
+            'unit.6.required_with'=>'数量7が入力された場合は単位6の入力は必須です',
+            'unit.7.required_with'=>'数量8が入力された場合は単位7の入力は必須です',
+            'unit.8.required_with'=>'数量9が入力された場合は単位8の入力は必須です',
+            'unit.9.required_with'=>'数量10が入力された場合は単位9の入力は必須です',
+            'unit.10.required_with'=>'数量11が入力された場合は単位10の入力は必須です',
+            'unit.11.required_with'=>'数量12が入力された場合は単位11の入力は必須です',
+            'unit.12.required_with'=>'数量13が入力された場合は単位12の入力は必須です',
+            'unit.13.required_with'=>'数量14が入力された場合は単位13の入力は必須です',
 
             'price.0.required_with'=>'単位1が入力された場合は単価1の入力は必須です',
             'price.1.required_with'=>'単位2が入力された場合は単価2の入力は必須です',
@@ -241,18 +240,27 @@ class BmController extends Controller
 
             //消費税テーブル
             'tax.numeric'=>'消費税は数字で入力する必要があります',
-            'tax.required_with'=>'有効値を入力した場合は消費税を入力する必要があります',
+            'tax.required_with'=>'合計が入力された場合は【下記テーブル】消費税の項目も入力する必要があります',
+
 
             'value.numeric'=>'有効値は数字で入力する必要があります',
-            'value.required_with'=>'小計を入力した場合は有効値を入力する必要があります',
+            'value.required_with'=>'【下記テーブル】消費税が入力されている場合は有効値を入力する必要があります',
+
+
+
+            'sutotal.required_with'=>'パーマン',
 
             'subtotal.numeric'=>'小計は数字で入力する必要があります',
-            'subtotal.required_with'=>'消費税有効値を入力した場合は小計を入力する必要があります',
+            'subtotal.required_with'=>'【下記テーブル】有効値が入力されている場合は小計を入力する必要があります',
 
             'ctsv.numeric'=>'消費税有効値は数字で入力する必要があります',
-            'ctsv.required_with'=>'合計を入力した場合は消費税有効値を入力する必要があります',
+            'ctsv.required_with'=>'【下記テーブル】小計が入力されている場合は消費税有効値を入力する必要があります',
+
 
             'total.numeric'=>'合計【下記テーブル】は数字で入力する必要があります',
+            'total.required_with'=>'【下記テーブル】消費税有効値が入力されてる場合は合計を入力する必要があります',
+
+
 
 
         ];
