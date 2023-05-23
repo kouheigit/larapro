@@ -101,8 +101,7 @@ class BmController extends Controller
         $rules['sum.13'] = 'nullable|numeric|required_with:price.13';
 
         //消費税テーブル
-        //【修正】tax.required_withをtax.requiredにする
-        $rules['tax'] = 'nullable|numeric|required_with:sum';
+        $rules['tax'] = 'nullable|numeric|required';
         $rules['value'] = 'nullable|numeric|required_with:tax';
         $rules['subtotal'] = 'nullable|numeric|required_with:value';
         $rules['ctsv'] = 'nullable|numeric|required_with:subtotal';
@@ -240,8 +239,7 @@ class BmController extends Controller
 
 
             //消費税テーブル
-            'tax.numeric'=>'消費税は数字で入力する必要があります',
-            //【修正】tax.required_withをtax.requiredにする
+            'tax.required'=>'【下記テーブル】消費税の項目は必須です',
             'tax.required_with'=>'合計が入力された場合は【下記テーブル】消費税の項目も入力する必要があります',
 
 
