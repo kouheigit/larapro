@@ -10,6 +10,7 @@ use Carbon\Carbon;
 
 class BmController extends Controller
 {
+    //test
     public function index(Request $request)
     {
         return view('admin.Bm');
