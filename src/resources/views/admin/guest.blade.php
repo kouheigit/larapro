@@ -51,6 +51,7 @@
             $(sum).attr('value',max);
 
         }
+        //larapro 
         /*
         function allsum(){
             id_payment_schedule ='#payment_schedule0';
