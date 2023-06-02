@@ -19,7 +19,7 @@ class CreateBooksTable extends Migration
             $table->string("name");
             //価格
             $table->integer("value");
-            //ライターID
+            //作家名ID
             $table->integer("writer_id");
             $table->timestamps();
         });
