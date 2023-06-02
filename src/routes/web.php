@@ -27,6 +27,8 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::namespace('Auth')->group(function(){
 
 
+        Route::get('searchbook',[App\Http\Controllers\Admin\BmController::class,'searchbook'])->name('searchbook');
+
         Route::get('domppdf',[App\Http\Controllers\Admin\SomeController::class,'domppdf']);
 
         Route::get('pdftest',[App\Http\Controllers\Admin\SomeController::class,'pdftest']);

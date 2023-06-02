@@ -10,6 +10,10 @@ use Carbon\Carbon;
 
 class BmController extends Controller
 {
+    public function searchbook(Request $request)
+    {
+        return view('admin.searchbook');
+    }
     //test
     public function index(Request $request)
     {
