@@ -15,7 +15,8 @@ class BmController extends Controller
 {
     public function searchbook(Request $request)
     {
-        $writer_name = Book::find(7)->writer->name;
+        $writer_name = writer::find(6)->books;
+       // $writer_name = Book::find(7)->writer->name;
         return view('admin.searchbook',compact('writer_name'));
     }
     //test
