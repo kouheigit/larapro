@@ -12,4 +12,9 @@ class Writer extends Model
     protected $fillable = [
         'name',
     ];
+    //Bookテーブルと紐付けた
+    public function books()
+    {
+        return $this->hasMany(Book::class);
+    }
 }
