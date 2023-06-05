@@ -13,6 +13,19 @@ use Carbon\Carbon;
 
 class BmController extends Controller
 {
+    public function search_asy(Request $request)
+    {
+        $search = $request->search;
+       // dd($search);
+        //$query = Writer::query();
+        $result = Writer::where('name','like',"%$search%")->get();
+        foreach($result as $results){
+            $resltid = $results->id;
+;        }
+        dd($resltid);
+
+        return response()->json($result);
+    }
     public function searchbook(Request $request)
     {
         $writer_name = Book::find(1)->writer;
