@@ -14,4 +14,8 @@ class Book extends Model
         'value',
         'writer_id',
     ];
+    public function writer()
+    {
+        return $this->belongsTo(Writer::class);
+    }
 }

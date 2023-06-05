@@ -2,17 +2,21 @@
 
 namespace App\Http\Controllers\Admin;
 use Validator;
+use App\Models\Writer;
+use App\Models\Book;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Billingmanagement_list;
 use App\Models\Billingmanagement_tax;
 use Carbon\Carbon;
 
+
 class BmController extends Controller
 {
     public function searchbook(Request $request)
     {
-        return view('admin.searchbook');
+        $writer_name = Book::find(7)->writer->name;
+        return view('admin.searchbook',compact('writer_name'));
     }
     //test
     public function index(Request $request)
