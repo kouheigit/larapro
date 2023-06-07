@@ -22,7 +22,9 @@ class BmController extends Controller
         foreach($result as $results){
             $resltid = $results->id;
 ;        }
+        //idを取得
         dd($resltid);
+        //しっかりと反応した
 
         return response()->json($result);
     }
