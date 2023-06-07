@@ -10,6 +10,7 @@ class Writer extends Model
     use HasFactory;
     protected $table = 'writers';
     protected $fillable = [
+        'id',
         'name',
     ];
     //Bookテーブルと紐付けた

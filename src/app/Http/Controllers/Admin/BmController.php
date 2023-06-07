@@ -40,6 +40,7 @@ class BmController extends Controller
     {
         //Modelとキーが別の形で結びついている
         $writer_name = Book::find(21)->writer;
+        
         //idは作動しているので大丈夫
         $books_name = writer::find(6)->books;
        // $writer_name = Book::find(7)->writer->name;
