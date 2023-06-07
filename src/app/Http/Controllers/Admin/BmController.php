@@ -20,10 +20,11 @@ class BmController extends Controller
         //$query = Writer::query();
         $result = Writer::where('name','like',"%$search%")->get();
         foreach($result as $results){
-            $resltid = $results->id;
+            $resultid = $results->id;
 ;        }
         //idを取得
-        dd($resltid);
+
+        dd($resultid);
         //しっかりと反応した
 
         return response()->json($result);
