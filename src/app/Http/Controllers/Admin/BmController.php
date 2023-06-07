@@ -16,22 +16,31 @@ class BmController extends Controller
     public function search_asy(Request $request)
     {
         $search = $request->search;
+        $val[] = null;
        // dd($search);
         //$query = Writer::query();
         $result = Writer::where('name','like',"%$search%")->get();
         foreach($result as $results){
             $resultid = $results->id;
 ;        }
+
+
+        $writer_name = Book::find($resultid)->writer;
+        $books_name = writer::find($resultid)->books;
+
+        $val[] = $writer_name;
+        $val[] = $books_name;
         //idを取得
 
-        dd($resultid);
         //しっかりと反応した
 
         return response()->json($result);
     }
     public function searchbook(Request $request)
     {
-        $writer_name = Book::find(1)->writer;
+        //Modelとキーが別の形で結びついている
+        $writer_name = Book::find(21)->writer;
+        //idは作動しているので大丈夫
         $books_name = writer::find(6)->books;
        // $writer_name = Book::find(7)->writer->name;
         return view('admin.searchbook',compact('writer_name','books_name'));
