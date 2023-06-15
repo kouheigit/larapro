@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model
 //larapro start
+//larapro start1
 {
     use HasFactory;
     protected $table = 'books';
