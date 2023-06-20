@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
@@ -26,6 +28,8 @@ require __DIR__.'/auth.php';
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::namespace('Auth')->group(function(){
 
+
+        Route::get('/sheet', [App\Http\Controllers\Admin\SpreadSheetController::class, 'store']);
 
         Route::get('search_asy',[App\Http\Controllers\Admin\BmController::class,'search_asy'])->name('search_asy');
 
