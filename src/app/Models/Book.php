@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model
-//larapro start
+//dev start
 {
     use HasFactory;
     protected $table = 'books';
