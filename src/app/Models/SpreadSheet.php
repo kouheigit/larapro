@@ -11,9 +11,9 @@ class SpreadSheet extends Model
 
     static function insert_spread_sheet($insert_data)
     {
+        //start
         // スプレッドシートを操作するGoogleClientインスタンスの生成（後述のファンクション）
         $sheets = SpreadSheet::instance();
-
         // データを格納したい SpreadSheet のURLが
         // https://docs.google.com/spreadsheets/d/×××××××××××××××××××/edit#gid=0
         // である場合、××××××××××××××××××× の部分を以下に記入する
