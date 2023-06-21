@@ -29,6 +29,8 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::namespace('Auth')->group(function(){
 
 
+        Route::get('/googlesheet', [App\Http\Controllers\Admin\SpreadSheetController::class,'insertData']);
+
         Route::get('/sheet', [App\Http\Controllers\Admin\SpreadSheetController::class, 'store']);
 
         Route::get('search_asy',[App\Http\Controllers\Admin\BmController::class,'search_asy'])->name('search_asy');
