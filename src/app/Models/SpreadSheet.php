@@ -25,6 +25,7 @@ class SpreadSheet extends Model
         $row = count($response->getValues() ?? []) + 1; // nullの場合は空配列にする
 
         // データを整形（この順序でシートに格納される）
+        //start
         $contact = [
             $insert_data['hoge'],
             $insert_data['huga'],
