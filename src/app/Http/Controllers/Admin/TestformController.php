@@ -20,7 +20,7 @@ class TestformController extends Controller
         $time = $request->input('time');
         $hourlywage = $request->input('hourlywage');
         $tscost = $request->input('tscost');
-
+        //insert value
         foreach($companynumber as $count=>$values) {
             if ($companynumber[$count] == !null && $pic_comp[$count]) {
                 $value = [
