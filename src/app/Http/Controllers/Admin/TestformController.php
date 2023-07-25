@@ -28,7 +28,7 @@ class TestformController extends Controller
                     'pic_comp' => $pic_comp[$count],
                     'time' => $time[$count],
                     'hourlywage' => $hourlywage[$count],
-                    'tscost' => $values,
+                    'tscost' => $tscost[$count],
                 ];
                 Store::insert($value);
             }
