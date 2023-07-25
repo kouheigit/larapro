@@ -1,6 +1,6 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+<form method="POST" action="{{('testform')}}">
 @for($i=0;$i<9;$i++)
     <div class="tr _td">
         <button class="button_delete" type="button">削除する</button>
@@ -21,10 +21,11 @@
     </div>
     <br>
 @endfor
-
    <div class="col_add">
        {{--カラムを追加する箇所--}}
    </div>
+    <button type="submit">送信する</button>
+</form>
 <button type="button" class="col_add_button">カラムを追加する</button>
 
 <script type="text/javascript">
