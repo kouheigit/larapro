@@ -1,10 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use App\Models\Store;
 use App\Models\Testform;
-
-
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -14,6 +12,27 @@ class TestformController extends Controller
     public function storetest(Request $request)
     {
         return view('admin.storetest');
+    }
+    public function storeget(Request $request)
+    {
+        $companynumber = $request->input('companynumber');
+        $pic_comp = $request->input('pic_comp');
+        $time = $request->input('time');
+        $hourlywage = $request->input('hourlywage');
+        $tscost = $request->input('tscost');
+
+        foreach($companynumber as $count=>$values) {
+            if ($companynumber[$count] == !null && $pic_comp[$count]) {
+                $value = [
+                    'companynumber' => $companynumber[$count],
+                    'pic_comp' => $pic_comp[$count],
+                    'time' => $time[$count],
+                    'hourlywage' => $hourlywage[$count],
+                    'tscost' => $values,
+                ];
+                Store::insert($value);
+            }
+        }
     }
     public function index()
     {

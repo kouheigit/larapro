@@ -93,6 +93,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
         Route::get('jstest2',[App\Http\Controllers\Admin\SomeController::class,'jstest2'])->name('jstest2');
 
         Route::get('storetest',[App\Http\Controllers\Admin\TestformController::class,'storetest'])->name('storetest');
+        Route::get('storeget',[App\Http\Controllers\Admin\TestformController::class,'storeget'])->name('storeget');
 
         Route::get('testform',[App\Http\Controllers\Admin\TestformController::class,'index'])->name('testform');
         Route::post('testform',[App\Http\Controllers\Admin\TestformController::class,'indexpost'])->name('testform');

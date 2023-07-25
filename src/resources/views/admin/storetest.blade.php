@@ -1,6 +1,6 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<form method="GET" action="{{('storetest')}}">
+<form method="GET" action="{{('storeget')}}">
 @for($i=0;$i<9;$i++)
     <div class="tr _td">
         <button class="button_delete" type="button">削除する</button>
@@ -13,11 +13,6 @@
         <div class="col"><input type="text" class="textc _input_dis text_comp" name="time[]" value="{{ old('time[]') }}"></div>
         <div class="col"><input type="text" class="textc text_comp" name="hourlywage[]" value="{{ old('hourlywage[]') }}"></div>
         <div class="col"><input type="text" class="textc _input_dis text_comp" name="tscost[]" value="{{ old('tscost[]') }}"></div>
-        <div class="col"><input type="text" class="textc _input_dis text_comp" name="deliverycharge[]" value="{{ old('deliverycharge[]') }}"></div>
-        <div class="col"><input type="text" class="textc _input_dis text_comp" name="copy[]" value="{{ old('copy[]') }}"></div>
-        <div class="col"><input type="text" class="textc _input_dis text_comp" name="cost[]" value="{{ old('cost[]') }}"></div>
-        <div class="col"><input type="text" class="textc _input_dis text_comp" name="other[]" value="{{ old('other[]') }}"></div>
-        <div class="col"><input type="text" class="textc _input_dis text_comp" name="sum[]" value="{{old('sum[]')}}"></div>
     </div>
     <br>
 @endfor
