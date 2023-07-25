@@ -49,6 +49,11 @@
         $(".col_add").append(col_add);
         });
 
+        $(".button_delete").click(function(){
+            $(this).closest('.tr').remove();
+           alert('SYAMU');
+        });
+
 </script>
 
 
