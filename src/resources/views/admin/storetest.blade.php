@@ -1,3 +1,6 @@
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 @for($i=0;$i<9;$i++)
     <div class="tr _td">
         <button class="button_delete" type="button">削除する</button>
@@ -23,11 +26,11 @@
        {{--カラムを追加する箇所--}}
    </div>
 <button type="button" class="col_add_button">カラムを追加する</button>
+
 <script type="text/javascript">
-    $('.col_add_button').on('click',function(){
-        alert('追加ボタンがクリックされました');
-    })
+        $(".col_add_button").click(function () {
+            alert('hello');
+        });
 </script>
-{{--ボタンを押してもjqueryが反応しないエラーがある--}}
 
 
