@@ -1,5 +1,6 @@
 @for($i=0;$i<9;$i++)
     <div class="tr _td">
+        <button class="button_delete" type="button">削除する</button>
         {{--data-confirm="削除してもよろしいでしょうか？"--}}
        {{-- <a href="javascript:void(0)" class="btn_delete"><img src="{{asset("design/images/i_cross2.png")}}" width="20"></a>--}}
         {{--外注、社内の振り分け番号、1は社内委託--}}
@@ -15,7 +16,7 @@
         <div class="col"><input type="text" class="textc _input_dis text_comp" name="other[]" value="{{ old('other[]') }}"></div>
         <div class="col"><input type="text" class="textc _input_dis text_comp" name="sum[]" value="{{old('sum[]')}}"></div>
     </div>
-    <button type="button">カラムを追加する</button>
+    <br>
 @endfor
-<br>
+<button type="button">カラムを追加する</button>
 
