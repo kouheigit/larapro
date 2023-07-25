@@ -92,6 +92,8 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
         Route::get('jstest1',[App\Http\Controllers\Admin\SomeController::class,'jstest1'])->name('jstest1');
         Route::get('jstest2',[App\Http\Controllers\Admin\SomeController::class,'jstest2'])->name('jstest2');
 
+        Route::get('storetest',[App\Http\Controllers\Admin\TestformController::class,'storetest'])->name('storetest');
+
         Route::get('testform',[App\Http\Controllers\Admin\TestformController::class,'index'])->name('testform');
         Route::post('testform',[App\Http\Controllers\Admin\TestformController::class,'indexpost'])->name('testform');
 

@@ -3,12 +3,18 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Testform;
+
+
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class TestformController extends Controller
 {
+    public function storetest(Request $request)
+    {
+        return view('admin.storetest');
+    }
     public function index()
     {
         $testform = Testform::all();
