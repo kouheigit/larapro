@@ -29,8 +29,26 @@
 
 <script type="text/javascript">
         $(".col_add_button").click(function () {
-            alert('hello');
+            var col_add = `<div class="tr _td">
+        <button class="button_delete" type="button">削除する</button>
+
+            <input type="hidden" name="distribute[]" value="1">
+            <div class="col"><input type="text" id="companynumber" class="textc text_comp" name="companynumber[]" data-modal=".modal_staff" value="{{ old('companynumber[]') }}"></div>
+        <div class="col"><input type="text" class="textc text_comp" name="pic_comp[]" value="{{ old('pic_com[]') }}"></div>
+        <div class="col"><input type="text" class="textc _input_dis text_comp" name="time[]" value="{{ old('time[]') }}"></div>
+        <div class="col"><input type="text" class="textc text_comp" name="hourlywage[]" value="{{ old('hourlywage[]') }}"></div>
+        <div class="col"><input type="text" class="textc _input_dis text_comp" name="tscost[]" value="{{ old('tscost[]') }}"></div>
+        <div class="col"><input type="text" class="textc _input_dis text_comp" name="deliverycharge[]" value="{{ old('deliverycharge[]') }}"></div>
+        <div class="col"><input type="text" class="textc _input_dis text_comp" name="copy[]" value="{{ old('copy[]') }}"></div>
+        <div class="col"><input type="text" class="textc _input_dis text_comp" name="cost[]" value="{{ old('cost[]') }}"></div>
+        <div class="col"><input type="text" class="textc _input_dis text_comp" name="other[]" value="{{ old('other[]') }}"></div>
+        <div class="col"><input type="text" class="textc _input_dis text_comp" name="sum[]" value="{{old('sum[]')}}"></div>
+    </div>
+     <br>
+     `;
+        $(".col_add").append(col_add);
         });
+
 </script>
 
 
