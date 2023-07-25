@@ -18,8 +18,16 @@
     </div>
     <br>
 @endfor
+
    <div class="col_add">
        {{--カラムを追加する箇所--}}
    </div>
-<button type="button">カラムを追加する</button>
+<button type="button" class="col_add_button">カラムを追加する</button>
+<script type="text/javascript">
+    $('.col_add_button').on('click',function(){
+        alert('追加ボタンがクリックされました');
+    })
+</script>
+{{--ボタンを押してもjqueryが反応しないエラーがある--}}
+
 
