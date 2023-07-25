@@ -51,7 +51,6 @@
 
         $(".button_delete").click(function(){
             $(this).closest('.tr').remove();
-           alert('SYAMU');
         });
 
 </script>
