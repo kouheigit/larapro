@@ -15,5 +15,7 @@
         <div class="col"><input type="text" class="textc _input_dis text_comp" name="other[]" value="{{ old('other[]') }}"></div>
         <div class="col"><input type="text" class="textc _input_dis text_comp" name="sum[]" value="{{old('sum[]')}}"></div>
     </div>
+    <button type="button">カラムを追加する</button>
 @endfor
+<br>
 
