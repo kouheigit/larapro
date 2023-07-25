@@ -15,12 +15,15 @@ class TestformController extends Controller
     }
     public function storeget(Request $request)
     {
+        //request value
         $companynumber = $request->input('companynumber');
         $pic_comp = $request->input('pic_comp');
         $time = $request->input('time');
         $hourlywage = $request->input('hourlywage');
         $tscost = $request->input('tscost');
-        //insert value
+
+
+
         foreach($companynumber as $count=>$values) {
             if ($companynumber[$count] == !null && $pic_comp[$count]) {
                 $value = [
