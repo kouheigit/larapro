@@ -30,6 +30,7 @@ class TestformController extends Controller
                     'hourlywage' => $hourlywage[$count],
                     'tscost' => $tscost[$count],
                 ];
+                //store insert
                 Store::insert($value);
             }
         }
