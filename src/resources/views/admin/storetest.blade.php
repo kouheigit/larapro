@@ -18,7 +18,7 @@
     </div>
     <br>
 @endfor
-   <div class="col_add">
+   <div class="col">
        {{--カラムを追加する箇所--}}
    </div>
 <button type="button">カラムを追加する</button>
