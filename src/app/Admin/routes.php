@@ -13,6 +13,7 @@ Route::group([
 
     $router->get('/', 'HomeController@index')->name('home');
     //add
-    $router->resource('reserves', ReserveController::class);
+    $router->resource('reserved', ReserveController::class);
+  //  $router->resource('reserves', ReserveController::class);
 
 });
