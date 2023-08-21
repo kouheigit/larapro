@@ -16,27 +16,33 @@
 <h3>フリーデイ</h3>
 {{--この列はデータベースから5つ持ってくる--}}
 {{--列--}}
-<p>利用可能日数</p>
-<p>(2022年6月末日まで有効)</p>
-<button onclick="location.href='https://qiita.com/mzmz__02'">5泊</button>
+
+
+
+<table>
 {{--列--}}
-<p>利用可能日数</p>
-<p>(2022年12月末日まで有効)</p>
-<button onclick="location.href='https://qiita.com/mzmz__02'">3泊</button>
-{{--列--}}
-<p>利用可能日数</p>
-<p>(2023年8月末日まで有効)</p>
-<button onclick="location.href='https://qiita.com/mzmz__02'">-8泊</button>
-{{--列--}}
-<p>利用可能日数</p>
-<p>(2024年6月末日まで有効)</p>
-<button onclick="location.href='https://qiita.com/mzmz__02'">0泊</button>
-{{--列--}}
-<p>利用可能日数</p>
-<p>(2024年12月末日まで有効)</p>
-<button onclick="location.href='https://qiita.com/mzmz__02'">4泊</button>
-{{--列終了--}}
-<a href="https://qiita.com/mzmz__02">さらに見る</a>
+    <tr>
+        <th>利用可能日数(2022年6月末日まで有効)</th>
+        <th><button onclick="location.href='https://qiita.com/mzmz__02'">5泊</button></th>
+    </tr>
+    <tr>
+        <th>利用可能日数(2022年12月末日まで有効)</th>
+        <th><button onclick="location.href='https://qiita.com/mzmz__02'">3泊</button></th>
+    </tr>
+    <tr>
+        <th>利用可能日数(2023年8月末日まで有効)</th>
+        <th><button onclick="location.href='https://qiita.com/mzmz__02'">-8泊</button></th>
+    </tr>
+    <tr>
+        <th>利用可能日数(2024年6月末日まで有効)</th>
+        <th><button onclick="location.href='https://qiita.com/mzmz__02'">0泊</button></th>
+    </tr>
+    <tr>
+        <th>利用可能日数(2024年12月末日まで有効)</th>
+        <th><button onclick="location.href='https://qiita.com/mzmz__02'">4泊</button></th>
+    </tr>
+</table>
+<a href="https://qiita.com/mzmz__02">>>さらに見る</a>
 
 
 <b>FIXDAY</b>
