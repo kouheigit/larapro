@@ -23,23 +23,23 @@
 {{--列--}}
     <tr>
         <th>利用可能日数(2022年6月末日まで有効)</th>
-        <th><button onclick="location.href='https://qiita.com/mzmz__02'">5泊</button></th>
+        <th><button class="t_button"onclick="location.href='https://qiita.com/mzmz__02'">5泊</button></th>
     </tr>
     <tr>
         <th>利用可能日数(2022年12月末日まで有効)</th>
-        <th><button onclick="location.href='https://qiita.com/mzmz__02'">3泊</button></th>
+        <th><button class="t_button" onclick="location.href='https://qiita.com/mzmz__02'">3泊</button></th>
     </tr>
     <tr>
         <th>利用可能日数(2023年8月末日まで有効)</th>
-        <th><button onclick="location.href='https://qiita.com/mzmz__02'">-8泊</button></th>
+        <th><button class="t_button" onclick="location.href='https://qiita.com/mzmz__02'">-8泊</button></th>
     </tr>
     <tr>
         <th>利用可能日数(2024年6月末日まで有効)</th>
-        <th><button onclick="location.href='https://qiita.com/mzmz__02'">0泊</button></th>
+        <th><button class="t_button" onclick="location.href='https://qiita.com/mzmz__02'">0泊</button></th>
     </tr>
     <tr>
         <th>利用可能日数(2024年12月末日まで有効)</th>
-        <th><button onclick="location.href='https://qiita.com/mzmz__02'">4泊</button></th>
+        <th><button class="t_button" onclick="location.href='https://qiita.com/mzmz__02'">4泊</button></th>
     </tr>
 </table>
 <a href="https://qiita.com/mzmz__02">>>さらに見る</a>
@@ -51,23 +51,23 @@
 <table>
   <tr>
       <th>2023年1月3日 (火)~5日 (木)</th>
-      <th><button onclick="location.href='https://qiita.com/mzmz__02'">未確定</button></th>
+      <th><button class="t_button"onclick="location.href='https://qiita.com/mzmz__02'">未確定</button></th>
   </tr>
     <tr>
         <th>2023年1月5日 (木)~7日 (土)</th>
-        <th><button onclick="location.href='https://qiita.com/mzmz__02'">未確定</button></th>
+        <th><button class="t_button"onclick="location.href='https://qiita.com/mzmz__02'">未確定</button></th>
     </tr>
     <tr>
         <th>2023年1月7日 (土)~9日 (月)</th>
-        <th><button onclick="location.href='https://qiita.com/mzmz__02'">未確定</button></th>
+        <th><button class="t_button"onclick="location.href='https://qiita.com/mzmz__02'">未確定</button></th>
     </tr>
     <tr>
         <th>2023年1月13日 (金)~15日 (日)</th>
-        <th><button onclick="location.href='https://qiita.com/mzmz__02'">未確定</button></th>
+        <th><button class="t_button"onclick="location.href='https://qiita.com/mzmz__02'">未確定</button></th>
     </tr>
     <tr>
         <th>2023年1月16日 (月)~18日 (水)</th>
-        <th><button onclick="location.href='https://qiita.com/mzmz__02'">未確定</button></th>
+        <th><button class="t_button"onclick="location.href='https://qiita.com/mzmz__02'">未確定</button></th>
     </tr>
 </table>
 {{--列終了--}}

@@ -36,6 +36,25 @@ button {
     margin: 0 auto;
 }
 
+button.t_button{
+    display: inline-block; /* インラインブロック要素にする */
+    margin: 0 auto;
+    padding: 10px 20px; /* パディングを追加 */
+    background-color: #001F3F; /* 紺色の背景色 */
+    color: #FFFFFF; /* テキストの白色 */
+    border: none; /* ボーダーをなしに */
+    border-radius: 4px; /* 角丸 */
+    cursor: pointer; /* カーソルをポインターに */
+}
+
+/* ボタンのホバー時のスタイル */
+button.t_button:hover {
+    background-color: #003366; /* ホバー時の背景色 */
+}
+
+
+/*
+
 /* 利用可能日数の中央寄せ */
 p {
     text-align: center;
