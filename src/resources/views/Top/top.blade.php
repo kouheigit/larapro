@@ -1,13 +1,15 @@
-<b>宿泊予約サイト　テストサイト</b>
-　　　<b>オーナー</b>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ asset('css/top.css')  }}" >
+</head>
+<body>
+<b class="title">宿泊予約サイト　テストサイト</b>
+　　　<b class="subtitle">オーナー</b>
 {{--↓ログイン情報をここに持ってくる--}}
-<h1>ログイン名</h1>様
-<b>【Information】お知らせ</b>
-<br>
-<button onclick="location.href='https://qiita.com/mzmz__02'">Information</button>
+<h1 class="guest_name">ログイン名様</h1>
+<b class="maintitle">【Information】お知らせ</b>
+<button class="Information" onclick="location.href='https://qiita.com/mzmz__02'">Information</button>
 {{--情報一覧に飛ぶ--}}
-<br>
-<br>
 {{--これで横一列でこれを5つ--}}
 {{--5泊,3泊,8泊,0泊,4泊--}}
 <b>FREEDAY</b>
@@ -66,6 +68,7 @@
 <b>Concierge DESK
     0120-026-015
     受付時間10時～18時</b>
-
+</body>
+</html>
 
 

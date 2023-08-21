@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+}
+
+/* タイトルとオーナーの中央寄せ */
+b {
+    display: block; /* ブロック要素にする */
+    margin: 0 auto; /* 左右のマージンを自動で調整 */
+}
+
+/* ボタンの中央寄せ */
+button {
+    display: block;
+    margin: 0 auto;
+}
+
+/* 利用可能日数の中央寄せ */
+p {
+    text-align: center;
+}
+
+/* カラム全体の中央寄せ */
+h3 {
+    text-align: center;
+}
+
+/* 住所の中央寄せ */
+p[style="text-align: center;"] {
+    text-align: center;
+}
