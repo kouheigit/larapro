@@ -11,6 +11,7 @@
 {{--5泊,3泊,8泊,0泊,4泊--}}
 <b>FREEDAY</b>
 <h3>フリーデイ</h3>
+{{--この列はデータベースから5つ持ってくる--}}
 {{--列--}}
 <p>利用可能日数</p>
 <p>(2022年6月末日まで有効)</p>
@@ -32,10 +33,37 @@
 <p>(2024年12月末日まで有効)</p>
 <button onclick="location.href='https://qiita.com/mzmz__02'">4泊</button>
 {{--列終了--}}
+<a href="https://qiita.com/mzmz__02">さらに見る</a>
 
 
 <b>FIXDAY</b>
-<h3>フィックスデイ</h3>
+{{--上の奴と同じでデータベースから5つぐらい持ってくる--}}
+{{--列--}}
+<b>2023年1月3日 (火)~5日 (木)</b>
+<button onclick="location.href='https://qiita.com/mzmz__02'">未確定</button>
+{{--列--}}
+<b>2023年1月5日 (木)~7日 (土)</b>
+{{--列--}}
+<button onclick="location.href='https://qiita.com/mzmz__02'">未確定</button>
+{{--列--}}
+<b>2023年1月7日 (土)~9日 (月)</b>
+<button onclick="location.href='https://qiita.com/mzmz__02'">未確定</button>
+{{--列--}}
+<b>2023年1月13日 (金)~15日 (日)</b>
+<button onclick="location.href='https://qiita.com/mzmz__02'">未確定</button>
+{{--列--}}
+<b>2023年1月16日 (月)~18日 (水)</b>
+<button onclick="location.href='https://qiita.com/mzmz__02'">未確定</button>
+{{--列終了--}}
+<a href="https://qiita.com/mzmz__02">さらに見る</a>
+
+<p>〒389-0100<br>
+    長野県北佐久郡軽井沢町1018-30</p>
+
+{{--これはかっこで囲む--}}
+<b>Concierge DESK
+    0120-026-015
+    受付時間10時～18時</b>
 
 
 
