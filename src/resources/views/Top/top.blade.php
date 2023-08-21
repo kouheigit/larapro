@@ -55,18 +55,20 @@
   </tr>
     <tr>
         <th>2023年1月5日 (木)~7日 (土)</th>
-{{--列--}}
-<button onclick="location.href='https://qiita.com/mzmz__02'">未確定</button>
+        <th><button onclick="location.href='https://qiita.com/mzmz__02'">未確定</button></th>
     </tr>
-{{--列--}}
-<b>2023年1月7日 (土)~9日 (月)</b>
-<button onclick="location.href='https://qiita.com/mzmz__02'">未確定</button>
-{{--列--}}
-<b>2023年1月13日 (金)~15日 (日)</b>
-<button onclick="location.href='https://qiita.com/mzmz__02'">未確定</button>
-{{--列--}}
-<b>2023年1月16日 (月)~18日 (水)</b>
-<button onclick="location.href='https://qiita.com/mzmz__02'">未確定</button>
+    <tr>
+        <th>2023年1月7日 (土)~9日 (月)</th>
+        <th><button onclick="location.href='https://qiita.com/mzmz__02'">未確定</button></th>
+    </tr>
+    <tr>
+        <th>2023年1月13日 (金)~15日 (日)</th>
+        <th><button onclick="location.href='https://qiita.com/mzmz__02'">未確定</button></th>
+    </tr>
+    <tr>
+        <th>2023年1月16日 (月)~18日 (水)</th>
+        <th><button onclick="location.href='https://qiita.com/mzmz__02'">未確定</button></th>
+    </tr>
 </table>
 {{--列終了--}}
 <a href="https://qiita.com/mzmz__02">さらに見る</a>
