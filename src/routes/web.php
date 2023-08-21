@@ -25,8 +25,9 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('top',[App\Http\Controllers\TopController::class,'index'])->name('top');
-
+Route::namespace('Top')->prefix('top')->name('top.')->group(function() {
+    Route::get('top',[App\Http\Controllers\Top\TopController::class,'index'])->name('top');
+});
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::namespace('Auth')->group(function(){
