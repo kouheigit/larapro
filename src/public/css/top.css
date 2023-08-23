@@ -2,6 +2,8 @@ body {
     text-align: center;
 }
 
+
+
 /* タイトルとオーナーの中央寄せ */
 b {
     display: block; /* ブロック要素にする */
@@ -28,6 +30,7 @@ td {
     padding: 8px;
     text-align: center;
 }
+
 /*テーブル*/
 
 /* ボタンの中央寄せ */
@@ -51,6 +54,7 @@ button.t_button{
 button.t_button:hover {
     background-color: #003366; /* ホバー時の背景色 */
 }
+
 
 
 /*

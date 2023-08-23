@@ -71,15 +71,18 @@
     </tr>
 </table>
 {{--列終了--}}
-<a href="https://qiita.com/mzmz__02">さらに見る</a>
+<a href="https://qiita.com/mzmz__02">>>さらに見る</a>
 
-<p>〒389-0100<br>
-    長野県北佐久郡軽井沢町1018-30</p>
+<b class="address">〒389-0100<br>
+    長野県北佐久郡軽井沢町1018-30</b>
 
-{{--これは白かっこで囲む--}}
-<b>Concierge DESK
-    0120-026-015
-    受付時間10時～18時</b>
+
+    <p>Concierge DESK<br>
+        0120-026-015<br>
+        受付時間10時～18時</p>
+
+
+
 </body>
 </html>
 
