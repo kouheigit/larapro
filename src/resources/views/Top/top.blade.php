@@ -8,7 +8,7 @@
 {{--↓ログイン情報をここに持ってくる--}}
 <h1 class="guest_name">ログイン名様</h1>
 <b class="maintitle">【Information】お知らせ</b>
-<button class="Information" onclick="location.href='https://qiita.com/mzmz__02'">Information</button>
+<button class="Information" onclick="location.href='http://localhost/top/information'">Information</button>
 {{--情報一覧に飛ぶ--}}
 {{--これで横一列でこれを5つ--}}
 {{--5泊,3泊,8泊,0泊,4泊--}}
@@ -76,11 +76,7 @@
 <b class="address">〒389-0100<br>
     長野県北佐久郡軽井沢町1018-30</b>
 
-    <p>Concierge DESK<br>
-        0120-026-015<br>
-        受付時間10時～18時</p>
-
-
+    <p class="concierge">Concierge DESK<br>0120-026-015<br>受付時間10時～18時</p>
 
 </body>
 </html>

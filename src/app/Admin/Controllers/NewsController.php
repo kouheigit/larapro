@@ -26,7 +26,11 @@ class NewsController extends AdminController
     {
         $grid = new Grid(new News());
 
-
+        $grid->column('id', __('Id'));
+        $grid->column('title', __('Title'));
+        $grid->column('text', __('Text'));
+        $grid->column('created_at', __('Created at'));
+        $grid->column('updated_at', __('Updated at'));
 
         return $grid;
     }
@@ -41,7 +45,11 @@ class NewsController extends AdminController
     {
         $show = new Show(News::findOrFail($id));
 
-
+        $show->field('id', __('Id'));
+        $show->field('title', __('Title'));
+        $show->field('text', __('Text'));
+        $show->field('created_at', __('Created at'));
+        $show->field('updated_at', __('Updated at'));
 
         return $show;
     }
@@ -55,7 +63,8 @@ class NewsController extends AdminController
     {
         $form = new Form(new News());
 
-
+        $form->text('title', __('Title'));
+        $form->text('text', __('Text'));
 
         return $form;
     }

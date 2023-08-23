@@ -25,8 +25,10 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
+
 Route::namespace('Top')->prefix('top')->name('top.')->group(function() {
     Route::get('top',[App\Http\Controllers\Top\TopController::class,'index'])->name('top');
+    Route::get('information',[App\Http\Controllers\Top\TopController::class,'information'])->name('information');
 });
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){

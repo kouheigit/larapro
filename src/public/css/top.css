@@ -39,6 +39,18 @@ button {
     margin: 0 auto;
 }
 
+button.Information{
+    font-size:25px;
+    display: inline-block; /* インラインブロック要素にする */
+    margin: 0 auto;
+    padding: 10px 40px; /* パディングを追加 */
+    background-color: #001F3F; /* 紺色の背景色 */
+    color: #FFFFFF; /* テキストの白色 */
+    border: none; /* ボーダーをなしに */
+    border-radius: 4px; /* 角丸 */
+    cursor: pointer; /* カーソルをポインターに */
+}
+
 button.t_button{
     display: inline-block; /* インラインブロック要素にする */
     margin: 0 auto;
@@ -53,6 +65,13 @@ button.t_button{
 /* ボタンのホバー時のスタイル */
 button.t_button:hover {
     background-color: #003366; /* ホバー時の背景色 */
+}
+p.concierge {
+    border: 1px solid black; /* 黒い枠線を追加 */
+    padding: 10px; /* 内側のパディングを追加 */
+    text-align: left; /* テキストを左寄せに */
+    width: max-content; /* コンテンツの幅に合わせる */
+    margin: 0 auto; /* 中央寄せ */
 }
 
 

@@ -14,6 +14,9 @@ Route::group([
     $router->get('/', 'HomeController@index')->name('home');
     //add
     $router->resource('reserved', ReserveController::class);
+
+    $router->resource('News', NewsController::class);
+
   //  $router->resource('reserves', ReserveController::class);
 
 });
