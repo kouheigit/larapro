@@ -6,8 +6,8 @@
 <h1>information start</h1>
 <h1>ニュースサイト</h1>
 @foreach($News as $news)
-    <div class="blog">
-        <b>{{$news->title}}</b>
+    <div class="container">
+        <h1>{{$news->title}}</h1>
         <p>{{$news->text}}</p>
     </div>
 @endforeach
