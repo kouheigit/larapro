@@ -9,6 +9,7 @@
     <div class="container">
         <h1>{{$news->title}}</h1>
         <p>{{$news->text}}</p>
+        <p>{{$news->created_at}}</p>
     </div>
 @endforeach
 </body>
