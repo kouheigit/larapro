@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="{{ asset('css/informations.css')  }}" >
 </head>
 <body>
+<h1>information start</h1>
 <h1>ニュースサイト</h1>
 @foreach($News as $news)
     <div class="blog">
