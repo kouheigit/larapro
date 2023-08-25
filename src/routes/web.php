@@ -28,6 +28,8 @@ require __DIR__.'/auth.php';
 
 Route::namespace('Top')->prefix('top')->name('top.')->group(function() {
     Route::get('top',[App\Http\Controllers\Top\TopController::class,'index'])->name('top');
+    //Route::get('top',[App\Http\Controllers\Top\TopController::class,'index'])->name('top')->middleware('auth');
+
     Route::get('information',[App\Http\Controllers\Top\TopController::class,'information'])->name('information');
 });
 
