@@ -17,14 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
-
 
 Route::namespace('Top')->prefix('top')->name('top.')->group(function() {
     Route::get('top',[App\Http\Controllers\Top\TopController::class,'index'])->name('top');
@@ -116,7 +113,9 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
         Route::post('login',[App\Http\Controllers\Admin\Auth\AuthenticatedSessionController::class,'store'])->name('adminlogin');
     });
 
-        Route::get('dashboard',[App\Http\Controllers\Admin\AdminController::class,'index'])->name('dashboard');
+    Route::get('dashboard',[App\Http\Controllers\Admin\AdminController::class,'index'])->name('dashboard');
 
     Route::post('logout',[App\Http\Controllers\Admin\Auth\AuthenticatedSessionController::class,'destroy'])->name('logout');
 });
+
+

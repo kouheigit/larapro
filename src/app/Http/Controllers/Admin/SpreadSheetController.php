@@ -11,6 +11,7 @@ class SpreadSheetController extends Controller
 {
     public function store()
     {
+        /*test*/
         $spread_sheet = new SpreadSheet();
         // スプレッドシートに格納するテストデータです
         $insert_data = [

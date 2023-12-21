@@ -32,30 +32,31 @@ services:
       - DB_PASSWORD=${DB_PASSWORD:-secret}
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    environment:
-      - PMA_HOST=db
-      - PMA_USER=phper
-      - PMA_PASSWORD=secret
-    links:
-      - db
-    ports:
-      - 8080:80
-    volumes:
-      - /sessions
+        image: phpmyadmin/phpmyadmin
+        environment:
+          # PMA_HOST=db
+          # PMA_USER=root
+          - PMA_PASSWORD=secret
+        links:
+          - mysql
+        ports:
+          - 8080:80
+        volumes:
+          - /sessions
   web:
     build:
       context: .
-      dockerfile: ./infra/docker/nginx/Dockerfile
+      dockerfile: ./Dockerfile
     ports:
       - target: 80
-        published: ${WEB_PUBLISHED_PORT:-8081}
+        published: ${WEB_PUBLISHED_PORT:-80}
         protocol: tcp
         mode: host
     volumes:
       - type: bind
         source: ./src
         target: /data
+    command: npm start
 
   db:
     build:
