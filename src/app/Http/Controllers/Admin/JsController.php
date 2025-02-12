@@ -44,6 +44,7 @@ class JsController extends Controller
                 $value ="ID1の値を1から0に変更しました。";
                 return response()->json($value);
             }
+            //test
     }
     public function ajaxchange5(Request $request)
     {
